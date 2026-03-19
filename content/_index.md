@@ -14,9 +14,9 @@ sections:
       subtitle: ""
       text: |
         <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
-          <img src="assets/media/chimie.png" style="height: 60px;">
-          <img src="assets/media/iclehs.png" style="height: 80px;">
-          <img src="assets/media/cnrs.png" style="height: 60px;">
+          <img src="./assets/media/chimie.png" style="height: 60px;">
+          <img src="./assets/media/iclehs.png" style="height: 80px;">
+          <img src="./assets/media/cnrs.png" style="height: 60px;">
         </div>
         <div style="text-align: center; font-style: italic; border-top: 1px solid #eee; padding-top: 10px;">
           — Institute of Chemistry for Life & Health Sciences —
