@@ -26,16 +26,17 @@ sections:
         padding: ["1rem", 0, "1rem", 0]
   
   # 1. photo
-  - block: hero
+  - block: markdown
     content:
       title: ""
-      text: ""
+      subtitle: ""
+      text: |
+        <div style="text-align: center;">
+          <img src="media/AA3A0511.JPG" style="width: 100%; max-width: 1000px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
     design:
-      background:
-        filename: "static/media/AA3A0511.JPG"
       spacing:
-        padding: ["15rem", 0, "15rem", 0]
-
+        padding: ["2rem", 0, "2rem", 0]
   # 3. Description
   - block: markdown
     content:
