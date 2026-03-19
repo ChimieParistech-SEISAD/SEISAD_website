@@ -63,12 +63,5 @@ sections:
     design:
       columns: '1'
     
-  # 5. People
-  - block: people
-    content:
-      title: "Permanent Staff Members"
-      user_groups:
-        - "Permanent Staff"
-    design:
-      columns: '4'
+
 ---
