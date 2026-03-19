@@ -7,7 +7,7 @@ design:
   spacing: "6rem"
 
 sections:
-# logo
+# 0. logo
 - block: markdown
     content:
       title: ""
