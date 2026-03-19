@@ -7,8 +7,8 @@ design:
   spacing: "6rem"
 
 sections:
-# 0. logo
-- block: markdown
+  # 0. logo
+  - block: markdown
     content:
       title: ""
       subtitle: ""
@@ -25,8 +25,8 @@ sections:
       spacing:
         padding: ["1rem", 0, "1rem", 0]
   
- # 1. photo
-- block: hero
+  # 1. photo
+  - block: hero
     content:
       title: ""
       text: ""
@@ -36,34 +36,18 @@ sections:
       spacing:
         padding: ["15rem", 0, "15rem", 0]
 
- # 2. Stats
-- block: stats
-    content:
-      title: Lab at a Glance
-      items:
-        - statistic: "20+"
-          description: "Team Members"
-        - statistic: "100+"
-          description: "Publications"
-        - statistic: "PSL"
-          description: "University"
-    design:
-      css_class: "bg-gray-100 dark:bg-gray-800"
-      spacing:
-        padding: ["2rem", 0, "2rem", 0]
-
-# 3. dscription
-- block: markdown
+  # 3. Description
+  - block: markdown
     content:
       title: "SEISAD"
       text: |
-        <span style="float: left; font-size: 70px; line-height: 60px; padding-top: 4px; padding-right: 8px; font-family: Georgia;">Actually, the Team develops projects aimed at elaborating processes and tools for the early detection of pathological signals using chemical and analytical methodologiesThe main prospections are related to: (i) new methodologies of synthesis and supported catalysis in mini – and continuous microflow reactors, synthesis of libraries of molecules as ligands of proteins, development of new radio-labelling methodologies for imaging; (ii) electrochemical sensors for biological systems and for screening biological markers, molecular materials for electroanalysis and electrocatalysis, microelectrochemical patterning of surfaces using scanning electrochemical microscopy, label-free electrochemical detection of microRNAs ; (iii) preparation of targeted optical and MR imaging agents, development of molecular magnetic resonance imaging MRI methods & functional imaging methods for the characterization and therapeutic follow-up of cancer in preclinics and (iv) characterization of new nano-supports and selective objects : peptide nanotubes, aptamers, nanobodies, design and characterization of original biocompatible nano-objects and quantitative characterization of their non-covalent interactions, development of miniaturized total analysis systems for applications ranging from environmental control to in-vitro medical diagnosis.
+        <span style="float: left; font-size: 70px; line-height: 60px; padding-top: 4px; padding-right: 8px; font-family: Georgia;">A</span>ctually, the Team develops projects aimed at elaborating processes and tools for the early detection of pathological signals using chemical and analytical methodologies. The main prospections are related to: (i) new methodologies of synthesis and supported catalysis in mini – and continuous microflow reactors, synthesis of libraries of molecules as ligands of proteins, development of new radio-labelling methodologies for imaging; (ii) electrochemical sensors for biological systems and for screening biological markers, molecular materials for electroanalysis and electrocatalysis, microelectrochemical patterning of surfaces using scanning electrochemical microscopy, label-free electrochemical detection of microRNAs ; (iii) preparation of targeted optical and MR imaging agents, development of molecular magnetic resonance imaging MRI methods & functional imaging methods for the characterization and therapeutic follow-up of cancer in preclinics and (iv) characterization of new nano-supports and selective objects : peptide nanotubes, aptamers, nanobodies, design and characterization of original biocompatible nano-objects and quantitative characterization of their non-covalent interactions, development of miniaturized total analysis systems for applications ranging from environmental control to in-vitro medical diagnosis.
     design:
       spacing:
         padding: ["2rem", 0, "2rem", 0]
   
-# 4. Research Themes
-- block: features
+  # 4. Research Themes
+  - block: features
     content:
       title: "Research Themes"
       items:
@@ -79,11 +63,12 @@ sections:
     design:
       columns: '1'
     
-# 5. People
-- block: people
+  # 5. People
+  - block: people
     content:
       title: "Permanent Staff Members"
       user_groups:
         - "Permanent Staff"
     design:
       columns: '4'
+---
