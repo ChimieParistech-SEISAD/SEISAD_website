@@ -25,8 +25,8 @@ sections:
       spacing:
         padding: ["1rem", 0, "1rem", 0]
   
-  # 1. photo
-  - block: hero
+ # 1. photo
+- block: hero
     content:
       title: ""
       text: ""
@@ -37,7 +37,7 @@ sections:
         padding: ["15rem", 0, "15rem", 0]
 
   # 2. Stats
-  - block: stats
+- block: stats
     content:
       title: Lab at a Glance
       items:
@@ -63,7 +63,7 @@ sections:
         padding: ["2rem", 0, "2rem", 0]
   
   # 4. Research Themes
-  - block: features
+- block: features
     content:
       title: "Research Themes"
       items:
@@ -80,7 +80,7 @@ sections:
       columns: '1'
     
 # 5. People
-      - block: people
+- block: people
     content:
       title: "Permanent Staff Members"
       user_groups:
