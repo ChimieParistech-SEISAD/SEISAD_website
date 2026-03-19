@@ -1,97 +1,85 @@
 ---
-title: 'Home'
-date: 2023-10-24
+title: 'SEISAD Team'
+date: 2024-01-01
 type: landing
 
 design:
-  # Default section spacing
   spacing: "6rem"
 
 sections:
+  # 1. Hero
   - block: hero
     content:
-      title: Write Docs Fast, Focus on Your Content
-      text: The easy, no-code technical documentation solution your users will love 🎉
+      title: SEISAD Team
+      text: |
+        **Surface, Electrochemistry, Imaging and Surface Analytical Design**  
+        Part of Chimie ParisTech - PSL University. We focus on advancing the understanding of electrochemical interfaces and material science.
       primary_action:
-        text: Get Started
-        url: https://hugoblox.com/templates/details/docs/
-        icon: rocket-launch
+        text: Our Publications
+        url: /publication/
+        icon: book-open
       secondary_action:
-        text: Read the docs
-        url: /docs/
+        text: Join Us
+        url: "/#contact"
       announcement:
-        text: "Announcing the release of version 2."
+        text: "📢 We are looking for new PhD students and Postdocs! Click here to learn more."
         link:
-          text: "Read more"
-          url: "/blog/"
+          text: "Open Positions"
+          url: "/#contact"
     design:
-      spacing:
-        padding: [0, 0, 0, 0]
-        margin: [0, 0, 0, 0]
-      # For full-screen, add `min-h-screen` below
-      css_class: ""
       background:
-        color: ""
-        image:
-          # Add your image background to `assets/media/`.
-          filename: ""
-          filters:
-            brightness: 0.5
+        filename: "lab-group.jpg"
+        filters:
+          brightness: 0.7
+      spacing:
+        padding: ["4rem", 0, "4rem", 0]
+
+  # 2. Stats
   - block: stats
     content:
+      title: Lab at a Glance
       items:
-        - statistic: "1M+"
-          description: |
-            Websites built  
-            with Hugo Blox
-        - statistic: "10k+"
-          description: |
-            GitHub stars  
-            since 2016
-        - statistic: "3k+"
-          description: |
-            Discord community  
-            for support
+        - statistic: "20+"
+          description: "Team Members"
+        - statistic: "100+"
+          description: "Publications"
+        - statistic: "PSL"
+          description: "University"
     design:
-      # Section background color (CSS class)
       css_class: "bg-gray-100 dark:bg-gray-800"
-      # Reduce spacing
       spacing:
-        padding: ["1rem", 0, "1rem", 0]
+        padding: ["2rem", 0, "2rem", 0]
+
+  # 3. Research Axes
   - block: features
-    id: features
+    id: research
     content:
-      title: Features
-      text: Collaborate, publish, and maintain technical knowledge with an all-in-one documentation site. Used by 100,000+ startups, enterprises, and researchers.
+      title: Research Axes
+      text: Our team investigates the complexity of chemical systems through multiple scales.
       items:
-        - name: Optimized SEO
-          icon: magnifying-glass
-          description: Automatic sitemaps, RSS feeds, and rich metadata take the pain out of SEO and syndication.
-        - name: Fast
+        - name: Surface Analysis
+          icon: microscope
+          description: Using advanced imaging techniques to characterize interfaces at the nanoscale.
+        - name: Electrochemistry
           icon: bolt
-          description: Super fast page load with Tailwind CSS and super fast site building with Hugo.
-        - name: Easy
-          icon: sparkles
-          description: One-click deployment to GitHub Pages. Have your new website live within 5 minutes!
-        - name: No-Code
-          icon: code-bracket
-          description: Edit and design your site just using rich text (Markdown) and configurable YAML parameters.
-        - name: Highly Rated
-          icon: star
-          description: Rated 5-stars by the community.
-        - name: Swappable Blocks
-          icon: rectangle-group
-          description: Build your pages with blocks - no coding required!
+          description: Studying charge transfer and fundamental electrochemical reactions.
+        - name: Material Design
+          icon: flask
+          description: Developing new materials for sustainable energy and industrial applications.
+        - name: Corrosion Science
+          icon: shield-check
+          description: Protecting infrastructure through innovative surface treatments.
+
+  # 4. CTA
   - block: cta-card
     content:
-      title: "Start Writing with the #1 Effortless Documentation Platform"
-      text: Hugo Blox Docs Theme brings all your technical knowledge together in a single, centralized knowledge base. Easily search and edit it with the tools you use every day!
+      title: "Join our Research"
+      text: "We are always looking for passionate researchers to join SEISAD. If you are interested in our work, please get in touch."
       button:
-        text: Get Started
-        url: https://hugoblox.com/templates/details/docs/
+        text: Contact Us
+        url: "mailto:your-email@chimieparistech.psl.eu"
     design:
       card:
-        # Card background color (CSS class)
-        css_class: "bg-primary-700"
-        css_style: ""
+        # 这里可以选择卡片的背景色
+        css_class: "bg-primary-500"
 ---
