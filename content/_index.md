@@ -11,19 +11,18 @@ sections:
   - block: markdown
     content:
       title: ""
-      subtitle: ""
       text: |
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
-          <img src="media/chimie.png" style="height: 60px;">
-          <img src="media/iclehs.png" style="height: 80px;">
-          <img src="media/cnrs.png" style="height: 60px;">
+        <div style="display: flex; justify-content: space-around; align-items: center; padding: 10px 0;">
+          <img src="media/chimie.png" style="height: 50px;">
+          <img src="media/iclehs.png" style="height: 70px;">
+          <img src="media/cnrs.png" style="height: 50px;">
         </div>
-        <div style="text-align: center; font-style: italic; border-top: 1px solid #eee; padding-top: 10px;">
+        <p style="text-align: center; color: #666; font-size: 0.9rem; margin-top: 10px;">
           — Institute of Chemistry for Life & Health Sciences —
-        </div>
+        </p>
     design:
       spacing:
-        padding: ["1rem", 0, "1rem", 0]
+        padding: ["1rem", 0, "0.5rem", 0]
   
   # 1. photo
   - block: markdown
