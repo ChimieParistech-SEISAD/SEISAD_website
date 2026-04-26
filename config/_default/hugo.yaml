@@ -11,9 +11,6 @@ baseURL: 'https://littlestar-xxy.github.io/crafty-fox-web/'
 ## PAGE OPTIONS
 ############################
 
-params:
-  plugins_css:
-    - css/custom.css
 
 cascade:
   # Docs folder options
