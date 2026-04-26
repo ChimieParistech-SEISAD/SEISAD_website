@@ -1,1 +1,20 @@
+/* 强制让容器宽度占满屏幕 */
+.container, 
+.container-lg, 
+.container-md, 
+.container-sm, 
+.container-xl, 
+.container-xxl {
+    max-width: 95% !important; /* 95% 比较美观，如果你想要绝对全屏可以改回 100% */
+    width: 95% !important;
+}
 
+/* 如果是文档主题，可能需要调整主内容区域 */
+.docs-content {
+    max-width: 100% !important;
+}
+
+/* 针对中间的内容区块 */
+.universal-wrapper {
+    max-width: 95% !important;
+}
