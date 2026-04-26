@@ -16,10 +16,10 @@ sections:
         <style>
           .max-w-prose, .prose { max-width: 100% !important; }
         </style>
-        <div style="display: flex; justify-content: space-between; align-items: center; width: 80%; max-width: 1200px; margin: 0 auto; padding: 20px 0;">
-          <img src="media/chimie.png" style="height: 110px; width: auto;">
-          <img src="media/iclehs.png" style="height: 160px; width: auto;">
-          <img src="media/cnrs.png" style="height: 100px; width: auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 80%; max-width: 1200px; margin: 0 auto; padding: 150px 0;">
+          <img src="media/chimie.png" style="height: 150px; width: auto;">
+          <img src="media/iclehs.png" style="height: 150px; width: auto;">
+          <img src="media/cnrs.png" style="height: 150px; width: auto;">
         </div>
         <div style="text-align: center; color: #555; font-style: italic; border-top: 1px solid #eee; padding-top: 15px; max-width: 1200px; margin: 0 auto;">
           — Institute of Chemistry for Life & Health Sciences —
