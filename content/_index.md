@@ -21,7 +21,7 @@ sections:
           <img src="media/iclehs.png" style="height: 150px; width: auto;">
           <img src="media/cnrs.png" style="height: 150px; width: auto;">
         </div>
-        <div style="text-align: center; color: #555; font-style: italic; border-top: 1px solid #eee; padding-top: 15px; max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center; color: #555; font-style: italic; border-top: 1px solid #eee; padding-top: 15px; width: 80%; max-width: 1200px; margin: 0 auto;">
           — Institute of Chemistry for Life & Health Sciences —
         </div>
     design:
