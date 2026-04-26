@@ -12,7 +12,7 @@ main:
     url: '/publication/'
     weight: 30
   - name: News
-    url: '/post/'
+    url: '/new/'
     weight: 40
   - name: Contact
     url: '/contact/'
