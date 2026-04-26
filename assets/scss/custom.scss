@@ -18,3 +18,21 @@
 .universal-wrapper {
     max-width: 95% !important;
 }
+
+/* 找到那个限制宽度的类并强制解除 */
+.blox-markdown .max-w-prose {
+    max-width: 100% !important; /* 允许它占满父级宽度 */
+    width: 100% !important;
+}
+
+/* 如果你只想让图片变大，而文字保持窄一点（为了阅读体验） */
+/* 你也可以针对图片单独设置 */
+.blox-markdown img {
+    max-width: 1200px !important; /* 设置你期望的照片最大宽度 */
+    width: 100% !important;
+}
+
+/* 针对你截图中那个特定的 flex 容器 */
+.flex.flex-col.items-center.max-w-prose {
+    max-width: 1200px !important; /* 这里的数值可以根据你想要的多宽来定，比如 1200px 或 90% */
+}
