@@ -7,84 +7,89 @@ design:
   spacing: "0"
 
 sections:
-  # 0. 全局样式补丁 (核心逻辑在这里)
+  # 0. 终极 CSS 补丁 (解决所有对齐和空隙问题)
   - block: markdown
     content:
       title: ""
       text: |
         <style>
-          /* 1. 破除容器限制 */
-          .max-w-prose, .prose { max-width: 100% !important; }
-          .hbb-section .container, .hbb-section .mx-auto { max-width: 100% !important; }
+          /* 1. 彻底解除所有容器宽度限制 */
+          .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
           
-          /* 2. 强制 Research Themes 居中并增加中间空隙 */
-          .hbb-section .row { 
-            justify-content: center !important; 
+          /* 2. 解决 Research Themes 歪掉的问题：强制图标项目水平居中 */
+          .hbb-section section[id*="features"] .row {
             display: flex !important;
-            flex-wrap: wrap;
+            justify-content: center !important;
+            text-align: center !important;
           }
-          .feature-item { 
-            margin: 0 40px !important; /* 这里控制三个图中间的空隙 */
-            max-width: 300px !important;
+          .hbb-section .feature-item {
+            margin: 0 50px !important; /* 调整图标之间的间距 */
+            flex: none !important;
+            width: 250px !important;
           }
+
+          /* 3. 解决“空隙太大”：强行砍掉所有默认的上下间距 */
+          .hbb-section { padding-top: 0 !important; padding-bottom: 0 !important; }
+          .hbb-section div[class*="py-"], .hbb-section div[class*="my-"] { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
           
-          /* 3. 统一页面主宽度 */
-          .content-wrapper { 
-            width: 95%; 
-            max-width: 1400px; 
-            margin: 0 auto; 
+          /* 4. 机构名称强制不换行 */
+          .institute-tagline {
+            white-space: nowrap !important; /* 强制不换行 */
+            display: inline-block !important;
+            font-size: 1.4rem !important;
+            letter-spacing: 2px !important;
           }
         </style>
     design:
       full_width: true
 
-  # 1. Logo Bar (解决中间空一些、居中、Institute大小问题)
+  # 1. Logo Bar (解决换行和居中)
   - block: markdown
     content:
       text: |
-        <div class="content-wrapper" style="display: flex; justify-content: space-around; align-items: center; padding: 30px 0;">
+        <div style="display: flex; justify-content: space-evenly; align-items: center; width: 80%; max-width: 1200px; margin: 0 auto; padding: 20px 0;">
           <img src="media/chimie.png" style="height: 100px; width: auto;">
           <img src="media/iclehs.png" style="height: 120px; width: auto;">
           <img src="media/cnrs.png" style="height: 100px; width: auto;">
         </div>
-        <div class="content-wrapper" style="text-align: center; color: #444; border-top: 1px solid #eee; padding-top: 25px; margin-top: 10px;">
-          <span style="font-size: 1.5rem; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; font-family: 'Palatino', serif; font-style: italic;">
+        <div style="text-align: center; color: #444; border-top: 1px solid #eee; padding-top: 15px; margin-top: 5px;">
+          <span class="institute-tagline" style="font-weight: 500; text-transform: uppercase; font-family: 'Palatino', serif; font-style: italic;">
             — Institute of Chemistry for Life & Health Sciences —
           </span>
         </div>
     design:
       full_width: true
       spacing:
-        padding: ["1rem", 0, "1rem", 0] # 缩小了上下空隙
+        padding: ["1rem", 0, "0.5rem", 0]
   
-  # 2. Group Photo
+  # 2. Group Photo (紧贴上面)
   - block: markdown
     content:
       text: |
-        <div style="width: 80%; max-width: 1500px; margin: 0 auto;">
+        <div style="width: 85%; max-width: 1500px; margin: 0 auto;">
           <img src="media/AA3A0511.JPG" style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
         </div>
     design:
       full_width: true
       spacing:
-        padding: ["0", 0, "3rem", 0]
+        padding: ["0.5rem", 0, "1rem", 0]
     
-  # 3. Description (文字介绍)
+  # 3. Description (文字介绍，砍掉底部空隙)
   - block: markdown
     content:
       title: "SEISAD"
       text: |
-        <div style="max-width: 1300px; margin: 0 auto; text-align: justify; line-height: 1.9; font-size: 1.1rem; color: #333;">
-          <span style="float: left; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 15px; font-family: Georgia; color: #008a85; font-weight: bold;">A</span>ctually, the Team develops projects aimed at elaborating processes and tools for the early detection of pathological signals using chemical and analytical methodologies. The main prospections are related to: (i) new methodologies of synthesis and supported catalysis in mini – and continuous microflow reactors, synthesis of libraries of molecules as ligands of proteins, development of new radio-labelling methodologies for imaging; (ii) electrochemical sensors for biological systems and for screening biological markers, molecular materials for electroanalysis and electrocatalysis, microelectrochemical patterning of surfaces using scanning electrochemical microscopy, label-free electrochemical detection of microRNAs ; (iii) preparation of targeted optical and MR imaging agents, development of molecular magnetic resonance imaging MRI methods & functional imaging methods for the characterization and therapeutic follow-up of cancer in preclinics and (iv) characterization of new nano-supports and selective objects : peptide nanotubes, aptamers, nanobodies, design and characterization of original biocompatible nano-objects and quantitative characterization of their non-covalent interactions, development of miniaturized total analysis systems for applications ranging from environmental control to in-vitro medical diagnosis.
+        <div style="max-width: 1300px; margin: 0 auto; text-align: justify; line-height: 1.8; font-size: 1.1rem;">
+          <span style="float: left; font-size: 70px; line-height: 60px; padding-top: 4px; padding-right: 15px; font-family: Georgia; color: #008a85; font-weight: bold;">A</span>ctually, the Team develops projects aimed at elaborating processes and tools for the early detection of pathological signals using chemical and analytical methodologies. The main prospections are related to: (i) new methodologies of synthesis and supported catalysis in mini – and continuous microflow reactors, synthesis of libraries of molecules as ligands of proteins, development of new radio-labelling methodologies for imaging; (ii) electrochemical sensors for biological systems and for screening biological markers, molecular materials for electroanalysis and electrocatalysis, microelectrochemical patterning of surfaces using scanning electrochemical microscopy, label-free electrochemical detection of microRNAs ; (iii) preparation of targeted optical and MR imaging agents, development of molecular magnetic resonance imaging MRI methods & functional imaging methods for the characterization and therapeutic follow-up of cancer in preclinics and (iv) characterization of new nano-supports and selective objects : peptide nanotubes, aptamers, nanobodies, design and characterization of original biocompatible nano-objects and quantitative characterization of their non-covalent interactions, development of miniaturized total analysis systems for applications ranging from environmental control to in-vitro medical diagnosis.
         </div>
     design:
       full_width: true
       background:
         color: "#f8fafc" 
       spacing:
-        padding: ["3rem", 0, "5rem", 0] # 缩小了顶部空隙 (从5rem降到3rem)
+        padding: ["2rem", 0, "1rem", 0] # 缩小了空隙
   
-  # 4. Research Themes (解决歪了、上面空、中间空)
+  # 4. Research Themes (解决歪了和上面空的问题)
   - block: features
     content:
       title: "Research Themes"
@@ -100,8 +105,8 @@ sections:
           icon: microscope
     design:
       full_width: true
-      columns: '3' # 强制设为3列
+      columns: '3'
       spacing:
-        padding: ["2rem", 0, "5rem", 0] # 大幅缩小了标题上方的空隙
+        padding: ["1rem", 0, "4rem", 0] # 顶部设为 1rem，解决上面空太多的问题
 
 ---
