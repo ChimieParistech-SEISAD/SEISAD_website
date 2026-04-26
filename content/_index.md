@@ -1,6 +1,6 @@
 ---
 title: 'SEISAD'
-date: 2024-01-01
+date: 2026-04-26
 type: landing
 
 design:
@@ -8,90 +8,105 @@ design:
 
 sections:
   # ────────────────────────────────────────────────────────────────────────────
-  # 0. 全局样式引擎：一站式解决所有排版问题
+  # 0. 终极 CSS 样式表 (放在最前面，控制全场)
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
       title: ""
       text: |
         <style>
-          /* 1. 彻底解除主题宽度限制 */
-          .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
+          /* 1. 彻底解除所有外层容器的宽度限制 */
+          .max-w-prose, .prose, .container, .mx-auto, .blox-markdown { 
+            max-width: 100% !important; 
+            width: 100% !important; 
+          }
           .hbb-section { padding: 0 !important; }
-          .hbb-section div[class*="py-"] { padding-top: 1rem !important; padding-bottom: 1rem !important; }
 
-          /* 2. 核心：修复 Research Themes 居中对齐 */
-          #research-themes .row {
-            display: flex !important;
-            justify-content: center !important; /* 强制三项整体居中 */
-            max-width: 1200px !important; 
-            margin: 0 auto !important;
-          }
-          #research-themes .feature-item {
-            text-align: center !important; /* 文字居中 */
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important; /* 图标居中 */
-            padding: 0 30px !important;
-          }
-          #research-themes .feature-icon { margin: 0 auto 1.5rem auto !important; }
-
-          /* 3. 核心：机构名称不换行 */
-          .institute-tagline {
+          /* 2. 机构名称：强制不换行，字号加大 */
+          .institute-title {
             white-space: nowrap !important;
             display: inline-block !important;
-            font-size: 1.4rem !important;
-            letter-spacing: 2px !important;
+            font-size: 1.6rem !important;
+            font-weight: 500;
+            letter-spacing: 2px;
             font-family: 'Palatino', serif;
             font-style: italic;
-            color: #444;
-            padding: 0 10px;
+            color: #333;
           }
+
+          /* 3. 自定义 Research Themes 容器：确保三项绝对居中且不散开 */
+          .themes-container {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            gap: 80px;               /* 三个图标之间的间距 */
+            max-width: 1200px;       /* 限制总宽度，防止散到屏幕两边 */
+            margin: 40px auto;       /* 整体居中 */
+            flex-wrap: wrap;
+          }
+          .theme-card {
+            flex: 0 1 280px;         /* 固定宽度，确保对齐 */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .theme-icon {
+            background-color: #f0fdfa;
+            color: #008a85;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+          .theme-name { font-size: 1.25rem; font-weight: bold; margin-bottom: 8px; color: #111; }
+          .theme-desc { font-size: 0.95rem; color: #666; line-height: 1.4; }
         </style>
     design:
       full_width: true
 
   # ────────────────────────────────────────────────────────────────────────────
-  # 1. Logo 区域
+  # 1. Logo Bar (解决换行、间距、居中)
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
       text: |
-        <div style="display: flex; justify-content: center; align-items: center; gap: 80px; width: 90%; max-width: 1200px; margin: 0 auto; padding: 30px 0;">
+        <!-- 第一行：Logo -->
+        <div style="display: flex; justify-content: center; align-items: center; gap: 60px; padding: 40px 0 20px 0;">
           <img src="media/chimie.png" style="height: 100px; width: auto;">
           <img src="media/iclehs.png" style="height: 120px; width: auto;">
           <img src="media/cnrs.png" style="height: 100px; width: auto;">
         </div>
-        <div style="text-align: center; border-top: 1px solid #eee; padding-top: 20px; margin-bottom: 10px;">
-          <span class="institute-tagline">— INSTITUTE OF CHEMISTRY FOR LIFE & HEALTH SCIENCES —</span>
+        <!-- 第二行：文字 -->
+        <div style="text-align: center; border-top: 1px solid #eee; padding-top: 25px; width: 90%; max-width: 1200px; margin: 0 auto;">
+          <span class="institute-title">— INSTITUTE OF CHEMISTRY FOR LIFE & HEALTH SCIENCES —</span>
         </div>
     design:
       full_width: true
-      spacing:
-        padding: ["1rem", 0, "1rem", 0]
-  
+
   # ────────────────────────────────────────────────────────────────────────────
-  # 2. 实验室合照
+  # 2. Group Photo
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
       text: |
-        <div style="width: 85%; max-width: 1500px; margin: 0 auto;">
-          <img src="media/AA3A0511.JPG" style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.12);">
+        <div style="width: 85%; max-width: 1500px; margin: 30px auto;">
+          <img src="media/AA3A0511.JPG" style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
         </div>
     design:
       full_width: true
-      spacing:
-        padding: ["0.5rem", 0, "2rem", 0]
-    
+
   # ────────────────────────────────────────────────────────────────────────────
-  # 3. 团队介绍文字
+  # 3. SEISAD Description
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
       title: "SEISAD"
       text: |
-        <div style="max-width: 1300px; margin: 0 auto; text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #222;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #222;">
           <span style="float: left; font-size: 70px; line-height: 60px; padding-top: 4px; padding-right: 15px; font-family: Georgia; color: #008a85; font-weight: bold;">A</span>ctually, the Team develops projects aimed at elaborating processes and tools for the early detection of pathological signals using chemical and analytical methodologies. The main prospections are related to: (i) new methodologies of synthesis and supported catalysis in mini – and continuous microflow reactors, synthesis of libraries of molecules as ligands of proteins, development of new radio-labelling methodologies for imaging; (ii) electrochemical sensors for biological systems and for screening biological markers, molecular materials for electroanalysis and electrocatalysis, microelectrochemical patterning of surfaces using scanning electrochemical microscopy, label-free electrochemical detection of microRNAs ; (iii) preparation of targeted optical and MR imaging agents, development of molecular magnetic resonance imaging MRI methods & functional imaging methods for the characterization and therapeutic follow-up of cancer in preclinics and (iv) characterization of new nano-supports and selective objects : peptide nanotubes, aptamers, nanobodies, design and characterization of original biocompatible nano-objects and quantitative characterization of their non-covalent interactions, development of miniaturized total analysis systems for applications ranging from environmental control to in-vitro medical diagnosis.
         </div>
     design:
@@ -100,28 +115,42 @@ sections:
         color: "#f8fafc" 
       spacing:
         padding: ["3rem", 0, "4rem", 0]
-  
+
   # ────────────────────────────────────────────────────────────────────────────
-  # 4. 研究主题 (Research Themes)
+  # 4. Research Themes (弃用不听话的 features 组件，直接手写以确保 100% 对齐)
   # ────────────────────────────────────────────────────────────────────────────
-  - block: features
-    id: research-themes
+  - block: markdown
     content:
-      title: "Research Themes"
-      items:
-        - name: "Synthetic methodologies"
-          description: "Development of new synthetic methodologies"
-          icon: flask
-        - name: "Sensors"
-          description: "Development of new electrochemical sensors"
-          icon: bolt
-        - name: "Imaging"
-          description: "Development of new imaging agents"
-          icon: microscope
+      text: |
+        <div style="text-align: center; margin-top: 60px;">
+          <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">Research Themes</h2>
+        </div>
+        
+        <div class="themes-container">
+          <!-- 项目 1 -->
+          <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-flask"></i></div>
+            <div class="theme-name">Synthetic methodologies</div>
+            <div class="theme-desc">Development of new synthetic methodologies</div>
+          </div>
+          
+          <!-- 项目 2 -->
+          <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-bolt"></i></div>
+            <div class="theme-name">Sensors</div>
+            <div class="theme-desc">Development of new electrochemical sensors</div>
+          </div>
+          
+          <!-- 项目 3 -->
+          <div class="theme-card">
+            <div class="theme-icon"><i class="fas fa-microscope"></i></div>
+            <div class="theme-name">Imaging</div>
+            <div class="theme-desc">Development of new imaging agents</div>
+          </div>
+        </div>
     design:
       full_width: true
-      columns: '3'
       spacing:
-        padding: ["1.5rem", 0, "5rem", 0]
+        padding: ["0", 0, "6rem", 0]
 
 ---
