@@ -13,7 +13,10 @@ sections:
       title: ""
       subtitle: ""
       text: |
-        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px 0;">
+        <style>
+          .max-w-prose, .prose { max-width: 100% !important; }
+        </style>
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 80%; max-width: 1200px; margin: 0 auto; padding: 20px 0;">
           <img src="media/chimie.png" style="height: 55px; width: auto;">
           <img src="media/iclehs.png" style="height: 80px; width: auto;">
           <img src="media/cnrs.png" style="height: 55px; width: auto;">
@@ -36,7 +39,7 @@ sections:
         <style>
           .max-w-prose, .prose { max-width: 100% !important; }
         </style>
-        <div style="width: 100%; max-width: 100%; margin: 0 auto;">
+        <div style="width: 100%; max-width: 600%; margin: 0 auto;">
           <img src="media/AA3A0511.JPG" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
     design:
