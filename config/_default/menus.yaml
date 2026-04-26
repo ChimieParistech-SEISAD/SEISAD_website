@@ -6,7 +6,7 @@ main:
     url: '/'
     weight: 10
   - name: People
-    url: '/#people'
+    url: '/people/'
     weight: 20
   - name: Publications
     url: '/publication/'
@@ -15,7 +15,7 @@ main:
     url: '/post/'
     weight: 40
   - name: Contact
-    url: '/#contact'
+    url: '/contact/'
     weight: 50
 
 sidebar:
