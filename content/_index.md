@@ -13,35 +13,41 @@ sections:
       title: ""
       text: |
         <style>
-          /* 1. 彻底解除所有容器宽度限制 */
+  /* 1. 基础容器解除限制 */
           .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
           .hbb-section { padding-top: 0 !important; padding-bottom: 0 !important; }
-          
-          /* 2. 解决 Research Themes 歪掉的问题：强制图标项目水平居中 */
-          .hbb-section section[id*="features"] .row,
+
+  /* 2. 【核心修复】Research Themes 专用补丁 */
+  /* 让整行内容在页面中间聚拢，不要散到最两边 */
+          .hbb-section section[id*="features"] .row, 
           .hbb-section section#research-themes .row {
             display: flex !important;
             justify-content: center !important;
-            max-width: 1200px !important;
+            max-width: 1200px !important; /* 限制这三个项目的总宽度，让它们聚在中间 */
             margin: 0 auto !important;
-          }
-          .hbb-section .feature-item {
-            margin: 0 50px !important; /* 调整图标之间的间距 */
-            flex: none !important;
-            width: 250px !important;
-          }
+  }
 
-          /* 3. 解决“空隙太大”：强行砍掉所有默认的上下间距 */
-          .hbb-section { padding-top: 0 !important; padding-bottom: 0 !important; }
-          .hbb-section div[class*="py-"], .hbb-section div[class*="my-"] { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-          
-          /* 4. 机构名称强制不换行 */
+  /* 强制每个项目内部的所有内容（图标、标题、描述）居中 */
+          .feature-item, .feature-item * {
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+  }
+  
+  /* 修正图标位置 */
+          .feature-icon {
+            margin: 0 auto 15px auto !important;
+  }
+
+  /* 3. 机构名称强制不换行 */
           .institute-tagline {
-            white-space: nowrap !important; /* 强制不换行 */
+            white-space: nowrap !important;
             display: inline-block !important;
             font-size: 1.4rem !important;
             letter-spacing: 2px !important;
-          }
+  }
         </style>
     design:
       full_width: true
