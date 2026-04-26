@@ -12,7 +12,7 @@ sections:
     content:
       title: ""
       text: |
-<style>
+    <style>
   /* 1. 基础容器解除限制 */
   .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
   .hbb-section { padding-top: 0 !important; padding-bottom: 0 !important; }
