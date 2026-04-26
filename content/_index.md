@@ -12,34 +12,43 @@ sections:
     content:
       title: ""
       text: |
-        <style>
-          /* 1. 彻底解除所有容器宽度限制 */
-          .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
-          
-          /* 2. 解决 Research Themes 歪掉的问题：强制图标项目水平居中 */
-          .hbb-section section[id*="features"] .row {
-            display: flex !important;
-            justify-content: center !important;
-            text-align: center !important;
-          }
-          .hbb-section .feature-item {
-            margin: 0 50px !important; /* 调整图标之间的间距 */
-            flex: none !important;
-            width: 250px !important;
-          }
+<style>
+  /* 1. 基础容器解除限制 */
+  .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
+  .hbb-section { padding-top: 0 !important; padding-bottom: 0 !important; }
 
-          /* 3. 解决“空隙太大”：强行砍掉所有默认的上下间距 */
-          .hbb-section { padding-top: 0 !important; padding-bottom: 0 !important; }
-          .hbb-section div[class*="py-"], .hbb-section div[class*="my-"] { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-          
-          /* 4. 机构名称强制不换行 */
-          .institute-tagline {
-            white-space: nowrap !important; /* 强制不换行 */
-            display: inline-block !important;
-            font-size: 1.4rem !important;
-            letter-spacing: 2px !important;
-          }
-        </style>
+  /* 2. 【核心修复】Research Themes 专用补丁 */
+  /* 让整行内容在页面中间聚拢，不要散到最两边 */
+  .hbb-section section[id*="features"] .row, 
+  .hbb-section section#research-themes .row {
+    display: flex !important;
+    justify-content: center !important;
+    max-width: 1200px !important; /* 限制这三个项目的总宽度，让它们聚在中间 */
+    margin: 0 auto !important;
+  }
+
+  /* 强制每个项目内部的所有内容（图标、标题、描述）居中 */
+  .feature-item, .feature-item * {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* 修正图标位置 */
+  .feature-icon {
+    margin: 0 auto 15px auto !important;
+  }
+
+  /* 3. 机构名称强制不换行 */
+  .institute-tagline {
+    white-space: nowrap !important;
+    display: inline-block !important;
+    font-size: 1.4rem !important;
+    letter-spacing: 2px !important;
+  }
+</style>
     design:
       full_width: true
 
@@ -89,8 +98,9 @@ sections:
       spacing:
         padding: ["2rem", 0, "1rem", 0] # 缩小了空隙
   
-  # 4. Research Themes (解决歪了和上面空的问题)
+# 4. Research Themes
   - block: features
+    id: research-themes # 增加这个 ID
     content:
       title: "Research Themes"
       items:
@@ -107,6 +117,6 @@ sections:
       full_width: true
       columns: '3'
       spacing:
-        padding: ["1rem", 0, "4rem", 0] # 顶部设为 1rem，解决上面空太多的问题
+        padding: ["2rem", 0, "5rem", 0]
 
 ---
