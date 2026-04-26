@@ -22,6 +22,7 @@ sections:
           — Institute of Chemistry for Life & Health Sciences —
         </div>
     design:
+      full_width: true
       columns: '1' 
       spacing:
         padding: ["1rem", 0, "1rem", 0]
@@ -36,6 +37,7 @@ sections:
           <img src="media/AA3A0511.JPG" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
     design:
+      full_width: true
       columns: '1'
       spacing:
         padding: ["0", 0, "2rem", 0]
