@@ -16,7 +16,7 @@ sections:
         <style>
           .max-w-prose, .prose { max-width: 100% !important; }
         </style>
-        <div style="display: flex; justify-content: space-between; align-items: center; width: 80%; max-width: 1200px; margin: 0 auto; padding: 150px 0;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 80%; max-width: 1200px; margin: 120px auto; padding: 20px 0;">
           <img src="media/chimie.png" style="height: 150px; width: auto;">
           <img src="media/iclehs.png" style="height: 150px; width: auto;">
           <img src="media/cnrs.png" style="height: 150px; width: auto;">
