@@ -1,3 +1,4 @@
+body { background-color: red !important; }
 /* 彻底解除 markdown 块中的宽度限制 */
 .blox-markdown .max-w-prose {
     max-width: 100% !important; /* 强制覆盖 Tailwind 的限制 */
