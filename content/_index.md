@@ -33,7 +33,7 @@ sections:
       title: ""
       subtitle: ""
       text: |
-        <div style="width: 100%; max-width: 80%; margin: 0 auto;">
+        <div style="width: 100%; max-width: 200%; margin: 0 auto;">
           <img src="media/AA3A0511.JPG" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
     design:
