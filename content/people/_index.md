@@ -105,7 +105,7 @@ sections:
               <div class="person-links">
                 <div><i class="fas fa-envelope"></i> Email: <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
                 <div><i class="fas fa-phone"></i> +33 x xx xx xx xx</div>
-                <div><i class="fas fa-globe"></i> Email: <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">CV</a></div>
+                <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">CV</a></div>
                 <div><i class="fas fa-globe"></i> <a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google scholar</a></div>    
               </div>
             </div>
