@@ -82,7 +82,7 @@ sections:
           
           <!-- 成员 1 -->
           <div class="person-card">
-            <img src="media/people/ZijunWang.jpg" class="person-img" alt="Name">
+            <img src="/SEISAD_website/media/people/ZijunWang.jpg" class="person-img" alt="Name">
             <div class="person-info">
               <div class="person-name">Prof. Jean Dupont</div>
               <div class="person-title">Director of SEISAD Team</div>
@@ -97,7 +97,7 @@ sections:
 
           <!-- 成员 2 -->
           <div class="person-card">
-            <img src="media/people/ZijunWang.jpg" class="person-img" alt="Name">
+            <img src="/SEISAD_website/media/people/ZijunWang.jpg" class="person-img" alt="Name">
             <div class="person-info">
               <div class="person-name">Dr. Marie Curie</div>
               <div class="person-title">Associate Professor</div>
@@ -127,7 +127,7 @@ sections:
           
           <!-- 学生 1 -->
           <div class="person-card">
-            <img src="media/people/XingyuanXu.png" class="person-img" alt="Student Name">
+            <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Student Name">
             <div class="person-info">
               <div class="person-name">Alice Smith</div>
               <div class="person-title">PhD Student (3rd Year)</div>
@@ -141,7 +141,7 @@ sections:
 
           <!-- 学生 2 -->
           <div class="person-card">
-            <img src="media/people/XingyuanXu.png" class="person-img" alt="Student Name">
+            <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Student Name">
             <div class="person-info">
               <div class="person-name">Bob Johnson</div>
               <div class="person-title">Master Student</div>
