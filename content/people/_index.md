@@ -80,32 +80,33 @@ sections:
       text: |
         <div class="people-grid">
           
-          <!-- 成员 1 -->
+          <!-- 1 -->
           <div class="person-card">
-            <img src="/SEISAD_website/media/people/ZijunWang.jpg" class="person-img" alt="Name">
+            <img src="/SEISAD_website/media/people/xxx.jpg" class="person-img" alt="Name">
             <div class="person-info">
-              <div class="person-name">Prof. Jean Dupont</div>
-              <div class="person-title">Director of SEISAD Team</div>
+              <div class="person-name">Prof. Anne Varenne</div>
+              <div class="person-title">Head of SEISAD</div>
               <div class="person-bio">Specialist in electrochemistry and surface analysis. Leading the design of new imaging agents.</div>
               <div class="person-links">
                 <div><i class="fas fa-envelope"></i> <a href="mailto:jean.dupont@chimieparistech.psl.eu">Email</a></div>
                 <div><i class="fas fa-phone"></i> +33 1 23 45 67 89</div>
-                <div><i class="fas fa-globe"></i> <a href="#" target="_blank">Personal Website</a></div>
+                <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2021/02/annevarenne-notice-biographique.pdf" target="_blank">CV</a></div>
               </div>
             </div>
           </div>
 
-          <!-- 成员 2 -->
+          <!-- 2 -->
           <div class="person-card">
             <img src="/SEISAD_website/media/people/ZijunWang.jpg" class="person-img" alt="Name">
             <div class="person-info">
-              <div class="person-name">Dr. Marie Curie</div>
-              <div class="person-title">Associate Professor</div>
-              <div class="person-bio">Expert in radio-labelling methodologies and molecular magnetic resonance imaging.</div>
+              <div class="person-name">Dr. Zijun Wang</div>
+              <div class="person-title">Junior Professor</div>
+              <div class="person-bio">Expert in luminescent nanomaterials, photoluminescence micro-spectroscopy, nano-bio interface engineering, and their bioapplications.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> <a href="mailto:marie.curie@example.com">Email</a></div>
-                <div><i class="fas fa-phone"></i> +33 1 98 76 54 32</div>
-                <div><i class="fas fa-globe"></i> <a href="#" target="_blank">Google Scholar</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="zijun.wang@chimieparistech.psl.eu"> zijun.wang@chimieparistech.psl.eu Email</a></div>
+                <div><i class="fas fa-phone"></i> +33 x xx xx xx xx</div>
+                <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">CV</a></div>
+                <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf](https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google scholar</a></div>    
               </div>
             </div>
           </div>
