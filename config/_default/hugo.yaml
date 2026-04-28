@@ -5,7 +5,7 @@
 
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: ''
-baseURL: 'https://www.seisad-lab-welcome.com/'
+baseURL: 'https://www.seisad-lab-welcome/'
 
 ############################
 ## PAGE OPTIONS
