@@ -1,3 +1,66 @@
+---
+title: Research
+type: landing
+
+sections:
+  # ────────────────────────────────────────────────────────────────────────────
+  # 0. 局部 CSS 样式表 (确保布局正常)
+  # ────────────────────────────────────────────────────────────────────────────
+  - block: markdown
+    content:
+      title: ""
+      text: |
+        <style>
+          .themes-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 40px auto;
+            flex-wrap: wrap;
+          }
+          .theme-card {
+            flex: 0 1 300px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+          }
+          .theme-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #008a85;
+            transition: transform 0.3s ease;
+          }
+          .theme-card:hover .theme-icon {
+            transform: scale(1.1);
+          }
+          .theme-name { 
+            font-size: 1.4rem; 
+            font-weight: bold; 
+            margin-bottom: 12px; 
+            color: #1a202c; 
+          }
+          .theme-desc { 
+            font-size: 1rem; 
+            color: #4a5568; 
+            line-height: 1.6; 
+            text-align: center;
+          }
+        </style>
+    design:
+      full_width: true
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # 1. Research Themes 内容区块
+  # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
       text: |
@@ -41,3 +104,4 @@
       full_width: true
       spacing:
         padding: ["0", 0, "6rem", 0]
+---
