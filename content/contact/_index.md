@@ -10,13 +10,16 @@ sections:
         <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding: 20px 0;">
           <div style="flex: 1; min-width: 300px; font-size: 1.1rem; line-height: 1.8;">
             <h3 style="margin-bottom: 15px; color: #008a85;">Office Location</h3>
-            <p>
-              <strong>Institute of Chemistry for Life and Health Sciences (i-CLeHS)</strong><br>
-              UMR 8060 / ENSCP – Chimie ParisTech<br><br>
-              <i class="fas fa-map-marker-alt" style="margin-right: 8px; color: #008a85;"></i>
-              11 Rue Pierre et Marie Curie<br>
-              75005 Paris, France
-            </p>
+            <div class="address-block">
+              <i class="fas fa-map-marker-alt" style="color: #008a85; margin-top: 6px; width: 20px;"></i>
+              <div>
+                <strong>Institute of Chemistry for Life and Health Sciences (i-CLeHS)</strong><br>
+                UMR 8060 / ENSCP – Chimie ParisTech<br><br>
+                <i class="fas fa-map-marker-alt" style="margin-right: 8px; color: #008a85;"></i>
+                11 Rue Pierre et Marie Curie<br>
+                75005 Paris, France
+              </div>
+            </div>
           </div>
           <div style="flex: 1.5; min-width: 300px;">
             <iframe 
