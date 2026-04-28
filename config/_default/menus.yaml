@@ -6,7 +6,7 @@ main:
     url: '/'
     weight: 1
   - name: Research
-    url: 'Research/'
+    url: '/research/'
     weight: 11
   - name: Members
     url: '/people/'
