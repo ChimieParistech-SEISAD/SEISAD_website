@@ -1,16 +1,78 @@
-body { background-color: red !important; }
-/* 彻底解除 markdown 块中的宽度限制 */
-.blox-markdown .max-w-prose {
-    max-width: 100% !important; /* 强制覆盖 Tailwind 的限制 */
+/* ==========================================================================
+   全局自定义样式 (SEISAD Website)
+   ========================================================================== */
+
+/* 1. 页面整体布局优化 */
+body { 
+    background-color: #f8fafc; /* 建议取消之前的 red 测试色，换成淡灰色 */
+}
+
+/* 彻底解除 Markdown 块中的宽度限制，让内容可以占满屏幕 */
+.blox-markdown .max-w-prose, 
+.prose, 
+.container, 
+.mx-auto {
+    max-width: 100% !important; 
     width: 100% !important;
 }
 
-/* 针对 prose 类的排版限制也解除 */
-.prose {
-    max-width: 100% !important;
+/* 如果希望内容在大屏上有一个上限，防止文字排版过散 */
+.blox-markdown .mx-auto.max-w-prose {
+    max-width: 1400px !important; 
 }
 
-/* 如果你希望内容有一个舒适的最大宽度（比如1600px），而不是无限宽，可以这样写： */
-.blox-markdown .mx-auto.max-w-prose {
-    max-width: 1600px !important; 
+/* 2. 导航栏 (Navigation Bar) 统一美化 */
+.navbar { 
+    background-color: #008a85 !important; 
+    padding: 0.8rem 0 !important;
+}
+
+/* 菜单文字：加大、加粗、白色 */
+.navbar-nav .nav-link {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease;
+}
+
+/* 悬停 (Hover) 或 选中 (Active) 效果 */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+    background-color: #ffffff !important;
+    color: #008a85 !important;
+    border-radius: 5px;
+}
+
+/* 站点名称 (Logo/Brand) */
+.navbar-brand { 
+    font-size: 1.6rem !important; 
+    color: #ffffff !important; 
+}
+
+/* 3. Research Themes 专用容器样式 */
+.themes-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+.theme-card {
+    flex: 0 1 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 4. 通用辅助类：解决地址左对齐问题 */
+.address-block {
+    display: flex; 
+    align-items: flex-start; 
+    gap: 12px;
+    text-align: left;
 }
