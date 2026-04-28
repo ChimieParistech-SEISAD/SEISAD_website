@@ -75,13 +75,13 @@ sections:
     content:
       text: |
         <!-- 第一行：Logo -->
-        <div style="width: 100%; display: flex; flex-direction: column; align-items: center; padding: 40px 0;">
+        <div style="width: 100%; display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 40px; padding: 40px 0;">
           <img src="media/chimie.png" style="height: 100px; width: auto;">
           <img src="media/iclehs.png" style="height: 90px; width: auto;">
           <img src="media/cnrs.png" style="height: 90px; width: auto;">
         </div>
         <!-- 第二行：文字 -->
-        <div style="text-align: center; border-top: 1px solid #eee; padding-top: 25px;">
+        <div style="text-align: center; border-top: 1px solid #eee; padding-top: 25px; font-weight: bold; font-size: 20px; color: #333333;">
           — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
         </div>
     design:
