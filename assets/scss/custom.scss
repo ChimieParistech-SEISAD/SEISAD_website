@@ -21,28 +21,33 @@ body {
     max-width: 1400px !important; 
 }
 
-/* 2. 导航栏 (Navigation Bar) 彻底美化 */
-
 /* 强制导航栏背景为青绿色 */
-header.blox-page-header .navbar { 
-    background-color: #008a85 !important; 
+body .blox-page-header .navbar.navbar-light {
+    background-color: #008a85 !important;
 }
 
-/* 导航选项栏文字：白色、加大、加粗 */
-header.blox-page-header .navbar-nav .nav-link {
+/* 导航文字平时为白色 */
+body .blox-page-header .navbar-light .navbar-nav .nav-link {
+    color: #ffffff !important;
     font-size: 1.1rem !important;
     font-weight: 700 !important;
-    color: #ffffff !important;
 }
 
-/* 关键：点击后(active)或鼠标指上去(hover)时，选项背景变白，文字变绿 */
-header.blox-page-header .navbar-nav .nav-item.active .nav-link,
-header.blox-page-header .navbar-nav .nav-link:hover {
+/* 点击或悬停：背景变白，文字变青绿 */
+body .blox-page-header .navbar-light .navbar-nav .nav-item.active .nav-link,
+body .blox-page-header .navbar-light .navbar-nav .nav-link:hover {
     background-color: #ffffff !important;
     color: #008a85 !important;
-    border-radius: 4px;
+    border-radius: 4px !important;
 }
 
+/* 辅助类：地址完美左对齐 */
+.address-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left; /* 强制文字整体左对齐 */
+}
 /* 3. Research Themes 专用容器样式 */
 .themes-container {
     display: flex;
