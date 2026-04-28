@@ -96,3 +96,9 @@ sitemap:
   _merge: deep
 minify:
   _merge: deep
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: static
+      target: static
