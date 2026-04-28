@@ -1,5 +1,5 @@
 ---
-title: "People"
+title: "Group Members"
 type: landing
 
 sections:
@@ -41,8 +41,8 @@ sections:
           
           /* 图片样式 */
           .person-img {
-            width: 180px;  /* 调大了一点照片 */
-            height: 220px;
+            width: 90px;  /* 调大了一点照片 */
+            height: 110px;
             object-fit: cover;
             border-radius: 8px;
             flex-shrink: 0; /* 防止图片被文字挤扁 */
