@@ -82,9 +82,10 @@ sections:
         </div>
         <!-- 第二行：文字 -->
         <div style="text-align: center; border-top: 1px solid #eee; padding-top: 25px;">
-           <div style="font-weight: bold; font-size: 1.1rem;">— INSTITUTE OF CHEMISTRY FOR LIFE & HEALTH SCIENCES —
-        </div>
-        <div style="margin-top: 6px; color: #666;">Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD)
+          <div style="font-weight: bold; font-size: 1.1rem;">— INSTITUTE OF CHEMISTRY FOR LIFE & HEALTH SCIENCES —
+          </div>
+          <div style="margin-top: 6px; color: #666;">Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD)
+          </div>
         </div>
     design:
       full_width: true
@@ -125,7 +126,7 @@ sections:
     content:
       text: |
         <div style="text-align: center; margin-top: 60px;">
-          <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">Research Themes</h2>
+          <h2 style="font-size: 2.5rem; font-weight: 600; margin-bottom: 20px;">Research Themes</h2>
         </div>
         
         <div class="themes-container">
