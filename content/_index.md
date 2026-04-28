@@ -77,12 +77,14 @@ sections:
         <!-- 第一行：Logo -->
         <div style="display: flex; justify-content: center; align-items: center; gap: 60px; padding: 40px 0 20px 0;">
           <img src="media/chimie.png" style="height: 100px; width: auto;">
-          <img src="media/iclehs.png" style="height: 120px; width: auto;">
+          <img src="media/iclehs.png" style="height: 100px; width: auto;">
           <img src="media/cnrs.png" style="height: 100px; width: auto;">
         </div>
         <!-- 第二行：文字 -->
-        <div style="text-align: center; border-top: 1px solid #eee; padding-top: 25px; width: 90%; max-width: 1200px; margin: 0 auto;">
-          <span class="institute-title">— INSTITUTE OF CHEMISTRY FOR LIFE & HEALTH SCIENCES —</span>
+        <div style="text-align: center; border-top: 1px solid #eee; padding-top: 25px;">
+           <div style="font-weight: bold; font-size: 1.1rem;">— INSTITUTE OF CHEMISTRY FOR LIFE & HEALTH SCIENCES —
+        </div>
+        <div style="margin-top: 6px; color: #666;">Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD)
         </div>
     design:
       full_width: true
