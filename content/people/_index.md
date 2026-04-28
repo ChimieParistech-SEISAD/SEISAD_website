@@ -41,8 +41,8 @@ sections:
           
           /* 图片样式 */
           .person-img {
-            width: 100px;  /* 调大了一点照片 */
-            height: 140px;
+            width: 120px;  /* 调大了一点照片 */
+            height: 160px;
             object-fit: cover;
             border-radius: 8px;
             flex-shrink: 0; /* 防止图片被文字挤扁 */
@@ -88,7 +88,7 @@ sections:
               <div class="person-title">Head of SEISAD, Professor</div>
               <div class="person-bio">Specialist in electrochemistry and surface analysis. Leading the design of new imaging agents.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> Email: <a href="mailto:anne.varenne@chimieparistech.psl.eu"> anne.varenne@chimieparistech.psl.eu</a></div>
+                <div><i class="fas fa-envelope"></i> Email: <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
                 <div><i class="fas fa-phone"></i> +33 x xx xx xx xx</div>
                 <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2021/02/annevarenne-notice-biographique.pdf" target="_blank">CV</a></div>
               </div>
@@ -103,10 +103,10 @@ sections:
               <div class="person-title">Junior Professor (CPJ)</div>
               <div class="person-bio">Research on luminescent nanomaterials, photoluminescence micro-spectroscopy, nano-bio interface engineering, and their bioapplications.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> Email: <a href="mailto:zijun.wang@chimieparistech.psl.eu"> zijun.wang@chimieparistech.psl.eu</a></div>
+                <div><i class="fas fa-envelope"></i> Email: <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
                 <div><i class="fas fa-phone"></i> +33 x xx xx xx xx</div>
                 <div><i class="fas fa-globe"></i> Email: <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">CV</a></div>
-                <div><i class="fas fa-globe"></i> <a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google scholar</a></div>    
+                <div><i class="fas fa-globe"></i> <a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google scholar</a></div>    
               </div>
             </div>
           </div>
