@@ -75,17 +75,14 @@ sections:
     content:
       text: |
         <!-- 第一行：Logo -->
-        <div style="display: flex; justify-content: center; align-items: center; gap: 60px; padding: 40px 0 20px 0;">
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: center; padding: 40px 0;">
           <img src="media/chimie.png" style="height: 100px; width: auto;">
-          <img src="media/iclehs.png" style="height: 100px; width: auto;">
-          <img src="media/cnrs.png" style="height: 100px; width: auto;">
+          <img src="media/iclehs.png" style="height: 90px; width: auto;">
+          <img src="media/cnrs.png" style="height: 90px; width: auto;">
         </div>
         <!-- 第二行：文字 -->
         <div style="text-align: center; border-top: 1px solid #eee; padding-top: 25px;">
-          <div style="font-weight: bold; font-size: 1.1rem;">— INSTITUTE OF CHEMISTRY FOR LIFE & HEALTH SCIENCES —
-          </div>
-          <div style="margin-top: 6px; color: #666;">Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD)
-          </div>
+          — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
         </div>
     design:
       full_width: true
@@ -96,7 +93,7 @@ sections:
   - block: markdown
     content:
       text: |
-        <div style="width: 85%; max-width: 1500px; margin: 30px auto;">
+        <div style="width: 85%; max-width: 1000px; margin: 30px auto;">
           <img src="media/AA3A0511.JPG" style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
         </div>
     design:
@@ -107,7 +104,7 @@ sections:
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
-      title: "SEISAD"
+      title: "Our research"
       text: |
         <div style="max-width: 1200px; margin: 0 auto; text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #222;">
           <span style="float: left; font-size: 70px; line-height: 60px; padding-top: 4px; padding-right: 15px; font-family: Georgia; color: #008a85; font-weight: bold;">A</span>ctually, the Team develops projects aimed at elaborating processes and tools for the early detection of pathological signals using chemical and analytical methodologies. The main prospections are related to: (i) new methodologies of synthesis and supported catalysis in mini – and continuous microflow reactors, synthesis of libraries of molecules as ligands of proteins, development of new radio-labelling methodologies for imaging; (ii) electrochemical sensors for biological systems and for screening biological markers, molecular materials for electroanalysis and electrocatalysis, microelectrochemical patterning of surfaces using scanning electrochemical microscopy, label-free electrochemical detection of microRNAs ; (iii) preparation of targeted optical and MR imaging agents, development of molecular magnetic resonance imaging MRI methods & functional imaging methods for the characterization and therapeutic follow-up of cancer in preclinics and (iv) characterization of new nano-supports and selective objects : peptide nanotubes, aptamers, nanobodies, design and characterization of original biocompatible nano-objects and quantitative characterization of their non-covalent interactions, development of miniaturized total analysis systems for applications ranging from environmental control to in-vitro medical diagnosis.
