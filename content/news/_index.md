@@ -5,5 +5,5 @@ sections:
   - block: markdown
     content:
       title: "News"
-      text: "最近有什么news..."
+      text: "what is the news..."
 ---
