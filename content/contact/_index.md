@@ -5,5 +5,5 @@ sections:
   - block: markdown
     content:
       title: "How to contact us"
-      text: "地址，联系方式，邮件，工作时间..."
+      text: "Paris，联系方式，邮件，工作时间..."
 ---
