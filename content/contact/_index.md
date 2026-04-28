@@ -7,22 +7,6 @@ sections:
     content:
       title: "Contact Us"
       text: |
-        <style>
-          .navbar { background-color: #008a85 !important; }
-          .navbar-nav .nav-link {
-            font-size: 1.15rem !important;
-            font-weight: 700 !important;
-            color: #ffffff !important;
-            padding: 10px 20px !important;
-          }
-          .navbar-nav .nav-link:hover,
-          .navbar-nav .nav-item.active .nav-link {
-            background-color: #ffffff !important;
-            color: #008a85 !important;
-            border-radius: 5px;
-          }
-          .navbar-brand { font-size: 1.6rem !important; color: #fff !important; }
-        </style>
         <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding: 20px 0;">
           <div style="flex: 1; min-width: 300px; font-size: 1.1rem; line-height: 1.8;">
             <h3 style="margin-bottom: 15px; color: #008a85;">Office Location</h3>
