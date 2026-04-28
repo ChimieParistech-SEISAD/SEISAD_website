@@ -129,12 +129,12 @@ sections:
           <div class="person-card">
             <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Student Name">
             <div class="person-info">
-              <div class="person-name">Alice Smith</div>
-              <div class="person-title">PhD Student (3rd Year)</div>
-              <div class="person-bio">Working on electrochemical sensors for biological markers.</div>
+              <div class="person-name">Xingyuan XU</div>
+              <div class="person-title">PhD Student</div>
+              <div class="person-bio">Working AI.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> <a href="mailto:alice.smith@example.com">Email</a></div>
-                <div><i class="fas fa-globe"></i> <a href="#">LinkedIn</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:xingyuan.xu@chimieparistech.psl.eu">Email</a></div>
+                <div><i class="fas fa-globe"></i> <a href="https://www.linkedin.com/in/xingyuan-xu-a125293a9/">LinkedIn</a></div>
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@ sections:
           <div class="person-card">
             <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Student Name">
             <div class="person-info">
-              <div class="person-name">Bob Johnson</div>
+              <div class="person-name">Xingyuan XU</div>
               <div class="person-title">Master Student</div>
               <div class="person-bio">Focusing on synthesis of libraries of molecules as ligands.</div>
               <div class="person-links">
