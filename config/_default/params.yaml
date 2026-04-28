@@ -289,3 +289,8 @@ hugoblox:
     # Affiliate referral code for rewards program
     # Join affiliate program: https://hugoblox.com/affiliates
     affiliate_code: ""
+    
+ # 在 params.yaml 中查找或添加
+ plugins:
+   css:
+     - "scss/custom.scss"
