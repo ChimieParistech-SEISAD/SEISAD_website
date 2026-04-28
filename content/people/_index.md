@@ -72,7 +72,7 @@ sections:
 
   # 
   # ────────────────────────────────────────────────────────────────────────────
-  # 1. Permanent Members (永久成员)
+  # 1. Permanent Members 
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
@@ -88,8 +88,8 @@ sections:
               <div class="person-title">Head of SEISAD</div>
               <div class="person-bio">Specialist in electrochemistry and surface analysis. Leading the design of new imaging agents.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> <a href="mailto:jean.dupont@chimieparistech.psl.eu">Email</a></div>
-                <div><i class="fas fa-phone"></i> +33 1 23 45 67 89</div>
+                <div><i class="fas fa-envelope"></i> Email: <a href="mailto:anne.varenne@chimieparistech.psl.eu"> anne.varenne@chimieparistech.psl.eu</a></div>
+                <div><i class="fas fa-phone"></i> +33 x xx xx xx xx</div>
                 <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2021/02/annevarenne-notice-biographique.pdf" target="_blank">CV</a></div>
               </div>
             </div>
@@ -103,9 +103,9 @@ sections:
               <div class="person-title">Junior Professor</div>
               <div class="person-bio">Expert in luminescent nanomaterials, photoluminescence micro-spectroscopy, nano-bio interface engineering, and their bioapplications.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> <a href="zijun.wang@chimieparistech.psl.eu"> zijun.wang@chimieparistech.psl.eu Email</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:zijun.wang@chimieparistech.psl.eu"> zijun.wang@chimieparistech.psl.eu</a></div>
                 <div><i class="fas fa-phone"></i> +33 x xx xx xx xx</div>
-                <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">CV</a></div>
+                <div><i class="fas fa-globe"></i> Email: <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">CV</a></div>
                 <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf](https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google scholar</a></div>    
               </div>
             </div>
@@ -118,7 +118,7 @@ sections:
         padding: ["3rem", 0, "3rem", 0]
 
   # ────────────────────────────────────────────────────────────────────────────
-  # 2. Students & Researchers (学生与研究员)
+  # 2. Students & Researchers
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
