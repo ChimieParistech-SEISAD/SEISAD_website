@@ -47,15 +47,10 @@ sections:
             100% { transform: translateX(0); }
           }
 
-          /* 3. Wide Text Layout: Maximizing horizontal space */
-          .wide-text-container {
-            width: 95%; 
-            max-width: 1800px; 
-            margin: 0 auto; 
-            text-align: justify; 
-            line-height: 1.6; 
-            font-size: 1.15rem; 
-            color: #222;
+          /* 3. The 80% Content Wrapper */
+          .centered-80-wrapper {
+            width: 80%;
+            margin: 0 auto;
           }
         </style>
 
@@ -65,8 +60,8 @@ sections:
   - block: markdown
     content:
       text: |
-       <div style="text-align: center; padding: 40px 20px; background: #fff;">
-          <h2 style="color: #2d3748; font-weight: bold; font-size: 1.6rem; letter-spacing: 1px;">
+       <div style="text-align: center; padding: 10px 20px; background: #fff;">
+          <h2 style="color: #2d3748; font-weight: bold; font-size: 2rem; letter-spacing: 1px;">
             — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
           </h2>
         </div> 
