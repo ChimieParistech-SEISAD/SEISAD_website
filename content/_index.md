@@ -115,7 +115,7 @@ sections:
   - block: markdown
     content:
       text: |
-        <div class="footer-logo-bar">
+        <div class="footer-logo-bar" style="display: flex; justify-content: space-evenly; align-items: center; padding: 80px 10%; width: 100%;">
           <img src="media/chimie.png" style="height: 100px; width: auto; object-fit: contain;">
           <img src="media/iclehs.png" style="height: 70px; width: auto; object-fit: contain;">
           <img src="media/cnrs.png" style="height: 80px; width: auto; object-fit: contain;">
