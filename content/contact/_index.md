@@ -1,24 +1,6 @@
 ---
 title: Contact
 type: landing
-
-sections:
-  # ────────────────────────────────────────────────────────────────────────────
-  # 1. 样式注入 (确保左对齐，防止被识别为代码块)
-  # ────────────────────────────────────────────────────────────────────────────
-  - block: markdown
-    content:
-      text: |
-        <style>
-        .navbar { background-color: #008a85 !important; box-shadow: none !important; border: none !important; }
-        .navbar-nav .nav-link { color: #ffffff !important; font-weight: 700 !important; }
-        .navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-link:hover {
-        background-color: #ffffff !important; color: #008a85 !important; border-radius: 5px;
-        }
-        .navbar-brand, .nav-link i { color: #ffffff !important; }
-        .max-w-prose, .prose { max-width: 100% !important; }
-        </style>
-
   # ────────────────────────────────────────────────────────────────────────────
   # 2. 内容区块 (HTML 标签必须顶格写)
   # ────────────────────────────────────────────────────────────────────────────
