@@ -20,7 +20,7 @@ sections:
           /* 自定义居中标题：位置下移 */
           .section-title-custom {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 2rem;
             font-weight: bold;
             color: #333;
             margin-top: 70px;    /* 标题下移距离 */
