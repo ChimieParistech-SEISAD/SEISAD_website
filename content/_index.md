@@ -57,7 +57,7 @@ sections:
     content:
       text: |
         <div style="text-align: center; padding: 2rem 0; background: #fff;">
-          <h2 style="color: #2d3748; font-weight: bold; font-size: 1.8rem; letter-spacing: 1px;">
+          <h2 style="color: #2d3748; font-weight: bold; font-size: 1.5rem; letter-spacing: 1px;">
             — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
           </h2>
         </div> 
