@@ -1,21 +1,34 @@
+/* assets/scss/custom.scss */
+
 /* --- 导航栏全局优化 --- */
 
-/* 1. 初始状态：青绿色背景 */
+/* 1. 初始状态：深青色背景，增加高度，移除灰色阴影 */
 header.blox-page-header .navbar {
     background-color: #008a85 !important;
-    padding: 0.8rem 0 !important;
+    padding: 25px 0 !important; /* 增加导航栏高度 */
+    box-shadow: none !important; /* 彻底移除下方的灰色阴影/线条 */
+    border: none !important;
 }
 
-/* 2. 菜单文字：平时为白色 */
+/* 2. 站点名 SEISAD：白色，向右移动 */
+header.blox-page-header .navbar-brand {
+    color: #ffffff !important;
+    font-size: 1.6rem !important;
+    font-weight: bold !important;
+    margin-left: 60px !important; /* SEISAD 向右偏移量 */
+}
+
+/* 3. 菜单文字：白色，增加间距 */
 header.blox-page-header .navbar-nav .nav-link {
     color: #ffffff !important;
     font-weight: 700 !important;
-    font-size: 1.1rem !important;
-    padding: 10px 20px !important;
+    font-size: 1.2rem !important; /* 调大字体 */
+    margin: 0 10px !important;    /* 增加菜单项之间的间距 */
+    padding: 8px 15px !important;
     transition: all 0.3s ease;
 }
 
-/* 3. 重点：悬停(Hover)或点击选中(Active)时，背景变白，文字变青绿 */
+/* 4. 交互效果：悬停或选中时，背景变白，文字变青绿 */
 header.blox-page-header .navbar-nav .nav-item.active .nav-link,
 header.blox-page-header .navbar-nav .nav-link:hover {
     background-color: #ffffff !important;
@@ -23,14 +36,15 @@ header.blox-page-header .navbar-nav .nav-link:hover {
     border-radius: 5px;
 }
 
-/* 4. 站点名 SEISAD 也改为白色 */
-header.blox-page-header .navbar-brand {
+/* 5. 搜索、月亮、语言切换图标：统一白色 */
+header.blox-page-header .nav-link i, 
+header.blox-page-header .nav-link svg,
+header.blox-page-header .navbar-toggler {
     color: #ffffff !important;
-    font-size: 1.5rem !important;
 }
 
-/* 5. 搜索和月亮图标改为白色 */
-header.blox-page-header .nav-link i, 
-header.blox-page-header .nav-link svg {
-    color: #ffffff !important;
+/* --- 全局宽度补丁 --- */
+/* 确保内容能占满全屏，不被默认的窄屏样式限制 */
+.max-w-prose, .prose {
+    max-width: 100% !important;
 }
