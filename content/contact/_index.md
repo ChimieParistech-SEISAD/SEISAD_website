@@ -4,43 +4,6 @@ type: landing
 
 sections:
   # ────────────────────────────────────────────────────────────────────────────
-  # 1. Navbar and Layout CSS (Top-aligned style block)
-  # ────────────────────────────────────────────────────────────────────────────
-  - block: markdown
-    content:
-      text: |
-        <style>
-          /* Navbar Styling */
-          .navbar { 
-            background-color: #008a85 !important; 
-            box-shadow: none !important; 
-            border: none !important;
-            padding: 25px 0 !important; 
-          }
-          .navbar-brand {
-            color: #ffffff !important;
-            font-size: 1.6rem !important;
-            font-weight: bold !important;
-            margin-left: 60px !important;
-          }
-          .navbar-nav .nav-link { 
-            color: #ffffff !important; 
-            font-weight: 700 !important; 
-            font-size: 1.25rem !important; 
-            margin: 0 15px !important;
-          }
-          .navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-link:hover {
-            background-color: #ffffff !important;
-            color: #008a85 !important;
-            border-radius: 5px;
-          }
-          .navbar-brand, .nav-link i { color: #ffffff !important; }
-
-          /* Layout Width Fix */
-          .max-w-prose, .prose { max-width: 100% !important; }
-        </style>
-
-  # ────────────────────────────────────────────────────────────────────────────
   # 2. Contact Content
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
