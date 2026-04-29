@@ -18,6 +18,7 @@ sections:
             background-color: #008a85 !important; 
             box-shadow: none !important; /* Removes bottom grey shadow/line */
             border: none !important;
+            padding: 20px 0 !important;
           }
           .navbar-nav .nav-link { color: #ffffff !important; font-weight: 700 !important; }
           .navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-link:hover {
@@ -115,8 +116,8 @@ sections:
     content:
       text: |
         <div class="footer-logo-bar">
-          <img src="media/chimie.png" style="height: 80px; width: auto; object-fit: contain;">
-          <img src="media/iclehs.png" style="height: 100px; width: auto; object-fit: contain;">
+          <img src="media/chimie.png" style="height: 100px; width: auto; object-fit: contain;">
+          <img src="media/iclehs.png" style="height: 70px; width: auto; object-fit: contain;">
           <img src="media/cnrs.png" style="height: 80px; width: auto; object-fit: contain;">
         </div>
     design:
