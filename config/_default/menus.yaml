@@ -19,10 +19,10 @@ main:
     weight: 5
   - name: Opportunities
     url: '/opportunities/'
-    weight: 5
+    weight: 6
   - name: Contact
     url: '/contact/'
-    weight: 6
+    weight: 7
 
 sidebar:
   - identifier: more
