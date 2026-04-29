@@ -1,2 +1,31 @@
 .max-w-prose { max-width: 100% !important; }
 .prose { max-width: 100% !important; }
+<style>
+  /* Increased height for the navbar as requested */
+  .navbar { 
+    padding: 1.8rem 0 !important; 
+  }
+
+  /* Improved Footer Logo Bar */
+  .footer-logo-bar {
+    display: flex;
+    /* justify-content: space-evenly puts equal space around items */
+    justify-content: space-evenly; 
+    align-items: center;
+    /* Increase the first number (100px) to make the footer section taller */
+    padding: 100px 5%; 
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+    /* gap provides a minimum distance between logos */
+    gap: 100px; 
+  }
+
+  /* Responsive fix: stack logos on mobile so they don't look tiny */
+  @media (max-width: 768px) {
+    .footer-logo-bar {
+      flex-direction: column;
+      gap: 50px;
+      padding: 60px 0;
+    }
+  }
+</style>
