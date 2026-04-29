@@ -1,13 +1,14 @@
+---
 title: "Publications"
 type: landing
 
 sections:
   - block: markdown
     content:
-      title: "" # 将原标题留空，我们在下面用自定义 HTML 写，以便控制位置
+      title: ""
       text: |
         <style>
-          /* 1. 彻底破除主题窄屏限制 (与成员页一致) */
+          /* 1. 彻底破除主题窄屏限制 */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 100% !important; 
             width: 100% !important; 
@@ -39,15 +40,15 @@ sections:
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-left: 6px solid #008a85; /* 左侧色条，呼应成员页主题色 */
+            border-left: 6px solid #008a85;
             transition: transform 0.2s;
+            text-align: left;
           }
           .pub-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
           }
 
-          /* 论文标题 */
           .pub-title {
             display: block;
             font-size: 1.25rem;
@@ -57,24 +58,21 @@ sections:
             margin-bottom: 10px;
           }
 
-          /* 作者 */
           .pub-authors {
             font-size: 1.05rem;
             color: #444;
             margin-bottom: 8px;
           }
           .pub-authors strong {
-            color: #008a85; /* 高亮自己的名字 */
+            color: #008a85;
           }
 
-          /* 期刊、DOI等元数据 */
           .pub-meta {
             font-size: 0.95rem;
             color: #666;
             margin-bottom: 15px;
           }
 
-          /* 按钮样式 */
           .pub-links {
             display: flex;
             gap: 12px;
@@ -83,28 +81,23 @@ sections:
             display: inline-flex;
             align-items: center;
             padding: 6px 16px;
-            background: #f0f0f0;
+            background: #f0f0f0 !important;
             color: #333 !important;
             border-radius: 6px;
             font-size: 0.85rem;
             font-weight: 500;
             text-decoration: none !important;
-            transition: all 0.3s;
           }
           .pub-btn:hover {
-            background: #008a85;
+            background: #008a85 !important;
             color: white !important;
-          }
-          .pub-btn-pdf {
-            background: #e9f5f5;
-            color: #008a85 !important;
           }
         </style>
 
         <h2 class="section-title-custom">Selected Publications</h2>
 
         <div class="pub-container">
-          <!-- 论文 1 -->
+          <!-- 论文卡片开始 -->
           <div class="pub-card">
             <span class="pub-title">
               Three in One: In Vitro and In Vivo Evaluation of Anticancer Activity of a Theranostic Agent that Combines Magnetic Resonance Imaging, Optical Bioimaging, and Photodynamic Therapy Capabilities
@@ -118,20 +111,15 @@ sections:
               DOI: <a href="https://doi.org/10.1021/acsabm.3c00565" target="_blank">10.1021/acsabm.3c00565</a>
             </div>
             <div class="pub-links">
-              <a class="pub-btn" href="https://doi.org/10.1021/acsabm.3c00565" target="_blank">
-                <i class="fas fa-external-link-alt" style="margin-right:5px"></i> View Article
-              </a>
-              <a class="pub-btn pub-btn-pdf" href="https://pubs.acs.org/doi/pdf/10.1021/acsabm.3c00565" target="_blank">
-                <i class="fas fa-file-pdf" style="margin-right:5px"></i> PDF
-              </a>
+              <a class="pub-btn" href="https://doi.org/10.1021/acsabm.3c00565" target="_blank">View Article</a>
+              <a class="pub-btn" style="background:#e9f5f5 !important; color:#008a85 !important;" href="https://pubs.acs.org/doi/pdf/10.1021/acsabm.3c00565" target="_blank">PDF</a>
             </div>
           </div>
-          
-          <!-- 你可以在这里继续添加更多的 <div class="pub-card">...</div> -->
-          
+          <!-- 论文卡片结束 -->
         </div>
 
     design:
       full_width: true
       spacing:
         padding: ["0", 0, "4rem", 0]
+---
