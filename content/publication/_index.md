@@ -4,7 +4,7 @@ type: landing
 
 sections:
   # ────────────────────────────────────────────────────────────────────────────
-  # 1. Styling (Ensures consistency with the rest of your site)
+  # 1. Styling (Improved for scannability and layout)
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
@@ -18,61 +18,84 @@ sections:
           .pub-grid {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            width: 80%;
+            gap: 24px;
+            width: 90%;
+            max-width: 1100px;
             margin: 0 auto;
           }
 
           .pub-card {
             background: #ffffff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: left; /* Strict left alignment */
-            border-left: 5px solid #008a85; /* Visual accent matching SEISAD theme */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: left;
+            border-left: 6px solid #008a85; /* Brand accent */
+            transition: transform 0.2s ease;
+          }
+
+          .pub-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
           }
 
           .pub-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #2d3748;
-            margin-bottom: 10px;
-            line-height: 1.4;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            display: block;
           }
 
           .pub-authors {
             font-size: 1.05rem;
             color: #4a5568;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            line-height: 1.5;
           }
 
           .pub-meta {
             font-size: 0.95rem;
             color: #718096;
-            font-style: italic;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            border-top: 1px solid #edf2f7;
+            padding-top: 10px;
           }
 
           .pub-links {
             display: flex;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 12px;
           }
 
           .pub-btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             padding: 8px 16px;
             background-color: #008a85;
             color: white !important;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
+            border-radius: 4px;
+            text-decoration: none !important;
+            font-size: 0.85rem;
             font-weight: 600;
-            transition: 0.3s;
+            transition: background 0.2s;
+          }
+
+          .pub-btn i {
+            margin-right: 8px;
           }
 
           .pub-btn:hover {
             background-color: #006b67;
-            box-shadow: 0 4px 10px rgba(0,138,133,0.2);
+          }
+
+          .btn-pdf {
+            background-color: #4a5568;
+          }
+          
+          .btn-pdf:hover {
+            background-color: #2d3748;
           }
         </style>
 
@@ -86,25 +109,25 @@ sections:
         <div class="pub-grid">
           
           <div class="pub-card">
-            <div class="pub-authors">
-              S. Boumati, A. Sour, V. Heitz, J. Seguin, G. Beitz, Y. Kaga, M. Jakubaszek, J. Karges, G. Gasser, N. Mignet, and <strong>B. Doan</strong>.
-            </div>
+            <span class="pub-title">
+              Three in One: In Vitro and In Vivo Evaluation of Anticancer Activity of a Theranostic Agent that Combines Magnetic Resonance Imaging, Optical Bioimaging, and Photodynamic Therapy Capabilities
+            </span>
             
-            <div class="pub-title">
-              "Three in One: In Vitro and In Vivo Evaluation of Anticancer Activity of a Theranostic Agent that Combines Magnetic Resonance Imaging, Optical Bioimaging, and Photodynamic Therapy Capabilities."
+            <div class="pub-authors">
+              S. Boumati, A. Sour, V. Heitz, J. Seguin, G. Beitz, Y. Kaga, M. Jakubaszek, J. Karges, G. Gasser, N. Mignet, and <strong>B. Doan</strong>
             </div>
             
             <div class="pub-meta">
-              <em>ACS Applied Bio Materials</em>, 2023, <strong>6</strong> (11), 4791–4804. 
+              <em>ACS Applied Bio Materials</em>, 2023, <strong>6</strong> (11), 4791–4804.
               <br>
-              DOI: <a href="https://doi.org/10.1021/acsabm.3c00565" target="_blank" style="color: #008a85; text-decoration: underline;">10.1021/acsabm.3c00565</a>
+              DOI: <a href="https://doi.org/10.1021/acsabm.3c00565" target="_blank" style="color: #008a85; font-weight: 500;">10.1021/acsabm.3c00565</a>
             </div>
             
             <div class="pub-links">
               <a href="https://doi.org/10.1021/acsabm.3c00565" target="_blank" class="pub-btn">
                 <i class="fas fa-external-link-alt"></i> View Article
               </a>
-              <a href="https://pubs.acs.org/doi/pdf/10.1021/acsabm.3c00565" target="_blank" class="pub-btn" style="background-color: #4a5568;">
+              <a href="https://pubs.acs.org/doi/pdf/10.1021/acsabm.3c00565" target="_blank" class="pub-btn btn-pdf">
                 <i class="fas fa-file-pdf"></i> PDF
               </a>
             </div>
