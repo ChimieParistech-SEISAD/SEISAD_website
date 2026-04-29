@@ -7,7 +7,7 @@ sections:
     content:
       title: "Contact Us"
       text: |
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start; margin-top: 30px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
           
           <div style="flex: 1; min-width: 300px;">
             <h3 style="color: #008a85; margin-bottom: 20px; font-weight: 700;">Office Location</h3>
