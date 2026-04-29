@@ -17,6 +17,9 @@ main:
   - name: News
     url: '/news/'
     weight: 5
+  - name: Opportunities
+    url: '/opportunities/'
+    weight: 5
   - name: Contact
     url: '/contact/'
     weight: 6
