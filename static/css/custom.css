@@ -29,3 +29,47 @@
     }
   }
 </style>
+<style>
+  /* 1. Navbar: Remove grey shadow/border and increase height */
+  .navbar { 
+    background-color: #008a85 !important; 
+    box-shadow: none !important;      /* Removes the grey shadow */
+    border-bottom: none !important;  /* Removes the grey bottom line */
+    padding: 1.5rem 0 !important;    /* Increases height */
+  }
+
+  /* 2. Navigator Font: Increase size and make them bold */
+  .navbar-nav .nav-link { 
+    color: #ffffff !important; 
+    font-size: 1.25rem !important;   /* Increased font size */
+    font-weight: 700 !important; 
+    padding-left: 20px !important;   /* Adjust horizontal spacing */
+    padding-right: 20px !important;
+  }
+
+  /* 3. Even Distribution: Use Flexbox on the container */
+  .navbar-collapse {
+    justify-content: center !important; /* Centers the menu group */
+  }
+
+  .navbar-nav {
+    width: 80%;                     /* Allows menu to spread across the width */
+    justify-content: space-evenly;  /* Distributes items evenly in a line */
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  /* Hover and Active State fixes */
+  .navbar-nav .nav-item.active .nav-link, 
+  .navbar-nav .nav-link:hover {
+    background-color: #ffffff !important;
+    color: #008a85 !important;
+    border-radius: 8px;
+  }
+
+  /* Search & Dark Mode Icons: Align and color white */
+  .nav-link i, .nav-link svg {
+    color: #ffffff !important;
+    transform: scale(1.2); /* Make icons slightly larger to match font */
+  }
+</style>
