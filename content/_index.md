@@ -4,7 +4,7 @@ type: landing
 
 design:
   # Using standard spacing instead of "0"
-  spacing: "2rem"
+  spacing: "1rem"
 
 sections:
   # ────────────────────────────────────────────────────────────────────────────
@@ -14,9 +14,9 @@ sections:
     content:
       text: |
         <style>
-          /* 1. Global Width: Standard 80% approach */
+          /* 1. Global Width: Standard 85% approach */
           .max-w-prose, .prose, .container, .mx-auto { 
-            max-width: 80% !important; 
+            max-width: 85% !important; 
             width: 80% !important; 
           }
           
