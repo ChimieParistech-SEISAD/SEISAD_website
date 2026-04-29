@@ -88,7 +88,7 @@ sections:
         color: "#ffffff"
       spacing:
         # Standard comfortable padding
-        padding: ["4rem", "0", "4rem", "0"]
+        padding: ["2rem", "0", "2rem", "0"]
 
   # ────────────────────────────────────────────────────────────────────────────
   # 3. Logo Bar
