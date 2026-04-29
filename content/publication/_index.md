@@ -86,16 +86,18 @@ sections:
         <div class="pub-grid">
           
           <div class="pub-card">
-            <div class="pub-title">
-              Three in One: In Vitro and In Vivo Evaluation of Anticancer Activity of a Theranostic Agent that Combines Magnetic Resonance Imaging, Optical Bioimaging, and Photodynamic Therapy Capabilities
+            <div class="pub-authors">
+              S. Boumati, A. Sour, V. Heitz, J. Seguin, G. Beitz, Y. Kaga, M. Jakubaszek, J. Karges, G. Gasser, N. Mignet, and <strong>B. Doan</strong>.
             </div>
             
-            <div class="pub-authors">
-              S. Boumati, A. Sour, V. Heitz, J. Seguin, G. Beitz, Y. Kaga, M. Jakubaszek, J. Karges, G. Gasser, N. Mignet, and <strong>B. Doan</strong>
+            <div class="pub-title">
+              "Three in One: In Vitro and In Vivo Evaluation of Anticancer Activity of a Theranostic Agent that Combines Magnetic Resonance Imaging, Optical Bioimaging, and Photodynamic Therapy Capabilities."
             </div>
             
             <div class="pub-meta">
-              ACS Applied Bio Materials, 2023, 6 (11), 4791–4804
+              <em>ACS Applied Bio Materials</em>, 2023, <strong>6</strong> (11), 4791–4804. 
+              <br>
+              DOI: <a href="https://doi.org/10.1021/acsabm.3c00565" target="_blank" style="color: #008a85; text-decoration: underline;">10.1021/acsabm.3c00565</a>
             </div>
             
             <div class="pub-links">
