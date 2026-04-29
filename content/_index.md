@@ -7,71 +7,6 @@ design:
 
 sections:
   # ────────────────────────────────────────────────────────────────────────────
-  # 0. Core CSS & Animation Logic
-  # ────────────────────────────────────────────────────────────────────────────
-  - block: markdown
-    content:
-      text: |
-        <style>
-          /* 1. Navbar Customization */
-          .navbar { 
-            background-color: #008a85 !important; 
-            box-shadow: none !important; /* Removes bottom grey shadow/line */
-            border: none !important;
-            padding: 20px 0 !important;
-          }
-          .navbar-nav .nav-link { color: #ffffff !important; font-weight: 700 !important; }
-          .navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-link:hover {
-            background-color: #ffffff !important;
-            color: #008a85 !important;
-            border-radius: 5px;
-          }
-          .navbar-brand, .nav-link i { color: #ffffff !important; }
-          
-          /* 2. Full-Width Layout Fixes */
-          .max-w-prose, .prose { max-width: 100% !important; }
-          .hbb-section { padding: 0 !important; }
-
-          /* 3. Automatic Image Slider */
-          .slider-container {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            height: 600px; /* Adjust height as needed */
-          }
-          .slider-wrapper {
-            display: flex;
-            width: 300%; /* Total number of images x 100% */
-            height: 100%;
-            animation: slide 15s infinite; /* 5s per image */
-          }
-          .slider-wrapper img {
-            width: 100.333%; /* 1/3 of wrapper */
-            height: 100%;
-            object-fit: cover;
-          }
-          @keyframes slide {
-            0% { transform: translateX(0); }
-            30% { transform: translateX(0); }
-            33% { transform: translateX(-33.33%); }
-            63% { transform: translateX(-33.33%); }
-            66% { transform: translateX(-66.66%); }
-            96% { transform: translateX(-66.66%); }
-            100% { transform: translateX(0); }
-          }
-
-          /* 4. Footer Logo Bar */
-          .footer-logo-bar {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 60px 10%;
-            background-color: #ffffff;
-            border-top: 1px solid #eeeeee;
-          }
-        </style>
-
-  # ────────────────────────────────────────────────────────────────────────────
   # 1. Automatic Image Slider (Immediately below Navbar)
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
@@ -105,7 +40,7 @@ sections:
     design:
       full_width: true
       background:
-        color: "#f8fafc"
+        color: "#ffffff"
       spacing:
         padding: ["5rem", 0, "5rem", 0]
 
