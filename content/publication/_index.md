@@ -1,4 +1,6 @@
-- block: markdown
+---
+title: "Publications"
+type: landing- block: markdown
   content:
     title: "Selected Publications"
     text: |
@@ -29,3 +31,4 @@
         </div>
 
       </div>
+  ---
