@@ -98,7 +98,7 @@ sections:
               <div class="person-title">Junior Professor (CPJ)</div>
               <div class="person-bio">Research on luminescent nanomaterials and bioapplications.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> <a href="mailto:zijun.wang@chimieparistech.psl.eu">Email</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:zijun.wang@chimieparistech.psl.eu">Email: zijun.wang@chimieparistech.psl.eu</a></div>
                 <div><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
                 <div><i class="fas fa-file-pdf"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">Full CV</a></div>
               </div>
