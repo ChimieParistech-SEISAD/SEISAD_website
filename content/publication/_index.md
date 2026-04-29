@@ -17,7 +17,7 @@ sections:
           /* 2. 标题样式 */
           .section-title-custom {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: bold;
             color: #333;
             margin-top: 60px;
