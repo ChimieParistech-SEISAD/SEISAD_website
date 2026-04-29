@@ -15,8 +15,8 @@ sections:
         <style>
           /* 1. Global Width: Expand content to full screen width */
           .max-w-prose, .prose, .container, .mx-auto { 
-            max-width: 100% !important; 
-            width: 100% !important; 
+            max-width: 80% !important; 
+            width: 80% !important; 
           }
           
           /* 2. Automatic Slider Logic: 4s per image (12s total loop) */
@@ -60,7 +60,7 @@ sections:
   - block: markdown
     content:
       text: |
-       <div style="text-align: center; padding: 10px 20px; background: #fff;">
+       <div style="text-align: center; padding: 5px 10px; background: #fff;">
           <h2 style="color: #2d3748; font-weight: bold; font-size: 2rem; letter-spacing: 1px;">
             — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
           </h2>
