@@ -6,49 +6,116 @@ sections:
   # ────────────────────────────────────────────────────────────────────────────
   # 1. 顶部标语 (解决两行显示问题)
   # ────────────────────────────────────────────────────────────────────────────
+  # ────────────────────────────────────────────────────────────────────────────
+  # Research Themes Section
+  # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
-      title: "Our Research"
+      title: "" # Title handled inside text for better positioning
       text: |
-        <div style="text-align: center; margin-bottom: 50px;">
-          <p style="color: #666; font-size: 1.25rem; font-style: italic; max-width: 900px; margin: 0 auto; line-height: 1.4;">
-            "Advancing diagnostics through multidisciplinary chemical innovation"
-          </p>
-        </div>
+        <style>
+          /* Container logic for 80% centering */
+          .themes-section-wrapper {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+          }
 
-        <div class="themes-container">
-          <div class="theme-card">
-            <div class="theme-icon" style="background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);">
-              <i class="fas fa-flask"></i>
-            </div>
-            <div class="theme-name">Synthetic Methodologies</div>
-            <div class="theme-desc">
-              Focusing on new methodologies of synthesis and supported catalysis in <strong>microflow reactors</strong>, protein ligand libraries, and radio-labelling for advanced imaging.
-            </div>
+          .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+          }
+
+          .theme-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 4px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .theme-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-bottom: 4px solid #008a85;
+          }
+
+          .theme-icon {
+            font-size: 3rem;
+            color: #008a85;
+            margin-bottom: 20px;
+          }
+
+          .theme-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 15px;
+          }
+
+          .theme-desc {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+            text-align: center;
+          }
+
+          .research-header {
+            margin-bottom: 20px;
+          }
+
+          .research-header h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+          }
+          
+          /* Ensuring icons and text align perfectly */
+          .theme-card * {
+            text-align: center;
+          }
+        </style>
+
+        <div class="themes-section-wrapper">
+          <div class="research-header">
+            <h2>Research Themes</h2>
           </div>
           
-          <div class="theme-card">
-            <div class="theme-icon" style="background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); color: #2563eb;">
-              <i class="fas fa-bolt"></i>
+          <div class="themes-grid">
+            <div class="theme-card">
+              <div class="theme-icon"><i class="fas fa-flask"></i></div>
+              <div class="theme-name">Synthetic Methodologies</div>
+              <div class="theme-desc">
+                Development of new synthetic methodologies and supported catalysis in mini- and continuous microflow reactors.
+              </div>
             </div>
-            <div class="theme-name">Sensors & Electroanalysis</div>
-            <div class="theme-desc">
-              Development of <strong>electrochemical sensors</strong> for biological markers, microelectrochemical surface patterning (SECM), and label-free detection of microRNAs.
+            
+            <div class="theme-card">
+              <div class="theme-icon"><i class="fas fa-bolt"></i></div>
+              <div class="theme-name">Sensors</div>
+              <div class="theme-desc">
+                Design and application of electrochemical sensors for biological markers and label-free detection techniques.
+              </div>
             </div>
-          </div>
-          
-          <div class="theme-card">
-            <div class="theme-icon" style="background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); color: #ea580c;">
-              <i class="fas fa-microscope"></i>
-            </div>
-            <div class="theme-name">Imaging & Diagnosis</div>
-            <div class="theme-desc">
-              Preparation of targeted <strong>optical and MR imaging agents</strong>, functional MRI methods, and therapeutic follow-up of cancer in preclinical studies.
+            
+            <div class="theme-card">
+              <div class="theme-icon"><i class="fas fa-microscope"></i></div>
+              <div class="theme-name">Imaging</div>
+              <div class="theme-desc">
+                Elaboration of targeted optical and MR imaging agents for cancer diagnosis and preclinical therapeutic follow-up.
+              </div>
             </div>
           </div>
         </div>
     design:
       full_width: true
       spacing:
-        padding: ["3rem", 0, "6rem", 0]
+        # Standard spacing to give the section breathing room
+        padding: ["5rem", "0", "5rem", "0"]
 ---
