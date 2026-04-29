@@ -76,7 +76,7 @@ sections:
               <div class="person-bio">Electrochemistry and surface analysis.</div>
               <div class="person-links">
                 <div><i class="fas fa-envelope"></i> 
-                <strong>Email:</strong>
+                <span>Email:</span>
                 <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
                 <div><i class="fas fa-phone"></i> <span>+33 x xx xx xx xx</span></div>
                 <div><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=ndfeauUAAAAJ&hl=fr">Google Scholar</a></div>
@@ -92,7 +92,7 @@ sections:
               <div class="person-bio">Luminescent nanomaterials and bioapplications.</div>
               <div class="person-links">
                 <div><i class="fas fa-envelope"></i>
-                <strong>Email:</strong>
+                <span>Email:</span>
                 <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
                 <div><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
                 <div><i class="fas fa-file-pdf"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">Full CV</a></div>
@@ -122,7 +122,9 @@ sections:
               <div class="person-title">PhD Student</div>
               <div class="person-bio">Theranostics related AI.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> <a href="mailto:xingyuan.xu@chimieparistech.psl.eu">Email</a></div>
+                <div><i class="fas fa-envelope"></i>
+                <span>Email:</span>
+                <a href="mailto:xingyuan.xu@chimieparistech.psl.eu">xingyuan.xu@chimieparistech.psl.eu</a></div>
                 <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/xingyuan-xu-a125293a9/" target="_blank">LinkedIn</a></div>
               </div>
             </div>
