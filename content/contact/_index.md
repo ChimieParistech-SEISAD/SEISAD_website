@@ -1,19 +1,20 @@
+---
 title: "Contact"
 type: landing
 
 sections:
   - block: markdown
     content:
-      title: "" # 留空，我们在下面自定义标题
+      title: ""
       text: |
         <style>
-          /* 1. 彻底破除主题窄屏限制 (全站统一) */
+          /* 1. 彻底破除主题窄屏限制 */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 100% !important; 
             width: 100% !important; 
           }
 
-          /* 2. 标题样式对齐 */
+          /* 2. 标题样式 */
           .section-title-custom {
             text-align: center;
             font-size: 2.5rem;
@@ -33,6 +34,7 @@ sections:
             gap: 50px;
             align-items: center;
             padding-bottom: 60px;
+            text-align: left;
           }
 
           /* 4. 左侧文字区域 */
@@ -77,7 +79,6 @@ sections:
             height: 450px;
           }
 
-          /* 响应式调整 */
           @media (max-width: 900px) {
             .contact-wrapper { flex-direction: column; text-align: center; }
             .contact-item { justify-content: center; }
@@ -88,8 +89,6 @@ sections:
         <h2 class="section-title-custom">Contact Us</h2>
 
         <div class="contact-wrapper">
-          
-          <!-- 左侧：联系信息 -->
           <div class="contact-info">
             <h3>Office Location</h3>
             <div class="contact-item">
@@ -99,7 +98,6 @@ sections:
                 UMR 8060 / ENSCP – Chimie ParisTech
               </span>
             </div>
-            
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
               <span>
@@ -107,7 +105,6 @@ sections:
                 75005 Paris, France
               </span>
             </div>
-
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
               <span>
@@ -116,7 +113,6 @@ sections:
             </div>
           </div>
 
-          <!-- 右侧：地图 -->
           <div class="contact-map">
             <iframe
               class="map-frame"
@@ -124,9 +120,10 @@ sections:
               loading="lazy">
             </iframe>
           </div>
-
         </div>
+
     design:
       full_width: true
       spacing:
         padding: ["0", 0, "4rem", 0]
+---
