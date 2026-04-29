@@ -1,74 +1,21 @@
 ---
-title: Research
+title: Research Themes
 type: landing
 
 sections:
   # ────────────────────────────────────────────────────────────────────────────
-  # 0. 局部 CSS 样式表 (确保布局正常)
+  # 1. 顶部标语 (解决两行显示问题)
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
-      title: ""
+      title: "Our Research"
       text: |
-        <style>
-          .themes-container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            max-width: 1200px;
-            margin: 40px auto;
-            flex-wrap: wrap;
-          }
-          .theme-card {
-            flex: 0 1 300px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-          }
-          .theme-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 32px;
-            margin-bottom: 25px;
-            color: #008a85;
-            transition: transform 0.3s ease;
-          }
-          .theme-card:hover .theme-icon {
-            transform: scale(1.1);
-          }
-          .theme-name { 
-            font-size: 1.4rem; 
-            font-weight: bold; 
-            margin-bottom: 12px; 
-            color: #1a202c; 
-          }
-          .theme-desc { 
-            font-size: 1rem; 
-            color: #4a5568; 
-            line-height: 1.6; 
-            text-align: center;
-          }
-        </style>
-    design:
-      full_width: true
-
-  # ────────────────────────────────────────────────────────────────────────────
-  # 1. Research Themes 内容区块
-  # ────────────────────────────────────────────────────────────────────────────
-  - block: markdown
-    content:
-      text: |
-        <div style="text-align: center; margin: 40px 0 60px 0;">
-          <h2 style="font-size: 2.8rem; font-weight: 700; color: #1a202c; margin-bottom: 10px;">Research Themes</h2>
-          <p style="color: #666; font-size: 1.1rem;">Advancing diagnostics through multidisciplinary chemical innovation</p>
+        <div style="text-align: center; margin-bottom: 50px;">
+          <p style="color: #666; font-size: 1.25rem; font-style: italic; max-width: 900px; margin: 0 auto; line-height: 1.4;">
+            "Advancing diagnostics through multidisciplinary chemical innovation"
+          </p>
         </div>
-        
+
         <div class="themes-container">
           <div class="theme-card">
             <div class="theme-icon" style="background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);">
@@ -103,6 +50,5 @@ sections:
     design:
       full_width: true
       spacing:
-        padding: ["0", 0, "6rem", 0]
+        padding: ["3rem", 0, "6rem", 0]
 ---
-
