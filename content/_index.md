@@ -11,46 +11,35 @@ sections:
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
-      title: ""
       text: |
         <style>
-          /* 1. 解除容器限制，确保全屏宽度 */
-          .max-w-prose, .prose, .container, .mx-auto, .blox-markdown { 
-            max-width: 100% !important; 
-            width: 100% !important; 
-          }
-          .hbb-section { padding: 0 !important; }
-
-          /* 2. 导航栏联动补丁 (如果全局 CSS 未生效则由此强制控制) */
-          header.blox-page-header .navbar { 
-            background-color: #008a85 !important; 
-          }
-          header.blox-page-header .navbar-nav .nav-item.active .nav-link,
-          header.blox-page-header .navbar-nav .nav-link:hover {
+          /* 导航栏：背景深青色 */
+          .navbar { background-color: #008a85 !important; }
+          /* 导航文字：平时白色 */
+          .navbar-nav .nav-link { color: #ffffff !important; font-weight: 700 !important; }
+          /* 导航文字：悬停或点击激活时背景变白，文字变青色 */
+          .navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-link:hover {
             background-color: #ffffff !important;
             color: #008a85 !important;
             border-radius: 5px;
           }
-          header.blox-page-header .navbar-brand, 
-          header.blox-page-header .nav-link i {
-            color: #ffffff !important;
-          }
-
-          /* 3. 响应式 Logo 容器 */
-          .footer-logo-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 80px;
-            padding: 60px 0;
-            background-color: #ffffff;
-            border-top: 1px solid #eaeaea;
-          }
-          @media (max-width: 768px) {
-            .footer-logo-bar { gap: 30px; flex-wrap: wrap; }
-            .footer-logo-bar img { height: 60px !important; }
-          }
+          /* 站点名字和图标：白色 */
+          .navbar-brand, .nav-link i { color: #ffffff !important; }
+          
+          /* 移除 Markdown 默认宽度限制 */
+          .max-w-prose, .prose { max-width: 100% !important; }
         </style>
+
+        <div style="width: 100%; margin: 0 auto; text-align: center;">
+          <img src="media/AA3A0511.JPG" style="width: 100%; height: auto; display: block; border-radius: 0 0 15px 15px;">
+          <h2 style="margin-top: 30px; color: #2d3748; font-weight: bold; font-size: 1.4rem;">
+            — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
+          </h2>
+        </div>
+    design:
+      full_width: true
+      spacing:
+        padding: ["0", 0, "2rem", 0]
 
   # ────────────────────────────────────────────────────────────────────────────
   # 1. Group Photo (紧贴导航栏下方)
@@ -58,8 +47,8 @@ sections:
   - block: markdown
     content:
       text: |
-        <div style="width: 100%; background-color: #ffffff;">
-          <img src="media/AA3A0511.JPG" style="width: 100%; height: auto; display: block;">
+        <div style="width: 70%; background-color: #ffffff;">
+          <img src="media/AA3A0511.JPG" style="width: 70%; height: auto; display: block;">
           
           <div style="text-align: center; padding: 40px 20px; font-weight: bold; font-size: 1.4rem; color: #2d3748; letter-spacing: 0.5px;">
             — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
