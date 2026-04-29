@@ -14,9 +14,12 @@ sections:
             <p>
               <strong>Institute of Chemistry for Life and Health Sciences (i-CLeHS)</strong><br>
               UMR 8060 / ENSCP – Chimie ParisTech<br><br>
-              <i class="fas fa-map-marker-alt" style="margin-right:8px; color:#666;"></i>
-              11 Rue Pierre et Marie Curie<br>
-              75005 Paris, France
+              <div style="display: flex; align-items: flex-start;">
+                <i class="fas fa-map-marker-alt" style="margin-right:8px; color:#666;"></i>
+                <span>
+                  11 Rue Pierre et Marie Curie<br>
+                  75005 Paris, France
+                <span>
             </p>
           </div>
 
