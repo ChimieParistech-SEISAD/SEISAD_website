@@ -4,6 +4,30 @@ type: landing
 
 sections:
   # ────────────────────────────────────────────────────────────────────────────
+  # 1. Layout Patch (Ensuring Full Width)
+  # ────────────────────────────────────────────────────────────────────────────
+  - block: markdown
+    content:
+      text: |
+        <style>
+          /* 彻底突破窄屏限制 - Force Full Width for all lines */
+          .max-w-prose, .prose, .container, .mx-auto { 
+            max-width: 100% !important; 
+            width: 100% !important; 
+          }
+          
+          /* Ensuring the contact wrapper uses the new available width */
+          .full-width-contact-wrapper {
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 50px; 
+            align-items: flex-start; 
+            padding: 20px 0;
+            width: 100%;
+          }
+        </style>
+    
+  # ────────────────────────────────────────────────────────────────────────────
   # 2. Contact Content
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
