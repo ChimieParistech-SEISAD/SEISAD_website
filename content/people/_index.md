@@ -3,110 +3,108 @@ title: "Group Members"
 type: landing
 
 sections:
-#  ────────────────────────────────────────────────────────────────────────────
-  # 0. 强力宽度补丁与人员样式
+  # ────────────────────────────────────────────────────────────────────────────
+  # 0. CSS Styles (Optimized for positioning)
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
       title: ""
       text: |
         <style>
-          /* 1. 彻底破除主题的“窄屏”限制 */
+          /* 1. Remove Top Gap: Force the first section to move up */
+          #permanent-members { margin-top: -50px !important; }
+          
+          /* 2. Breadcrumb/Header fix: Hide empty titles if necessary */
+          .blox-page-header { margin-bottom: 0 !important; }
+
+          /* 3. Global Width */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 100% !important; 
             width: 100% !important; 
           }
 
-          /* 2. 人员网格：设为 1400px 宽，且一行两列 */
+          /* 4. People Grid Styling */
           .people-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* 一行两个 */
-            gap: 50px;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
             width: 90%;
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
           }
           
-          /* 3. 卡片样式：确保左图右字不换行 */
           .person-card {
             display: flex;
             align-items: flex-start;
-            gap: 30px; /* 图和字之间的间距 */
+            gap: 25px;
             background: #ffffff;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            min-height: 220px;
+            transition: transform 0.2s;
           }
+          .person-card:hover { transform: translateY(-5px); }
           
-          /* 图片样式 */
           .person-img {
-            width: 120px;  /* 调大了一点照片 */
-            height: 160px;
+            width: 130px; 
+            height: 170px;
             object-fit: cover;
             border-radius: 8px;
-            flex-shrink: 0; /* 防止图片被文字挤扁 */
-            background: #eee; /* 图片没加载出来时的占位色 */
+            flex-shrink: 0;
+            background: #eee;
           }
 
-          /* 文字信息 */
           .person-info { text-align: left; flex: 1; }
-          .person-name { font-size: 1.6rem; font-weight: bold; margin-bottom: 8px; color: #008a85; }
-          .person-title { font-style: italic; color: #555; margin-bottom: 12px; font-size: 1rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-          .person-bio { font-size: 0.95rem; line-height: 1.6; color: #444; margin-bottom: 15px; }
+          .person-name { font-size: 1.5rem; font-weight: bold; margin-bottom: 5px; color: #008a85; }
+          .person-title { font-style: italic; color: #666; margin-bottom: 10px; font-size: 0.95rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
+          .person-bio { font-size: 0.9rem; line-height: 1.5; color: #444; margin-bottom: 12px; }
           
-          /* 联系方式图标 */
-          .person-links { font-size: 0.9rem; color: #555; }
-          .person-links div { margin-bottom: 5px; display: flex; align-items: center; }
-          /* 这里手动写图标，防止 FontAwesome 没加载 */
-          .icon-box { width: 25px; color: #008a85; display: inline-block; font-weight: bold; }
+          .person-links { font-size: 0.85rem; color: #555; }
+          .person-links div { margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+          .person-links i { color: #008a85; width: 16px; }
           .person-links a { color: #008a85; text-decoration: none; }
           .person-links a:hover { text-decoration: underline; }
 
           @media (max-width: 1000px) {
-            .people-grid { grid-template-columns: 1fr; } /* 屏幕窄时变一列 */
+            .people-grid { grid-template-columns: 1fr; }
           }
         </style>
     design:
       full_width: true
 
-  # 
   # ────────────────────────────────────────────────────────────────────────────
-  # 1. Permanent Members 
+  # 1. Permanent Members (ID added for CSS targeting)
   # ────────────────────────────────────────────────────────────────────────────
   - block: markdown
     content:
       title: "Permanent Members"
       text: |
-        <div class="people-grid">
+        <div id="permanent-members" class="people-grid">
           
-          <!-- 1 -->
           <div class="person-card">
-            <img src="/SEISAD_website/media/people/xxx.jpg" class="person-img" alt="Name">
+            <img src="/SEISAD_website/media/people/xxx.jpg" class="person-img" alt="Anne Varenne">
             <div class="person-info">
               <div class="person-name">Prof. Anne Varenne</div>
               <div class="person-title">Head of SEISAD, Professor</div>
               <div class="person-bio">Specialist in electrochemistry and surface analysis. Leading the design of new imaging agents.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> Email: <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
                 <div><i class="fas fa-phone"></i> +33 x xx xx xx xx</div>
-                <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2021/02/annevarenne-notice-biographique.pdf" target="_blank">CV</a></div>
+                <div><i class="fas fa-file-alt"></i> <a href="#" target="_blank">Biographical Notice (CV)</a></div>
               </div>
             </div>
           </div>
 
-          <!-- 2 -->
           <div class="person-card">
-            <img src="/SEISAD_website/media/people/ZijunWang.jpg" class="person-img" alt="Name">
+            <img src="/SEISAD_website/media/people/ZijunWang.jpg" class="person-img" alt="Zijun Wang">
             <div class="person-info">
               <div class="person-name">Dr. Zijun Wang</div>
               <div class="person-title">Junior Professor (CPJ)</div>
-              <div class="person-bio">Research on luminescent nanomaterials, photoluminescence micro-spectroscopy, nano-bio interface engineering, and their bioapplications.</div>
+              <div class="person-bio">Research on luminescent nanomaterials, photoluminescence micro-spectroscopy, and nano-bio interface engineering.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> Email: <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
-                <div><i class="fas fa-phone"></i> +33 x xx xx xx xx</div>
-                <div><i class="fas fa-globe"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">CV</a></div>
-                <div><i class="fas fa-globe"></i> <a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google scholar</a></div>    
+                <div><i class="fas fa-envelope"></i> <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
+                <div><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ" target="_blank">Google Scholar</a></div>
+                <div><i class="fas fa-file-pdf"></i> <a href="#" target="_blank">Full CV</a></div>
               </div>
             </div>
           </div>
@@ -115,7 +113,8 @@ sections:
     design:
       full_width: true
       spacing:
-        padding: ["3rem", 0, "3rem", 0]
+        # Reduced top padding from "3rem" to "0"
+        padding: ["0.5rem", 0, "3rem", 0]
 
   # ────────────────────────────────────────────────────────────────────────────
   # 2. Students & Researchers
@@ -125,40 +124,22 @@ sections:
       title: "Students & Researchers"
       text: |
         <div class="people-grid">
-          
-          <!-- 学生 1 -->
           <div class="person-card">
-            <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Student Name">
+            <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Xingyuan XU">
             <div class="person-info">
               <div class="person-name">Xingyuan XU</div>
               <div class="person-title">PhD Student</div>
-              <div class="person-bio">Working AI.</div>
-              <div class="person-links">
-                <div><i class="fas fa-envelope"></i> <a href="mailto:xingyuan.xu@chimieparistech.psl.eu">Email</a></div>
-                <div><i class="fas fa-globe"></i> <a href="https://www.linkedin.com/in/xingyuan-xu-a125293a9/">LinkedIn</a></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 学生 2 -->
-          <div class="person-card">
-            <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Student Name">
-            <div class="person-info">
-              <div class="person-name">Xingyuan XU</div>
-              <div class="person-title">Master Student</div>
               <div class="person-bio">Focusing on synthesis of libraries of molecules as ligands.</div>
               <div class="person-links">
-                <div><i class="fas fa-envelope"></i> <a href="mailto:bob.johnson@example.com">Email</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:xingyuan.xu@chimieparistech.psl.eu">Email</a></div>
+                <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/xingyuan-xu-a125293a9/">LinkedIn</a></div>
               </div>
             </div>
           </div>
-
-        </div>
+          </div>
     design:
       full_width: true
       background:
         color: "#f8fafc"
       spacing:
         padding: ["3rem", 0, "5rem", 0]
-
----
