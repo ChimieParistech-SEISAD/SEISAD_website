@@ -4,22 +4,22 @@
 main:
   - name: Home
     url: '/'
-    weight: 10
+    weight: 1
   - name: Research
     url: '/research/'
-    weight: 20
+    weight: 2
   - name: Members
     url: '/people/'
-    weight: 30
+    weight: 3
   - name: Publication
     url: '/publication/'
-    weight: 40
+    weight: 4
   - name: News
     url: '/news/'
-    weight: 50
+    weight: 5
   - name: Contact
     url: '/contact/'
-    weight: 60
+    weight: 6
 
 sidebar:
   - identifier: more
