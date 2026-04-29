@@ -65,6 +65,11 @@ sections:
   - block: markdown
     content:
       text: |
+       <div style="text-align: center; padding: 40px 20px; background: #fff;">
+          <h2 style="color: #2d3748; font-weight: bold; font-size: 1.6rem; letter-spacing: 1px;">
+            — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
+          </h2>
+        </div> 
         <div class="slider-container">
           <div class="slider-wrapper">
             <img src="media/AA3A0511.JPG" alt="Slide 1">
@@ -72,11 +77,7 @@ sections:
             <img src="media/AA3A0511.JPG" alt="Slide 3" style="filter: sepia(0.3);">
           </div>
         </div>
-        <div style="text-align: center; padding: 40px 20px; background: #fff;">
-          <h2 style="color: #2d3748; font-weight: bold; font-size: 1.6rem; letter-spacing: 1px;">
-            — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
-          </h2>
-        </div>
+        
     design:
       full_width: true
 
@@ -104,8 +105,8 @@ sections:
     content:
       text: |
         <div class="footer-logo-bar" style="display: flex; justify-content: space-evenly; align-items: center; padding: 60px 5%; width: 100%; border-top: 1px solid #f0f0f0;">
-          <img src="media/chimie.png" style="height: 90px; width: auto; object-fit: contain;">
-          <img src="media/iclehs.png" style="height: 100px; width: auto; object-fit: contain;">
+          <img src="media/chimie.png" style="height: 110px; width: auto; object-fit: contain;">
+          <img src="media/iclehs.png" style="height: 80px; width: auto; object-fit: contain;">
           <img src="media/cnrs.png" style="height: 85px; width: auto; object-fit: contain;">
         </div>
     design:
