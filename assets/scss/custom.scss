@@ -1,76 +1,36 @@
-/* ==========================================================================
-   全局自定义样式 (SEISAD Website)
-   ========================================================================== */
+/* --- 导航栏全局优化 --- */
 
-/* 1. 页面整体布局优化 */
-body { 
-    background-color: #f8fafc; /* 建议取消之前的 red 测试色，换成淡灰色 */
-}
-
-/* 彻底解除 Markdown 块中的宽度限制，让内容可以占满屏幕 */
-.blox-markdown .max-w-prose, 
-.prose, 
-.container, 
-.mx-auto {
-    max-width: 100% !important; 
-    width: 100% !important;
-}
-
-/* 如果希望内容在大屏上有一个上限，防止文字排版过散 */
-.blox-markdown .mx-auto.max-w-prose {
-    max-width: 1400px !important; 
-}
-
-/* 强制导航栏背景为青绿色 */
-body .blox-page-header .navbar.navbar-light {
+/* 1. 初始状态：青绿色背景 */
+header.blox-page-header .navbar {
     background-color: #008a85 !important;
+    padding: 0.8rem 0 !important;
 }
 
-/* 导航文字平时为白色 */
-body .blox-page-header .navbar-light .navbar-nav .nav-link {
+/* 2. 菜单文字：平时为白色 */
+header.blox-page-header .navbar-nav .nav-link {
     color: #ffffff !important;
-    font-size: 1.1rem !important;
     font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease;
 }
 
-/* 点击或悬停：背景变白，文字变青绿 */
-body .blox-page-header .navbar-light .navbar-nav .nav-item.active .nav-link,
-body .blox-page-header .navbar-light .navbar-nav .nav-link:hover {
+/* 3. 重点：悬停(Hover)或点击选中(Active)时，背景变白，文字变青绿 */
+header.blox-page-header .navbar-nav .nav-item.active .nav-link,
+header.blox-page-header .navbar-nav .nav-link:hover {
     background-color: #ffffff !important;
     color: #008a85 !important;
-    border-radius: 4px !important;
+    border-radius: 5px;
 }
 
-/* 辅助类：地址完美左对齐 */
-.address-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    text-align: left; /* 强制文字整体左对齐 */
-}
-/* 3. Research Themes 专用容器样式 */
-.themes-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 40px auto;
-    flex-wrap: wrap;
+/* 4. 站点名 SEISAD 也改为白色 */
+header.blox-page-header .navbar-brand {
+    color: #ffffff !important;
+    font-size: 1.5rem !important;
 }
 
-.theme-card {
-    flex: 0 1 300px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* 4. 通用辅助类：解决地址左对齐问题 */
-.address-block {
-    display: flex; 
-    align-items: flex-start; 
-    gap: 12px;
-    text-align: left;
+/* 5. 搜索和月亮图标改为白色 */
+header.blox-page-header .nav-link i, 
+header.blox-page-header .nav-link svg {
+    color: #ffffff !important;
 }
