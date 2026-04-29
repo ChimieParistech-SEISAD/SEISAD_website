@@ -142,6 +142,7 @@ sections:
     content:
       text: |
         <div class="logo-bar">
+          <img src="media/seisad.png" style="height:80px;">
           <img src="media/chimie.png" style="height:100px;">
           <img src="media/iclehs.png" style="height:75px;">
           <img src="media/cnrs.png" style="height:80px;">
