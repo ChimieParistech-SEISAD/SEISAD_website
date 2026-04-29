@@ -8,43 +8,46 @@ sections:
       title: ""
       text: |
         <style>
+          /* 1. 强制破除宽度限制 (1400px) */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 100% !important; 
             width: 100% !important; 
           }
 
-          .opp-container {
+          .opp-outer-wrapper {
             width: 95%;
             max-width: 1400px;
             margin: 0 auto;
             padding-bottom: 60px;
-            text-align: left;
           }
 
           .section-title-custom {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: bold;
             color: #333;
-            margin-top: 60px;
-            margin-bottom: 50px;
+            margin-top: 50px;
+            margin-bottom: 40px;
           }
 
+          /* 2. 卡片整体设计 */
           .opp-card {
             background: #ffffff;
-            border-radius: 15px;
+            border-radius: 16px;
             border: 1px solid #e2e8f0;
             margin-bottom: 40px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: left;
           }
 
+          /* 3. 卡片头部蓝色条 */
           .opp-header {
             background: #008a85;
             color: white;
-            padding: 20px 30px;
+            padding: 25px 35px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -53,62 +56,74 @@ sections:
           .opp-badge {
             background: #ffffff;
             color: #008a85;
-            padding: 4px 12px;
+            padding: 5px 15px;
             border-radius: 20px;
             font-weight: bold;
             font-size: 0.9rem;
           }
 
+          /* 4. 卡片内容区域 */
           .opp-body {
-            padding: 30px;
+            padding: 35px;
           }
 
           .opp-section-title {
+            font-size: 1.3rem;
             font-weight: bold;
             color: #008a85;
-            margin: 20px 0 10px 0;
+            margin: 25px 0 12px 0;
             display: flex;
             align-items: center;
             gap: 10px;
           }
+          .opp-section-title:first-child { margin-top: 0; }
+
+          .opp-text {
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.7;
+          }
 
           .opp-list {
             padding-left: 20px;
-            margin-bottom: 20px;
+            margin: 10px 0;
           }
-          .opp-list li { margin-bottom: 8px; color: #444; }
+          .opp-list li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            color: #444;
+          }
 
+          /* 5. 申请按钮 */
           .apply-btn {
             display: inline-block;
             background: #008a85;
             color: white !important;
-            padding: 12px 25px;
+            padding: 12px 30px;
             border-radius: 8px;
             text-decoration: none !important;
             font-weight: bold;
-            margin-top: 20px;
-            transition: opacity 0.3s;
+            margin-top: 25px;
+            transition: transform 0.2s, background 0.2s;
           }
-          .apply-btn:hover { opacity: 0.9; }
+          .apply-btn:hover {
+            background: #006e6a;
+            transform: translateY(-2px);
+          }
         </style>
 
-        <h2 class="section-title-custom">Join Our Team</h2>
-
-        <div class="opp-container">
-          
-          <p style="text-align:center; font-size:1.2rem; margin-bottom:40px; color:#666;">
-            We are always looking for motivated students and researchers to join SEISAD group.
-          </p>
+        <div class="opp-outer-wrapper">
+          <h2 class="section-title-custom">Join Our Team</h2>
 
           <!-- 职位 1 -->
           <div class="opp-card">
             <div class="opp-header">
-              <span style="font-size:1.5rem; font-weight:bold;">PhD Position in Bio-Sensing</span>
+              <span style="font-size:1.6rem; font-weight:bold;">PhD Position in Bio-Sensing</span>
               <span class="opp-badge">Status: Open</span>
             </div>
             <div class="opp-body">
               <div class="opp-section-title"><i class="fas fa-info-circle"></i> Project Description</div>
-              <p>The candidate will work on developing a new generation of electrochemical sensors for early detection of neurological biomarkers. This project involves surface chemistry, nanomaterials, and microfluidics.</p>
+              <p class="opp-text">The candidate will work on developing a new generation of electrochemical sensors for early detection of neurological biomarkers. This project involves surface chemistry, nanomaterials, and microfluidics.</p>
               
               <div class="opp-section-title"><i class="fas fa-check-square"></i> Requirements</div>
               <ul class="opp-list">
@@ -124,12 +139,12 @@ sections:
           <!-- 职位 2 -->
           <div class="opp-card">
             <div class="opp-header">
-              <span style="font-size:1.5rem; font-weight:bold;">Postdoctoral Fellowship in Imaging Agents</span>
+              <span style="font-size:1.6rem; font-weight:bold;">Postdoctoral Fellowship</span>
               <span class="opp-badge">Status: Open</span>
             </div>
             <div class="opp-body">
               <div class="opp-section-title"><i class="fas fa-info-circle"></i> Project Description</div>
-              <p>Focus on the synthesis and preclinical evaluation of bimodal MRI/Optical imaging agents for cancer theranostics. Collaboration with clinical partners is expected.</p>
+              <p class="opp-text">Focus on the synthesis and preclinical evaluation of bimodal MRI/Optical imaging agents for cancer theranostics. Collaboration with clinical partners is expected.</p>
               
               <div class="opp-section-title"><i class="fas fa-check-square"></i> Requirements</div>
               <ul class="opp-list">
@@ -141,7 +156,6 @@ sections:
               <a href="mailto:zijun.wang@chimieparistech.psl.eu" class="apply-btn">Apply for Postdoc</a>
             </div>
           </div>
-
         </div>
 
     design:
