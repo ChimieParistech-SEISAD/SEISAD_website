@@ -13,9 +13,9 @@ header.blox-page-header .navbar {
 /* 2. 站点名 SEISAD：白色，向右移动 */
 header.blox-page-header .navbar-brand {
     color: #ffffff !important;
-    font-size: 1.6rem !important;
+    font-size: 2rem !important;
     font-weight: bold !important;
-    margin-left: 60px !important; /* SEISAD 向右偏移量 */
+    margin-left: 100px !important; /* SEISAD 向右偏移量 */
 }
 
 /* 3. 菜单文字：白色，增加间距 */
@@ -23,7 +23,7 @@ header.blox-page-header .navbar-nav .nav-link {
     color: #ffffff !important;
     font-weight: 700 !important;
     font-size: 1.2rem !important; /* 调大字体 */
-    margin: 0 10px !important;    /* 增加菜单项之间的间距 */
+    margin: 0 20px !important;    /* 增加菜单项之间的间距 */
     padding: 8px 15px !important;
     transition: all 0.3s ease;
 }
@@ -46,5 +46,5 @@ header.blox-page-header .navbar-toggler {
 /* --- 全局宽度补丁 --- */
 /* 确保内容能占满全屏，不被默认的窄屏样式限制 */
 .max-w-prose, .prose {
-    max-width: 100% !important;
+    max-width: 90% !important;
 }
