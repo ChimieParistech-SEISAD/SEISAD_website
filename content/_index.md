@@ -13,7 +13,7 @@ sections:
     content:
       text: |
         <style>
-          /* ===== 1. 全局顶部导航栏彻底变绿 (Header & Navbar) ===== */
+          /* ===== 1. 全局顶部导航栏彻底变绿 ===== */
           header, .page-header, .blox-page-header {
             background-color: #008a85 !important;
             padding: 0 !important;
@@ -22,48 +22,66 @@ sections:
 
           .navbar {
             background-color: #008a85 !important;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
             margin: 0 !important;
-            padding: 0.6rem 0 !important; 
+            padding: 0 !important; /* 关键：去掉内边距，让子元素可以顶天立地 */
             border: none !important;
+            min-height: 60px; /* 统一导航栏高度 */
           }
 
-          /* 导航栏默认文字（加粗，白色） */
-          .navbar-brand, 
-          .nav-link, 
-          .search-icon, 
-          .theme-toggle, 
-          #navbar-main .nav-item .nav-link {
+          /* ===== 2. 删除左上角文字 (SEISAD) ===== */
+          .navbar-brand {
+            display: none !important;
+          }
+
+          /* 让导航菜单占满高度并居中 */
+          .navbar-collapse {
+            height: 100%;
+          }
+          .navbar-nav {
+            height: 100%;
+            align-items: stretch; /* 让子元素拉伸填充高度 */
+          }
+          .nav-item {
+            display: flex;
+            align-items: stretch;
+          }
+
+          /* ===== 3. 导航文字样式 (顶天立地的悬停效果) ===== */
+          .nav-link {
             color: #ffffff !important;
             opacity: 1 !important;
-            font-weight: bold !important; /* 恢复并强化粗体 */
+            font-weight: bold !important;
             font-size: 1.05rem !important;
-            padding: 8px 16px !important; /* 增加一点点击区域 */
-            transition: all 0.2s ease;
+            padding: 0 1.5rem !important; /* 左右间距，控制色块宽度 */
+            display: flex !important;
+            align-items: center; /* 文字垂直居中 */
+            transition: all 0.3s ease;
+            height: 60px !important; /* 与 navbar 高度一致，实现顶天立地 */
+            border-radius: 0 !important; /* 悬停是矩形，不要圆角 */
           }
 
-          /* ===== 2. 当前页面高亮效果 (White Box, Green Text) ===== */
-          /* Hugo Blox 会自动给当前页面的链接加上 .active 类 */
+          /* 鼠标悬停时的效果：淡化背景，覆盖整个区域 */
+          .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.15) !important; /* 白色淡化背景 */
+            color: #ffffff !important;
+          }
+
+          /* 取消当前页面的特殊高亮（保持和其他一致） */
           .navbar-nav .nav-item .nav-link.active {
-            background-color: #ffffff !important; /* 白色方框背景 */
-            color: #008a85 !important;           /* 变成绿色文字 */
-            border-radius: 6px !important;        /* 圆角方框 */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+            background-color: transparent !important;
+            color: #ffffff !important;
           }
+          /* 如果希望当前页也有个淡淡的底色，可以开启下面这段 */
+          /* .navbar-nav .nav-item .nav-link.active { background-color: rgba(255, 255, 255, 0.08) !important; } */
 
-          /* 鼠标悬停时的效果：稍微变亮一点 */
-          .nav-link:hover:not(.active) {
-            background-color: rgba(255, 255, 255, 0.15) !important;
-            border-radius: 6px !important;
-          }
-
-          /* ===== 3. 页面宽度设置 ===== */
+          /* ===== 4. 页面宽度设置 ===== */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 85% !important; 
             width: 85% !important; 
           }
 
-          /* ===== 4. 间距系统 ===== */
+          /* ===== 5. 间距系统 ===== */
           :root {
             --space-xs: 0.5rem;
             --space-sm: 1rem;
@@ -76,7 +94,7 @@ sections:
             padding-bottom: 1rem !important;
           }
 
-          /* ===== 5. 轮播图 SLIDER ===== */
+          /* ===== 6. 轮播图 SLIDER ===== */
           .slider-container {
             width: 100%;
             height: 520px;
@@ -108,7 +126,7 @@ sections:
             100% { transform: translateX(0); }
           }
 
-          /* ===== 6. 标题与文字 ===== */
+          /* ===== 7. 标题与文字 ===== */
           .main-title {
             text-align: center;
             padding: var(--space-xs) 0;
@@ -125,7 +143,7 @@ sections:
             color: #222;
           }
 
-          /* ===== 7. 底部署名栏 ===== */
+          /* ===== 8. 底部署名栏 ===== */
           .logo-bar {
             display: flex;
             justify-content: space-evenly;
