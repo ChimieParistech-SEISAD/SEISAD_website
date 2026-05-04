@@ -14,57 +14,56 @@ sections:
       text: |
         <style>
           /* ===== 1. 全局顶部导航栏彻底变绿 (Header & Navbar) ===== */
-          /* 覆盖最外层容器 */
           header, .page-header, .blox-page-header {
             background-color: #008a85 !important;
             padding: 0 !important;
             margin: 0 !important;
           }
 
-          /* 覆盖导航栏主体 */
           .navbar {
             background-color: #008a85 !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
             margin: 0 !important;
-            padding: 0.8rem 0 !important; /* 控制导航栏的高度 */
+            padding: 0.6rem 0 !important; 
             border: none !important;
           }
 
-          /* 导航栏文字、Logo、图标全部设为白色 */
+          /* 导航栏默认文字（加粗，白色） */
           .navbar-brand, 
           .nav-link, 
           .search-icon, 
           .theme-toggle, 
-          .navbar-toggler,
           #navbar-main .nav-item .nav-link {
             color: #ffffff !important;
             opacity: 1 !important;
-            font-weight: 500 !important;
+            font-weight: bold !important; /* 恢复并强化粗体 */
+            font-size: 1.05rem !important;
+            padding: 8px 16px !important; /* 增加一点点击区域 */
+            transition: all 0.2s ease;
           }
 
-          /* 鼠标悬停时的文字颜色 */
-          .nav-link:hover {
-            color: #d1d5db !important;
+          /* ===== 2. 当前页面高亮效果 (White Box, Green Text) ===== */
+          /* Hugo Blox 会自动给当前页面的链接加上 .active 类 */
+          .navbar-nav .nav-item .nav-link.active {
+            background-color: #ffffff !important; /* 白色方框背景 */
+            color: #008a85 !important;           /* 变成绿色文字 */
+            border-radius: 6px !important;        /* 圆角方框 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
           }
-    
-          /* ===== 1. GLOBAL WIDTH ===== */
+
+          /* 鼠标悬停时的效果：稍微变亮一点 */
+          .nav-link:hover:not(.active) {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+            border-radius: 6px !important;
+          }
+
+          /* ===== 3. 页面宽度设置 ===== */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 85% !important; 
             width: 85% !important; 
           }
 
-          /* ===== 2. REMOVE HUGE DEFAULT SPACING ===== */
-          .blox-page-header {
-            margin-bottom: 0 !important;
-            padding-bottom: 0 !important;
-          }
-
-          .hbb-section {
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
-          }
-
-          /* ===== 3. SPACING SYSTEM (统一间距标准) ===== */
+          /* ===== 4. 间距系统 ===== */
           :root {
             --space-xs: 0.5rem;
             --space-sm: 1rem;
@@ -72,7 +71,12 @@ sections:
             --space-lg: 2.5rem;
           }
 
-          /* ===== 4. SLIDER ===== */
+          .hbb-section {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+          }
+
+          /* ===== 5. 轮播图 SLIDER ===== */
           .slider-container {
             width: 100%;
             height: 520px;
@@ -104,7 +108,7 @@ sections:
             100% { transform: translateX(0); }
           }
 
-          /* ===== 5. TITLE ===== */
+          /* ===== 6. 标题与文字 ===== */
           .main-title {
             text-align: center;
             padding: var(--space-xs) 0;
@@ -114,7 +118,6 @@ sections:
             letter-spacing: 1px;
           }
 
-          /* ===== 6. TEXT BLOCK ===== */
           .research-text {
             text-align: justify;
             line-height: 1.8;
@@ -122,7 +125,7 @@ sections:
             color: #222;
           }
 
-          /* ===== 7. LOGO BAR ===== */
+          /* ===== 7. 底部署名栏 ===== */
           .logo-bar {
             display: flex;
             justify-content: space-evenly;
