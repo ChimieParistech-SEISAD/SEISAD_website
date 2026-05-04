@@ -13,34 +13,38 @@ sections:
     content:
       text: |
         <style>
-/* ===== 彻底修改顶部容器 ===== */
-           header, .page-header {
-            background-color: #008a85 !important; /* 整个顶层容器背景 */
-            border-bottom: none !important;      /* 去掉底部可能存在的细线 */
+          /* ===== 1. 全局顶部导航栏彻底变绿 (Header & Navbar) ===== */
+          /* 覆盖最外层容器 */
+          header, .page-header, .blox-page-header {
+            background-color: #008a85 !important;
+            padding: 0 !important;
+            margin: 0 !important;
           }
 
+          /* 覆盖导航栏主体 */
           .navbar {
-            background-color: #008a85 !important; /* 确保导航栏本身也是这个颜色 */
-            box-shadow: none !important;          /* 去掉阴影，让它看起来更平整 */
-            padding-top: 15px !important;         /* 适当增加上下高度，让它更宽厚大气 */
-            padding-bottom: 15px !important;
+            background-color: #008a85 !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+            margin: 0 !important;
+            padding: 0.8rem 0 !important; /* 控制导航栏的高度 */
+            border: none !important;
           }
 
-          /* 统一文字和图标颜色为白色 */
+          /* 导航栏文字、Logo、图标全部设为白色 */
           .navbar-brand, 
           .nav-link, 
           .search-icon, 
           .theme-toggle, 
-          #navbar-main .nav-item .nav-link,
-          .navbar-toggler {
+          .navbar-toggler,
+          #navbar-main .nav-item .nav-link {
             color: #ffffff !important;
-            opacity: 1 !important; /* 确保文字清晰 */
+            opacity: 1 !important;
+            font-weight: 500 !important;
           }
 
-          /* 鼠标悬停在菜单上的效果 */
+          /* 鼠标悬停时的文字颜色 */
           .nav-link:hover {
-            color: #e2e8f0 !important; 
-            text-decoration: underline !important;
+            color: #d1d5db !important;
           }
     
           /* ===== 1. GLOBAL WIDTH ===== */
