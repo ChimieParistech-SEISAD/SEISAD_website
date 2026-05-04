@@ -13,12 +13,34 @@ sections:
     content:
       text: |
         <style>
-          /* ===== NAVBAR BACKGROUND ===== */
-          .navbar {
-            background-color: #008a85 !important; 
+/* ===== 彻底修改顶部容器 ===== */
+          header, .page-header {
+            background-color: #008a85 !important; /* 整个顶层容器背景 */
+            border-bottom: none !important;      /* 去掉底部可能存在的细线 */
           }
-          .navbar-brand, .nav-link, .search-icon {
-            color: white !important;
+
+          .navbar {
+            background-color: #008a85 !important; /* 确保导航栏本身也是这个颜色 */
+            box-shadow: none !important;          /* 去掉阴影，让它看起来更平整 */
+            padding-top: 15px !important;         /* 适当增加上下高度，让它更宽厚大气 */
+            padding-bottom: 15px !important;
+          }
+
+          /* 统一文字和图标颜色为白色 */
+          .navbar-brand, 
+          .nav-link, 
+          .search-icon, 
+          .theme-toggle, 
+          #navbar-main .nav-item .nav-link,
+          .navbar-toggler {
+            color: #ffffff !important;
+            opacity: 1 !important; /* 确保文字清晰 */
+          }
+
+          /* 鼠标悬停在菜单上的效果 */
+          .nav-link:hover {
+            color: #e2e8f0 !important; 
+            text-decoration: underline !important;
           }
     
           /* ===== 1. GLOBAL WIDTH ===== */
