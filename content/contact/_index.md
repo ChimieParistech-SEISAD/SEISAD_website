@@ -8,7 +8,7 @@ sections:
       title: ""
       text: |
         <style>
-          /* 1. 彻底破除主题窄屏限制 */
+          /* 1. 彻底破除主题窄屏限制qq */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 100% !important; 
             width: 100% !important; 
