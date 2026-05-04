@@ -14,7 +14,7 @@ sections:
       text: |
         <style>
 /* ===== 彻底修改顶部容器 ===== */
-          header, .page-header {
+           header, .page-header {
             background-color: #008a85 !important; /* 整个顶层容器背景 */
             border-bottom: none !important;      /* 去掉底部可能存在的细线 */
           }
