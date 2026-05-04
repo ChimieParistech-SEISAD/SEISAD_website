@@ -13,6 +13,14 @@ sections:
     content:
       text: |
         <style>
+          /* ===== NAVBAR BACKGROUND ===== */
+          .navbar {
+            background-color: #008a85 !important; 
+          }
+          .navbar-brand, .nav-link, .search-icon {
+            color: white !important;
+          }
+    
           /* ===== 1. GLOBAL WIDTH ===== */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 85% !important; 
