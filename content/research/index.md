@@ -80,7 +80,7 @@ sections:
           .nav-link {
             color: #ffffff !important;
             font-weight: bold !important;
-            font-size: 1.1rem !important; /* 稍微调小一点，防止在小屏幕挤压 */
+            font-size: 1.5rem !important; /* 稍微调小一点，防止在小屏幕挤压 */
             /* 关键：通过 padding 统一单词间的物理间距 */
             padding: 0 1.5rem !important; 
             transition: background-color 0.3s;
