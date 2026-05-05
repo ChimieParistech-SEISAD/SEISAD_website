@@ -19,14 +19,77 @@ sections:
           .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
           .home-outer-wrapper { width: 95%; max-width: 1400px; margin: 0 auto; clear: both; }
 
-          /* 2. 导航栏标准化 (同步全站) */
-          header, .page-header { background-color: #008a85 !important; padding: 0 !important; }
-          .navbar-brand, .navbar-brand-mobile, .brand-logo { display: none !important; }
-          .navbar { background-color: #008a85 !important; box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important; min-height: 60px; padding: 0 2rem !important; }
-          .navbar > .container, .navbar > .container-xl { display: flex !important; justify-content: space-between !important; max-width: 1400px !important; }
-          .navbar-collapse { flex-grow: 1 !important; display: flex !important; justify-content: center !important; }
-          .nav-link { color: #ffffff !important; font-weight: bold !important; font-size: 1.1rem !important; padding: 0 1.5rem !important; }
-          .navbar-nav-btns { display: flex !important; align-items: center !important; margin-left: 2rem !important; }
+          /* ===== 2. 导航栏标准化 (修正 SEISAD 显现和图标挤压问题) ===== */
+          header, .page-header {
+            background-color: #008a85 !important;
+            padding: 0 !important;
+          }
+          
+          /* 强制隐藏左侧所有的 Brand/Logo 文本 */
+          .navbar-brand, .navbar-brand-mobile, .brand-logo {
+            display: none !important;
+          }
+          
+          .navbar {
+            background-color: #008a85 !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+            min-height: 60px;
+            padding: 0 2rem !important; /* 给导航栏左右留出安全边距 */
+          }
+          
+          /* 导航栏容器：使用 space-between 让中间菜单居中，两侧撑开 */
+          .navbar > .container, .navbar > .container-xl {
+            display: flex !important;
+            justify-content: space-between !important; 
+            max-width: 1400px !important; /* 与内容宽度一致 */
+          }
+          
+          /* 中间菜单部分 */
+          .navbar-collapse {
+            flex-grow: 1 !important;
+            display: flex !important;
+            justify-content: center !important; /* 确保菜单项整体在中间 */
+          }
+          
+          .navbar-nav {
+            flex-direction: row !important;
+            align-items: center !important;
+          }
+          
+          .nav-item {
+            display: flex !important;
+            align-items: center !important;
+          }
+          
+          .nav-link {
+            color: #ffffff !important;
+            font-weight: bold !important;
+            font-size: 1.5rem !important; /* 稍微调小一点，防止在小屏幕挤压 */
+            /* 关键：通过 padding 统一单词间的物理间距 */
+            padding: 0 1.5rem !important; 
+            transition: background-color 0.3s;
+          }
+          
+          .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+            border-radius: 4px;
+          }
+          
+          /* 右侧图标部分 (搜索、月亮) */
+          .navbar-nav-btns {
+            display: flex !important;
+            align-items: center !important;
+            margin-left: 2rem !important; /* 强制与 "Contact" 保持距离 */
+          }
+          
+          .navbar-nav-btns .nav-link {
+            padding: 0 0.8rem !important; /* 图标之间的间距小一点 */
+          }
+          
+          /* 针对移动端的微调：如果屏幕太小，隐藏图标或调整 */
+          @media (max-width: 768px) {
+            .nav-link { padding: 0 0.8rem !important; font-size: 0.9rem !important; }
+          }
 
           /* 3. 统一标题横条 */
           .main-title-container {
@@ -114,7 +177,7 @@ sections:
         <!-- 2026-2022 占位 -->
         <h2 class="year-header">2023</h2>
         <div class="pub-card">
-        <span class="pub-title"><span class="pub-number">42.</span> Three in One: In Vitro and In Vivo Evaluation of Anticancer Activity of a Theranostic Agent...</span>
+        <span class="pub-title"><span class="pub-number">5.</span> Three in One: In Vitro and In Vivo Evaluation of Anticancer Activity of a Theranostic Agent...</span>
         <div class="pub-authors">S. Boumati, A. Sour, V. Heitz, J. Seguin, G. Beitz, Y. Kaga, M. Jakubaszek, J. Karges, G. Gasser, N. Mignet, and B. Doan</div>
         <div class="pub-meta">ACS Applied Bio Materials, 2023, 6 (11), 4791–4804.</div>
         <a class="pub-doi" href="https://doi.org/10.1021/acsabm.3c00565" target="_blank">https://doi.org/10.1021/acsabm.3c00565</a>
@@ -123,7 +186,7 @@ sections:
         <!-- 2021 模块 -->
         <h2 class="year-header">2021</h2>
         <div class="pub-card">
-        <span class="pub-title"><span class="pub-number">41.</span> Protein-protected metal nanoclusters as diagnostic and therapeutic platforms for biomedical applications.</span>
+        <span class="pub-title"><span class="pub-number">4.</span> Protein-protected metal nanoclusters as diagnostic and therapeutic platforms for biomedical applications.</span>
         <div class="pub-authors">IMAN ZARE, DANIEL M. CHEVRIER, ANNA CIFUENTES-RIUS, et al.</div>
         <div class="pub-meta">Materials Today 2021</div>
         <a class="pub-doi" href="https://doi.org/10.1016/j.mattod.2020.10.027" target="_blank">https://doi.org/10.1016/j.mattod.2020.10.027</a>
@@ -133,7 +196,7 @@ sections:
         <!-- 2020 模块 -->
         <h2 class="year-header">2020</h2>
         <div class="pub-card">
-        <span class="pub-title"><span class="pub-number">11.</span> A maltol-containing Ruthenium Polypyridyl Complex as a Potential Anticancer Agent.</span>
+        <span class="pub-title"><span class="pub-number">3.</span> A maltol-containing Ruthenium Polypyridyl Complex as a Potential Anticancer Agent.</span>
         <div class="pub-authors">A. NOTARO, M. JAKUBASZEK, S. KOCH, et al.</div>
         <div class="pub-meta">Chem. Eur. J. 26 (2020) 4997-5009</div>
         <a class="pub-doi" href="https://doi.org/10.1002/chem.201904877" target="_blank">https://doi.org/10.1002/chem.201904877</a>
@@ -142,7 +205,7 @@ sections:
         <!-- 2019 模块 -->
         <h2 class="year-header">2019</h2>
         <div class="pub-card">
-        <span class="pub-title"><span class="pub-number">24.</span> Integrated microfluidic device for the separation, decomposition and detection of low molecular weight S-nitrosothiols.</span>
+        <span class="pub-title"><span class="pub-number">2.</span> Integrated microfluidic device for the separation, decomposition and detection of low molecular weight S-nitrosothiols.</span>
         <div class="pub-authors">G. F. DUARTE-JUNIOR, A. ISMAIL, S. GRIVEAU, et al.</div>
         <div class="pub-meta">The Analyst 144 (2019) 180-185</div>
         <a class="pub-doi" href="http://doi.org/10.1039/C8AN00757H" target="_blank">http://doi.org/10.1039/C8AN00757H</a>
@@ -151,7 +214,7 @@ sections:
         <!-- 2018 模块 -->
         <h2 class="year-header">2018</h2>
         <div class="pub-card">
-        <span class="pub-title"><span class="pub-number">41.</span> Colorimetric immunoassays for the screening and specificity evaluation of molecules disturbing VEGFs/VEGFRs interactions.</span>
+        <span class="pub-title"><span class="pub-number">1.</span> Colorimetric immunoassays for the screening and specificity evaluation of molecules disturbing VEGFs/VEGFRs interactions.</span>
         <div class="pub-authors">L. TRAPIELLA-ALFONSO, S. BROUSSY, W-Q LIU, et al.</div>
         <div class="pub-meta">Anal. Biochem. 2018</div>
         <a class="pub-doi" href="http://doi.org/10.1016/j.ab.2017.12.029" target="_blank">http://doi.org/10.1016/j.ab.2017.12.029</a>
