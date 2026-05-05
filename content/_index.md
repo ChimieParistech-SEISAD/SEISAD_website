@@ -112,38 +112,36 @@ sections:
             95% { transform: translateX(-66.66%); }
             100% { transform: translateX(0); }
           }
-          /* ===== 7. 标题优化：更有品牌感 ===== */
-          .main-title {
-            text-align: center;
-            padding: 2.5rem 0 1.5rem 0; /* 增加上下间距，让它不那么拥挤 */
-            font-size: 1.4rem; /* 稍微调小一点全称，突出层次 */
-            font-weight: 500;
-            color: #4a5568; /* 全称用深灰色，更有质感 */
-            letter-spacing: 0.5px;
-            line-height: 1.4;
-            max-width: 90%;
-            margin: 0 auto;
+          /* ===== 7. 重新设计的标题区块 (精美卡片式) ===== */
+          .main-title-container {
+            background-color: #f0f9f8; /* 极浅的薄荷绿底色 */
+            border-left: 8px solid #008a85; /* 左侧深绿色加粗装饰条 */
+            padding: 1.5rem 2rem;
+            margin: 2rem auto;
+            max-width: 85%;
+            text-align: left; /* 改为左对齐，通常比居中显高级 */
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.05); /* 极淡的阴影 */
           }
 
-          /* 专门针对 SEISAD 这个词的样式 */
-          .brand-name {
-            color: #008a85; /* 实验室绿色 */
-            font-weight: 800; /* 极粗体 */
-            font-size: 1.8rem; /* 缩写比全称大 */
-            display: block; /* 让它换行，或者不换行（取决于你喜欢哪种） */
-            margin-top: 5px;
-            letter-spacing: 2px;
-          }
-
-          /* 给标题加一个淡淡的底部装饰线，增加精致感 */
-          .main-title::after {
-            content: "";
+          .full-name {
+            font-size: 1.1rem;
+            color: #4a5568;
+            text-transform: uppercase; /* 全称大写化，增加学术感 */
+            letter-spacing: 1px;
             display: block;
-            width: 80px;
-            height: 3px;
-            background-color: #008a85;
-            margin: 15px auto 0;
-            border-radius: 2px;
+            margin-bottom: 0.5rem;
+          }
+
+          .brand-name-bold {
+            font-size: 2.2rem;
+            color: #008a85;
+            font-weight: 900;
+            letter-spacing: -1px;
+          }
+
+          .brand-name-bold span {
+            color: #2d3748; /* 让圆括号保持深色，对比更明显 */
+            font-weight: 300;
           }
           /* ===== 8. 底部署名栏 ===== */
           .logo-bar {
@@ -232,9 +230,9 @@ sections:
   - block: markdown
     content:
       text: |
-        <div class="main-title">
-          Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team
-          <span class="brand-name">(SEISAD)</span>
+        <div class="main-title-container">
+          <span class="full-name">Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team</span>
+          <div class="brand-name-bold">SEISAD <span>—</span></div>
         </div>
         <div class="slider-container">
           <div class="slider-wrapper">
