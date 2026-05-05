@@ -35,22 +35,29 @@ sections:
             clear: both;
           }
 
-          /* ===== 2. 导航栏同步 ===== */
-          header, .page-header { background-color: #008a85 !important; padding: 0 !important; }
-          .navbar {
-            background-color: #008a85 !important;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
-            border: none !important;
-            min-height: 60px; 
+          /* ===== 2. 顶部导航栏同步 (核心修改区) ===== */
+          .navbar-nav { 
+            flex-direction: row !important; /* 强制横向排列 */
+            align-items: stretch !important; 
+            height: 100% !important;
           }
-          .navbar-brand { display: none !important; }
+
+          .nav-item { 
+            display: flex !important; 
+            align-items: stretch !important; 
+            height: 60px !important; /* 必须与主页高度一致 */
+          }
+
           .nav-link {
             color: #ffffff !important;
             font-weight: bold !important;
-            font-size: 1.4rem !important;
-            height: 60px !important; 
+            font-size: 1.4rem !important;      /* 字体大小 */
+            padding: 0 1.5rem !important;     /* 左右间距：这里的 1.5rem 决定了按钮间的距离 */
             display: flex !important;
-            align-items: center !important;
+            align-items: center !important; 
+            justify-content: center !important;
+            height: 60px !important; 
+            transition: background-color 0.3s ease;
           }
 
           /* ===== 3. 统一标题横条 (解决顶部贴紧问题) ===== */
