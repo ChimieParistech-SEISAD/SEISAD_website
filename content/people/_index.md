@@ -2,37 +2,96 @@
 title: "Group Members"
 type: landing
 
+design:
+  spacing: "0"
+
 sections:
-  # ────────────────────────────────────────────────────────────────────────────
-  # 1. Permanent Members
-  # ────────────────────────────────────────────────────────────────────────────
+  # ─────────────────────────────────────────────────────────
+  # 0. GLOBAL STYLE (同步主页、Research、News 的全站视觉规范)
+  # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
-      title: "" 
       text: |
         <style>
-          /* 彻底破除主题窄屏限制 */
+          /* ===== 1. 框架间距与宽度修正 ===== */
+          .blox-page-header, .main-content, main {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+          }
+          section.hbb-section {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+          }
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 100% !important; 
             width: 100% !important; 
           }
-          /* 自定义居中标题：位置下移 */
-          .section-title-custom {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #333;
-            margin-top: 70px;    /* 标题下移距离 */
-            margin-bottom: 50px;
+          .home-outer-wrapper {
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+            clear: both;
           }
-          /* 大宽屏网格布局：一行两个 */
+
+          /* ===== 2. 导航栏标准化 (修正 SEISAD 显现和图标挤压) ===== */
+          header, .page-header { background-color: #008a85 !important; padding: 0 !important; }
+          .navbar-brand, .navbar-brand-mobile, .brand-logo { display: none !important; }
+          .navbar {
+            background-color: #008a85 !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+            min-height: 60px;
+            padding: 0 2rem !important;
+          }
+          .navbar > .container, .navbar > .container-xl {
+            display: flex !important;
+            justify-content: space-between !important; 
+            max-width: 1400px !important;
+          }
+          .navbar-collapse { flex-grow: 1 !important; display: flex !important; justify-content: center !important; }
+          .navbar-nav { flex-direction: row !important; align-items: center !important; }
+          .nav-link {
+            color: #ffffff !important;
+            font-weight: bold !important;
+            font-size: 1.1rem !important;
+            padding: 0 1.5rem !important; 
+            transition: background-color 0.3s;
+          }
+          .nav-link:hover { background-color: rgba(255, 255, 255, 0.15) !important; border-radius: 4px; }
+          .navbar-nav-btns { display: flex !important; align-items: center !important; margin-left: 2rem !important; }
+
+          /* ===== 3. 统一标题横条 ===== */
+          .main-title-container {
+            background-color: #f0f9f8;
+            border-top: 6px solid #008a85;
+            padding: 2.5rem 1.5rem;
+            margin: 0.5rem 0 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-radius: 0 0 8px 8px;
+          }
+          .full-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 0.8rem;
+          }
+          .brand-name-bold {
+            font-size: 2.6rem;
+            color: #008a85;
+            font-weight: 900;
+            letter-spacing: 4px;
+            line-height: 1;
+          }
+
+          /* ===== 4. Members 专用网格与卡片 ===== */
           .people-grid {
             display: grid;
             grid-template-columns: 1fr 1fr; 
             gap: 40px;
-            width: 95%;
-            max-width: 1400px; /* 增加宽度 */
-            margin: 0 auto;
+            margin-bottom: 50px;
           }
           .person-card {
             display: flex;
@@ -42,8 +101,10 @@ sections:
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            min-height: 220px;
+            border: 1px solid #eee;
+            transition: transform 0.3s;
           }
+          .person-card:hover { transform: translateY(-5px); }
           .person-img {
             width: 140px;
             height: 185px;
@@ -53,79 +114,128 @@ sections:
             background: #f0f0f0;
           }
           .person-info { text-align: left; flex: 1; }
-          .person-name { font-size: 1.6rem; font-weight: bold; color: #008a85; margin-bottom: 5px; }
-          .person-title { font-style: italic; color: #555; font-size: 1rem; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-          .person-bio { font-size: 0.95rem; line-height: 1.6; color: #444; margin-bottom: 15px; }
-          .person-links { font-size: 0.9rem; }
-          .person-links div { margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
-          .person-links i { color: #008a85; width: 18px; text-align: center; }
-          .person-links a { color: #008a85; text-decoration: none; font-weight: 500; }
+          .person-name { font-size: 1.5rem; font-weight: bold; color: #008a85; margin-bottom: 5px; }
+          .person-title { font-style: italic; color: #555; font-size: 0.95rem; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+          .person-bio { font-size: 0.9rem; line-height: 1.6; color: #444; margin-bottom: 15px; }
+          .person-links { font-size: 0.85rem; }
+          .person-links div { margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+          .person-links a { color: #008a85 !important; text-decoration: none; font-weight: 600; }
           .person-links a:hover { text-decoration: underline; }
-          /* 响应式：平板以下变一列 */
+
+          /* ===== 5. 全宽自定义页脚 ===== */
+          .custom-footer-container {
+            background-color: #008a85; 
+            color: #ffffff;            
+            padding: 1.5rem 0 !important; 
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-top: 60px;
+            margin-bottom: -50px; 
+          }
+          .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+          .footer-column h3 {
+            color: #ffffff !important;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            font-weight: bold;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            display: inline-block;
+            padding-bottom: 5px;
+          }
+          .footer-column p, .footer-column li { font-size: 0.85rem; color: rgba(255,255,255,0.95) !important; }
+          .footer-column a { color: #ffffff !important; text-decoration: underline; }
+
+          /* 隐藏系统默认 */
+          footer, .site-footer, .powered-by, .copyright { display: none !important; }
+
           @media (max-width: 1100px) {
-            .people-grid { grid-template-columns: 1fr; max-width: 700px; }
+            .people-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
           }
         </style>
-        <h2 class="section-title-custom">Permanent Members</h2>
-        <div class="people-grid">
-          <div class="person-card">
-            <img src="/SEISAD_website/media/people/xxx.jpg" class="person-img" alt="Anne Varenne">
-            <div class="person-info">
-              <div class="person-name">Prof. Anne Varenne</div>
-              <div class="person-title">Head of SEISAD, Professor</div>
-              <div class="person-bio">Electrochemistry and surface analysis.</div>
-              <div class="person-links">
-                <div><i class="fas fa-envelope"></i> 
-                <span>Email:</span>
-                <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
-                <div><i class="fas fa-phone"></i> <span>+33 x xx xx xx xx</span></div>
-                <div><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=ndfeauUAAAAJ&hl=fr">Google Scholar</a></div>
-                <div><i class="fas fa-file-pdf"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2021/02/annevarenne-notice-biographique.pdf" target="_blank">Full CV</a></div>
+
+  # ─────────────────────────────────────────────────────────
+  # 1. TITLE BAR (视觉一致性 + 解决贴顶问题)
+  # ─────────────────────────────────────────────────────────
+  - block: markdown
+    content:
+      text: |
+        <div class="home-outer-wrapper">
+          <div class="main-title-container">
+            <span class="full-name">Our Research Team</span>
+            <div class="brand-name-bold">GROUP MEMBERS</div>
+          </div>
+        </div>
+    design:
+      full_width: true
+
+  # ─────────────────────────────────────────────────────────
+  # 2. PERMANENT MEMBERS
+  # ─────────────────────────────────────────────────────────
+  - block: markdown
+    content:
+      text: |
+        <div class="home-outer-wrapper">
+          <h2 style="text-align:center; color:#333; margin-bottom:40px; font-weight:900; text-transform:uppercase; letter-spacing:1px;">Permanent Members</h2>
+          <div class="people-grid">
+            <!-- Anne Varenne -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/xxx.jpg" class="person-img" alt="Anne Varenne">
+              <div class="person-info">
+                <div class="person-name">Prof. Anne Varenne</div>
+                <div class="person-title">Head of SEISAD, Professor</div>
+                <div class="person-bio">Electrochemistry and surface analysis.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
+                  <div><span>Tel:</span> +33 x xx xx xx xx</div>
+                  <div><a href="https://scholar.google.com/citations?user=ndfeauUAAAAJ&hl=fr" target="_blank">Google Scholar</a></div>
+                  <div><a href="#" target="_blank">Full CV (PDF)</a></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="person-card">
-            <img src="/SEISAD_website/media/people/ZijunWang.jpg" class="person-img" alt="Zijun Wang">
-            <div class="person-info">
-              <div class="person-name">Dr. Zijun Wang</div>
-              <div class="person-title">Junior Professor (CPJ)</div>
-              <div class="person-bio">Luminescent nanomaterials and bioapplications.</div>
-              <div class="person-links">
-                <div><i class="fas fa-envelope"></i>
-                <span>Email:</span>
-                <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
-                <div><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
-                <div><i class="fas fa-file-pdf"></i> <a href="https://www.chimieparistech.psl.eu/wp-content/uploads/2026/02/i-clehs-seisad-zijun-wang.pdf" target="_blank">Full CV</a></div>
+            <!-- Zijun Wang -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/ZijunWang.jpg" class="person-img" alt="Zijun Wang">
+              <div class="person-info">
+                <div class="person-name">Dr. Zijun Wang</div>
+                <div class="person-title">Junior Professor (CPJ)</div>
+                <div class="person-bio">Luminescent nanomaterials and bioapplications.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
+                  <div><a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
+                  <div><a href="#" target="_blank">Full CV (PDF)</a></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
     design:
       full_width: true
-      spacing:
-        padding: ["0", 0, "4rem", 0]
 
-  # ────────────────────────────────────────────────────────────────────────────
-  # 2. Students & Researchers
-  # ────────────────────────────────────────────────────────────────────────────
+  # ─────────────────────────────────────────────────────────
+  # 3. STUDENTS & RESEARCHERS
+  # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
-      title: "" 
       text: |
-        <h2 class="section-title-custom">Students & Researchers</h2>
-        <div class="people-grid">
-          <div class="person-card">
-            <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Xingyuan XU">
-            <div class="person-info">
-              <div class="person-name">Xingyuan XU</div>
-              <div class="person-title">PhD Student</div>
-              <div class="person-bio">Theranostics related AI.</div>
-              <div class="person-links">
-                <div><i class="fas fa-envelope"></i>
-                <span>Email:</span>
-                <a href="mailto:xingyuan.xu@chimieparistech.psl.eu">xingyuan.xu@chimieparistech.psl.eu</a></div>
-                <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/xingyuan-xu-a125293a9/" target="_blank">LinkedIn</a></div>
+        <div class="home-outer-wrapper">
+          <h2 style="text-align:center; color:#333; margin-bottom:40px; font-weight:900; text-transform:uppercase; letter-spacing:1px;">Students & Researchers</h2>
+          <div class="people-grid">
+            <!-- Xingyuan XU -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Xingyuan XU">
+              <div class="person-info">
+                <div class="person-name">Xingyuan XU</div>
+                <div class="person-title">PhD Student</div>
+                <div class="person-bio">Theranostics related AI and advanced sensing.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:xingyuan.xu@chimieparistech.psl.eu">xingyuan.xu@chimieparistech.psl.eu</a></div>
+                  <div><a href="https://www.linkedin.com/in/xingyuan-xu-a125293a9/" target="_blank">LinkedIn Profile</a></div>
+                </div>
               </div>
             </div>
           </div>
@@ -134,6 +244,35 @@ sections:
       full_width: true
       background:
         color: "#f8fafc"
-      spacing:
-        padding: ["2rem", 0, "8rem", 0]
+
+  # ─────────────────────────────────────────────────────────
+  # 4. CUSTOM FOOTER (全站同步)
+  # ─────────────────────────────────────────────────────────
+  - block: markdown
+    content:
+      text: |
+        <div class="custom-footer-container">
+          <div class="home-outer-wrapper">
+            <div class="footer-grid">
+              <div class="footer-column">
+                <h3>Address</h3>
+                <p>Chimie ParisTech - PSL University<br>i-CLeHS (CNRS UMR 8060)<br>11 Rue Pierre et Marie Curie<br>75005 Paris, France</p>
+              </div>
+              <div class="footer-column">
+                <h3>Contact</h3>
+                <p>Tel: +33 1 XX XX XX XX<br>Email: <a href="mailto:contact@seisad.com">contact@seisad.com</a><br>Twitter: <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a></p>
+              </div>
+              <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul style="list-style:none; padding:0;">
+                  <li><a href="https://www.chimieparistech.psl.eu/" target="_blank">Chimie ParisTech</a></li>
+                  <li><a href="https://www.cnrs.fr/" target="_blank">CNRS</a></li>
+                  <li><a href="https://psl.eu/" target="_blank">PSL University</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    design:
+      full_width: true
 ---
