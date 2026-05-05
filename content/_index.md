@@ -39,36 +39,76 @@ sections:
             clear: both;
           }
 
-          /* ===== 2. 顶部导航栏 ===== */
+          /* ===== 2. 导航栏标准化 (修正 SEISAD 显现和图标挤压问题) ===== */
           header, .page-header {
             background-color: #008a85 !important;
             padding: 0 !important;
-            margin: 0 !important;
           }
+          
+          /* 强制隐藏左侧所有的 Brand/Logo 文本 */
+          .navbar-brand, .navbar-brand-mobile, .brand-logo {
+            display: none !important;
+          }
+          
           .navbar {
             background-color: #008a85 !important;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
-            margin: 0 !important;
-            padding: 0 !important; 
-            border: none !important;
-            min-height: 60px; 
+            min-height: 60px;
+            padding: 0 2rem !important; /* 给导航栏左右留出安全边距 */
           }
-          .navbar-brand { display: none !important; }
-          .navbar-nav { height: 100%; align-items: stretch !important; flex-direction: row !important; }
-          .nav-item { display: flex !important; align-items: stretch !important; height: 60px !important; }
+          
+          /* 导航栏容器：使用 space-between 让中间菜单居中，两侧撑开 */
+          .navbar > .container, .navbar > .container-xl {
+            display: flex !important;
+            justify-content: space-between !important; 
+            max-width: 1400px !important; /* 与内容宽度一致 */
+          }
+          
+          /* 中间菜单部分 */
+          .navbar-collapse {
+            flex-grow: 1 !important;
+            display: flex !important;
+            justify-content: center !important; /* 确保菜单项整体在中间 */
+          }
+          
+          .navbar-nav {
+            flex-direction: row !important;
+            align-items: center !important;
+          }
+          
+          .nav-item {
+            display: flex !important;
+            align-items: center !important;
+          }
+          
           .nav-link {
             color: #ffffff !important;
             font-weight: bold !important;
-            font-size: 1.4rem !important;
+            font-size: 1.5rem !important; /* 稍微调小一点，防止在小屏幕挤压 */
+            /* 关键：通过 padding 统一单词间的物理间距 */
             padding: 0 1.5rem !important; 
-            display: flex !important;
-            align-items: center !important; 
-            justify-content: center !important;
-            height: 60px !important; 
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
           }
-          .nav-link:hover, .nav-link.active:hover {
-            background-color: rgba(255, 255, 255, 0.2) !important;
+          
+          .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+            border-radius: 4px;
+          }
+          
+          /* 右侧图标部分 (搜索、月亮) */
+          .navbar-nav-btns {
+            display: flex !important;
+            align-items: center !important;
+            margin-left: 2rem !important; /* 强制与 "Contact" 保持距离 */
+          }
+          
+          .navbar-nav-btns .nav-link {
+            padding: 0 0.8rem !important; /* 图标之间的间距小一点 */
+          }
+          
+          /* 针对移动端的微调：如果屏幕太小，隐藏图标或调整 */
+          @media (max-width: 768px) {
+            .nav-link { padding: 0 0.8rem !important; font-size: 0.9rem !important; }
           }
 
           /* ===== 3. 居中标题 (顶部横条) ===== */
