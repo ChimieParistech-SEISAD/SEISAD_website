@@ -232,7 +232,7 @@ sections:
     content:
       text: |
         <div class="main-title-container">
-          <span class="full-name">Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team</span>
+          <span class="full-name">Synthesis, Electrochemistry, Imaging and Analytical Sciences for Diagnostics</span>
           <div class="brand-name-bold">SEISAD </div>
         </div>
         <div class="slider-container">
