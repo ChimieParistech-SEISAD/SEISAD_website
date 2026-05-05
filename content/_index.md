@@ -154,6 +154,75 @@ sections:
             border-top: 1px solid #f0f0f0;
             margin-top: var(--space-md);
           }
+    /* ===== 9. CUSTOM FOOTER STYLE ===== */
+          .custom-footer-container {
+            background-color: #008a85; /* 使用你的标志性绿色 */
+            color: #ffffff;            /* 文字用白色 */
+            padding: 4rem 10% !important; /* 上下内边距，左右缩进 */
+            margin-top: 0;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+          }
+
+          .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 三列布局 */
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+
+          .footer-column h3 {
+            color: #ffffff !important;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            font-weight: bold;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            display: inline-block;
+            padding-bottom: 5px;
+          }
+
+          .footer-column p, .footer-column li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+          }
+
+          .footer-column a {
+            color: #ffffff !important;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity 0.2s;
+          }
+
+          .footer-column a:hover {
+            opacity: 0.7;
+          }
+
+          .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+
+          .footer-column ul li {
+            margin-bottom: 8px;
+          }
+
+          /* 手机适配：在窄屏下变成一列 */
+          @media (max-width: 768px) {
+            .footer-grid {
+              grid-template-columns: 1fr;
+              text-align: center;
+            }
+            .footer-column h3 {
+              display: block;
+            }
+          }
         </style>
 
   # ─────────────────────────────────────────────────────────
@@ -206,4 +275,48 @@ sections:
         </div>
     design:
       full_width: true
+# ─────────────────────────────────────────────────────────
+  # 4. CUSTOM FOOTER
+  # ─────────────────────────────────────────────────────────
+  - block: markdown
+    content:
+      text: |
+        <div class="custom-footer-container">
+          <div class="footer-grid">
+            <!-- 1. Address -->
+            <div class="footer-column">
+              <h3>Address</h3>
+              <p>
+                Chimie ParisTech - PSL University<br>
+                i-CLeHS (CNRS UMR 8060)<br>
+                11 Rue Pierre et Marie Curie<br>
+                75005 Paris, France
+              </p>
+            </div>
+
+            <!-- 2. Contact -->
+            <div class="footer-column">
+              <h3>Contact</h3>
+              <p>
+                <strong>Tel:</strong> +33 1 XX XX XX XX<br>
+                <strong>Email:</strong> <a href="mailto:contact@seisad.com">contact@seisad.com</a><br>
+                <strong>Twitter:</strong> <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a>
+              </p>
+            </div>
+
+            <!-- 3. Quick Links -->
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="https://www.chimieparistech.psl.eu/" target="_blank">Chimie ParisTech</a></li>
+                <li><a href="https://www.cnrs.fr/" target="_blank">CNRS</a></li>
+                <li><a href="https://psl.eu/" target="_blank">PSL University</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    design:
+      full_width: true
+      spacing:
+        padding: ["0", "0", "0", "0"]
 ---
