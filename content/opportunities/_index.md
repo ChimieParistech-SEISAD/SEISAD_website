@@ -228,7 +228,7 @@ sections:
                 <li>Experience with electrochemistry is highly desirable.</li>
                 <li>Fluent in English (written and spoken).</li>
               </ul>
-              <a href="mailto:anne.varenne@chimieparistech.psl.eu" class="apply-btn">Apply for PhD</a>
+              <a href="mailto:xxxxxxxx@chimieparistech.psl.eu" class="apply-btn">Apply for PhD</a>
             </div>
           </div>
 
@@ -247,7 +247,7 @@ sections:
                 <li>Proven track record of high-quality publications.</li>
                 <li>Self-motivated and multidisciplinary mindset.</li>
               </ul>
-              <a href="mailto:zijun.wang@chimieparistech.psl.eu" class="apply-btn">Apply for Postdoc</a>
+              <a href="mailto:xxxxxxxxx@chimieparistech.psl.eu" class="apply-btn">Apply for Postdoc</a>
             </div>
           </div>
 
