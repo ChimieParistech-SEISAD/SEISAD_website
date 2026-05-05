@@ -187,6 +187,16 @@ sections:
           .footer-column ul li {
             margin-bottom: 8px;
           }
+
+          /* ===== 10. 彻底隐藏系统默认底部 (CC图标、Hugo署名等) ===== */
+          footer.site-footer, 
+          .site-footer, 
+          footer, 
+          .powered-by, 
+          .copyright {
+            display: none !important;
+          }
+
           @media (max-width: 768px) {
             .footer-grid {
               grid-template-columns: 1fr;
