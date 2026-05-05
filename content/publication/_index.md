@@ -19,14 +19,77 @@ sections:
           .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
           .home-outer-wrapper { width: 95%; max-width: 1400px; margin: 0 auto; clear: both; }
 
-          /* 2. 导航栏标准化 (彻底隐藏 SEISAD, 修复图标位置) */
-          header, .page-header { background-color: #008a85 !important; padding: 0 !important; }
-          .navbar-brand, .navbar-brand-mobile, .brand-logo { display: none !important; }
-          .navbar { background-color: #008a85 !important; box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important; min-height: 60px; padding: 0 2rem !important; }
-          .navbar > .container, .navbar > .container-xl { display: flex !important; justify-content: space-between !important; max-width: 1400px !important; }
-          .navbar-collapse { flex-grow: 1 !important; display: flex !important; justify-content: center !important; }
-          .nav-link { color: #ffffff !important; font-weight: bold !important; font-size: 1.1rem !important; padding: 0 1.5rem !important; }
-          .navbar-nav-btns { display: flex !important; align-items: center !important; margin-left: 2rem !important; }
+          /* ===== 2. 导航栏标准化 (修正 SEISAD 显现和图标挤压问题) ===== */
+          header, .page-header {
+            background-color: #008a85 !important;
+            padding: 0 !important;
+          }
+          
+          /* 强制隐藏左侧所有的 Brand/Logo 文本 */
+          .navbar-brand, .navbar-brand-mobile, .brand-logo {
+            display: none !important;
+          }
+          
+          .navbar {
+            background-color: #008a85 !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+            min-height: 60px;
+            padding: 0 2rem !important; /* 给导航栏左右留出安全边距 */
+          }
+          
+          /* 导航栏容器：使用 space-between 让中间菜单居中，两侧撑开 */
+          .navbar > .container, .navbar > .container-xl {
+            display: flex !important;
+            justify-content: space-between !important; 
+            max-width: 1400px !important; /* 与内容宽度一致 */
+          }
+          
+          /* 中间菜单部分 */
+          .navbar-collapse {
+            flex-grow: 1 !important;
+            display: flex !important;
+            justify-content: center !important; /* 确保菜单项整体在中间 */
+          }
+          
+          .navbar-nav {
+            flex-direction: row !important;
+            align-items: center !important;
+          }
+          
+          .nav-item {
+            display: flex !important;
+            align-items: center !important;
+          }
+          
+          .nav-link {
+            color: #ffffff !important;
+            font-weight: bold !important;
+            font-size: 1.5rem !important; /* 稍微调小一点，防止在小屏幕挤压 */
+            /* 关键：通过 padding 统一单词间的物理间距 */
+            padding: 0 1.5rem !important; 
+            transition: background-color 0.3s;
+          }
+          
+          .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+            border-radius: 4px;
+          }
+          
+          /* 右侧图标部分 (搜索、月亮) */
+          .navbar-nav-btns {
+            display: flex !important;
+            align-items: center !important;
+            margin-left: 2rem !important; /* 强制与 "Contact" 保持距离 */
+          }
+          
+          .navbar-nav-btns .nav-link {
+            padding: 0 0.8rem !important; /* 图标之间的间距小一点 */
+          }
+          
+          /* 针对移动端的微调：如果屏幕太小，隐藏图标或调整 */
+          @media (max-width: 768px) {
+            .nav-link { padding: 0 0.8rem !important; font-size: 0.9rem !important; }
+          }
 
           /* 3. 统一标题横条 */
           .main-title-container {
@@ -102,30 +165,30 @@ sections:
 
         <!-- 2021 -->
         <h2 class="year-header">2021</h2>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">5.</span> C. GUERRA, A. RINGUEDE, M.I. AZOCAR... Corrosion analysis of AISI 430 stainless steel in the presence of Escherichia coli and Staphylococcus aureus. <strong>Corrosion Science</strong> 181 (2021) 109204.</div><a class="pub-doi" href="https://doi.org/10.1016/j.corsci.2020.109204" target="_blank">https://doi.org/10.1016/j.corsci.2020.109204</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">4.</span> M. LÓPEZ MUJICA, Y. ZHANG, F. BÉDIOUI... Non-amplified impedimetric genosensor for quantification of miRNA-21 based on the use of reduced graphene oxide modified with chitosan. <strong>Microchemical Journal</strong> 160 (2021) 105596.</div><a class="pub-doi" href="https://doi.org/10.1016/j.microc.2020.105596" target="_blank">https://doi.org/10.1016/j.microc.2020.105596</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">3.</span> KHAN M., BOUMATI S. ARIB C... Doxorubicin (DOX) Gadolinium-Gold-Complex: A New Way to Tune Hybrid Nanorods as Theranostic Agent. <strong>International Journal of Nanomedicine</strong> 2021, 16:2219-2236.</div><a class="pub-doi" href="https://doi.org/10.2147/IJN.S295809" target="_blank">https://doi.org/10.2147/IJN.S295809</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">2.</span> FERNANDO ESPINOLA-PORTILLA, ORACIO SERRANO-TORRES... Superparamagnetic iron oxide nanoparticles functionalized with a binary alkoxysilane array... <strong>New Journal of Chemistry</strong> 2021, 45, 3600-3609.</div><a class="pub-doi" href="https://doi.org/10.1039/D0NJ05227B" target="_blank">https://doi.org/10.1039/D0NJ05227B</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">1.</span> IMAN ZARE, DANIEL M. CHEVRIER... Protein-protected metal nanoclusters as diagnostic and therapeutic platforms for biomedical applications. <strong>Materials Today</strong> 2021.</div><a class="pub-doi" href="https://doi.org/10.1016/j.mattod.2020.10.027" target="_blank">https://doi.org/10.1016/j.mattod.2020.10.027</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">15.</span> C. GUERRA, A. RINGUEDE, M.I. AZOCAR... Corrosion analysis of AISI 430 stainless steel in the presence of Escherichia coli and Staphylococcus aureus. <strong>Corrosion Science</strong> 181 (2021) 109204.</div><a class="pub-doi" href="https://doi.org/10.1016/j.corsci.2020.109204" target="_blank">https://doi.org/10.1016/j.corsci.2020.109204</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">14.</span> M. LÓPEZ MUJICA, Y. ZHANG, F. BÉDIOUI... Non-amplified impedimetric genosensor for quantification of miRNA-21 based on the use of reduced graphene oxide modified with chitosan. <strong>Microchemical Journal</strong> 160 (2021) 105596.</div><a class="pub-doi" href="https://doi.org/10.1016/j.microc.2020.105596" target="_blank">https://doi.org/10.1016/j.microc.2020.105596</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">13.</span> KHAN M., BOUMATI S. ARIB C... Doxorubicin (DOX) Gadolinium-Gold-Complex: A New Way to Tune Hybrid Nanorods as Theranostic Agent. <strong>International Journal of Nanomedicine</strong> 2021, 16:2219-2236.</div><a class="pub-doi" href="https://doi.org/10.2147/IJN.S295809" target="_blank">https://doi.org/10.2147/IJN.S295809</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">12.</span> FERNANDO ESPINOLA-PORTILLA, ORACIO SERRANO-TORRES... Superparamagnetic iron oxide nanoparticles functionalized with a binary alkoxysilane array... <strong>New Journal of Chemistry</strong> 2021, 45, 3600-3609.</div><a class="pub-doi" href="https://doi.org/10.1039/D0NJ05227B" target="_blank">https://doi.org/10.1039/D0NJ05227B</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">11.</span> IMAN ZARE, DANIEL M. CHEVRIER... Protein-protected metal nanoclusters as diagnostic and therapeutic platforms for biomedical applications. <strong>Materials Today</strong> 2021.</div><a class="pub-doi" href="https://doi.org/10.1016/j.mattod.2020.10.027" target="_blank">https://doi.org/10.1016/j.mattod.2020.10.027</a></div>
 
         <!-- 2020 -->
         <h2 class="year-header">2020</h2>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">11.</span> A. NOTARO, M. JAKUBASZEK, S. KOCH... A maltol-containing Ruthenium Polypyridyl Complex as a Potential Anticancer Agent. <strong>Chem. Eur. J.</strong> 26 (2020) 4997-5009.</div><a class="pub-doi" href="https://doi.org/10.1002/chem.201904877" target="_blank">https://doi.org/10.1002/chem.201904877</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">10.</span> A. NOTARO, A FREI, R RUBBIANI... A Ruthenium(II) Complex Containing a Redox-Active Semiquinonate Ligand as Potential Chemotherapeutic Agent. <strong>J. Med Chem.</strong> 63 (2020)5568-5584.</div><a class="pub-doi" href="https://doi.org/10.1021/acs.jmedchem.0c00431" target="_blank">https://doi.org/10.1021/acs.jmedchem.0c00431</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">9.</span> M. LÓPEZ MUJICA, Y. ZHANG, F. BÉDIOUI... Label-free graphene oxide-based SPR genosensor for the quantification of microRNA21. <strong>Analytical & Bioanalytical Chem.</strong> 412 (2020) 3539-3546.</div><a class="pub-doi" href="https://doi.org/10.1007/s00216-020-02593-w" target="_blank">https://doi.org/10.1007/s00216-020-02593-w</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">10.</span> A. NOTARO, M. JAKUBASZEK, S. KOCH... A maltol-containing Ruthenium Polypyridyl Complex as a Potential Anticancer Agent. <strong>Chem. Eur. J.</strong> 26 (2020) 4997-5009.</div><a class="pub-doi" href="https://doi.org/10.1002/chem.201904877" target="_blank">https://doi.org/10.1002/chem.201904877</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">9.</span> A. NOTARO, A FREI, R RUBBIANI... A Ruthenium(II) Complex Containing a Redox-Active Semiquinonate Ligand as Potential Chemotherapeutic Agent. <strong>J. Med Chem.</strong> 63 (2020)5568-5584.</div><a class="pub-doi" href="https://doi.org/10.1021/acs.jmedchem.0c00431" target="_blank">https://doi.org/10.1021/acs.jmedchem.0c00431</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">8.</span> M. LÓPEZ MUJICA, Y. ZHANG, F. BÉDIOUI... Label-free graphene oxide-based SPR genosensor for the quantification of microRNA21. <strong>Analytical & Bioanalytical Chem.</strong> 412 (2020) 3539-3546.</div><a class="pub-doi" href="https://doi.org/10.1007/s00216-020-02593-w" target="_blank">https://doi.org/10.1007/s00216-020-02593-w</a></div>
 
         <!-- 2019 -->
         <h2 class="year-header">2019</h2>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">24.</span> G. F. DUARTE-JUNIOR, A. ISMAIL, S. GRIVEAU... Integrated microfluidic device for the separation, decomposition and detection of low molecular weight S-nitrosothiols. <strong>The Analyst</strong> 144 (2019) 180-185.</div><a class="pub-doi" href="http://doi.org/10.1039/C8AN00757H" target="_blank">http://doi.org/10.1039/C8AN00757H</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">23.</span> S. CONDON, C. CANNES & F. BEDIOUI. Cobalt-Salen catalyzed electroreductive alkylation of activated olefins. <strong>J. Chemistry</strong>, 2019.</div><a class="pub-doi" href="https://doi.org/10.1155/2019/9832639" target="_blank">https://doi.org/10.1155/2019/9832639</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">22.</span> C. SLIM, N. TLILI, C. RICHARD... Amperometric detection of diclofenac at a nano-structured multi-wall carbon nanotubes sensing films. <strong>Inorg. Chem. Comm.</strong> 107 (2019) 107454.</div><a class="pub-doi" href="https://doi.org/10.1016/j.inoche.2019.107454" target="_blank">https://doi.org/10.1016/j.inoche.2019.107454</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">7.</span> G. F. DUARTE-JUNIOR, A. ISMAIL, S. GRIVEAU... Integrated microfluidic device for the separation, decomposition and detection of low molecular weight S-nitrosothiols. <strong>The Analyst</strong> 144 (2019) 180-185.</div><a class="pub-doi" href="http://doi.org/10.1039/C8AN00757H" target="_blank">http://doi.org/10.1039/C8AN00757H</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">6.</span> S. CONDON, C. CANNES & F. BEDIOUI. Cobalt-Salen catalyzed electroreductive alkylation of activated olefins. <strong>J. Chemistry</strong>, 2019.</div><a class="pub-doi" href="https://doi.org/10.1155/2019/9832639" target="_blank">https://doi.org/10.1155/2019/9832639</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">5.</span> C. SLIM, N. TLILI, C. RICHARD... Amperometric detection of diclofenac at a nano-structured multi-wall carbon nanotubes sensing films. <strong>Inorg. Chem. Comm.</strong> 107 (2019) 107454.</div><a class="pub-doi" href="https://doi.org/10.1016/j.inoche.2019.107454" target="_blank">https://doi.org/10.1016/j.inoche.2019.107454</a></div>
 
         <!-- 2018 -->
         <h2 class="year-header">2018</h2>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">41.</span> L. TRAPIELLA-ALFONSO, S. BROUSSY, W-Q LIU... Colorimetric immunoassays for the screening and specificity evaluation of molecules disturbing VEGFs/VEGFRs interactions. <strong>Anal. Biochem.</strong> 2018.</div><a class="pub-doi" href="http://doi.org/10.1016/j.ab.2017.12.029" target="_blank">http://doi.org/10.1016/j.ab.2017.12.029</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">40.</span> V. BALDIM, F. BEDIOUI, N. MIGNET... The enzyme-like catalytic activity of cerium oxide nanoparticles and its dependency on Ce3+ surface area concentration. <strong>Nanoscale</strong> 10 (2018) 6971-6980.</div><a class="pub-doi" href="https://doi.org/10.1039/C8NR00325D" target="_blank">https://doi.org/10.1039/C8NR00325D</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">39.</span> A. CALMET, N. VEJAR, X. GONZALEZ... Electrochemical behavior of stainless steels for sudomotor dysfunction applications. <strong>Electroanalysis</strong> 30 (2018) 162-169.</div><a class="pub-doi" href="https://doi.org/10.1002/elan.201700464" target="_blank">https://doi.org/10.1002/elan.201700464</a></div>
-        <div class="pub-card"><div class="pub-content"><span class="pub-number">38.</span> F. BEDIOUI, V. LAIR, S. GRIVEAU... Electrochemical behavior of electrode materials (nickel and stainless steels) for sudomotor dysfunction applications: a review. <strong>Electroanalysis</strong> 30 (2018) 2525-2534.</div><a class="pub-doi" href="https://doi.org/10.1002/elan.201800439" target="_blank">https://doi.org/10.1002/elan.201800439</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">4.</span> L. TRAPIELLA-ALFONSO, S. BROUSSY, W-Q LIU... Colorimetric immunoassays for the screening and specificity evaluation of molecules disturbing VEGFs/VEGFRs interactions. <strong>Anal. Biochem.</strong> 2018.</div><a class="pub-doi" href="http://doi.org/10.1016/j.ab.2017.12.029" target="_blank">http://doi.org/10.1016/j.ab.2017.12.029</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">3.</span> V. BALDIM, F. BEDIOUI, N. MIGNET... The enzyme-like catalytic activity of cerium oxide nanoparticles and its dependency on Ce3+ surface area concentration. <strong>Nanoscale</strong> 10 (2018) 6971-6980.</div><a class="pub-doi" href="https://doi.org/10.1039/C8NR00325D" target="_blank">https://doi.org/10.1039/C8NR00325D</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">2.</span> A. CALMET, N. VEJAR, X. GONZALEZ... Electrochemical behavior of stainless steels for sudomotor dysfunction applications. <strong>Electroanalysis</strong> 30 (2018) 162-169.</div><a class="pub-doi" href="https://doi.org/10.1002/elan.201700464" target="_blank">https://doi.org/10.1002/elan.201700464</a></div>
+        <div class="pub-card"><div class="pub-content"><span class="pub-number">1.</span> F. BEDIOUI, V. LAIR, S. GRIVEAU... Electrochemical behavior of electrode materials (nickel and stainless steels) for sudomotor dysfunction applications: a review. <strong>Electroanalysis</strong> 30 (2018) 2525-2534.</div><a class="pub-doi" href="https://doi.org/10.1002/elan.201800439" target="_blank">https://doi.org/10.1002/elan.201800439</a></div>
 
         </div>
 
