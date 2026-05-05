@@ -118,13 +118,13 @@ sections:
             border-left: 8px solid #008a85; /* 左侧深绿色加粗装饰条 */
             padding: 1.5rem 2rem;
             margin: 2rem auto;
-            max-width: 85%;
+            max-width: 90%;
             text-align: left; /* 改为左对齐，通常比居中显高级 */
             box-shadow: 2px 2px 15px rgba(0,0,0,0.05); /* 极淡的阴影 */
           }
 
           .full-name {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #4a5568;
             font-weight: bold;
             text-transform: uppercase; /* 全称大写化，增加学术感 */
