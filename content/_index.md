@@ -7,7 +7,7 @@ design:
 
 sections:
   # ─────────────────────────────────────────────────────────
-  # 0. GLOBAL STYLE (核心：样式与系统)
+  # 0. GLOBAL STYLE
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
@@ -19,7 +19,6 @@ sections:
             padding: 0 !important;
             margin: 0 !important;
           }
-
           .navbar {
             background-color: #008a85 !important;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
@@ -28,12 +27,10 @@ sections:
             border: none !important;
             min-height: 60px; 
           }
-
           /* ===== 2. 删除左上角文字 (SEISAD) ===== */
           .navbar-brand {
             display: none !important;
           }
-
           /* 导航布局修正 */
           .navbar-nav {
             height: 100%;
@@ -45,8 +42,7 @@ sections:
             align-items: stretch !important;
             height: 60px !important;
           }
-
-          /* ===== 3. 导航文字样式 (顶天立地的悬停效果) ===== */
+          /* ===== 3. 导航文字样式 ===== */
           .nav-link {
             color: #ffffff !important;
             opacity: 1 !important;
@@ -61,7 +57,6 @@ sections:
             border-radius: 0 !important;
             background-color: transparent !important;
           }
-
           .nav-link:hover, 
           .navbar-nav .nav-item .nav-link:hover,
           .navbar-nav .nav-item .nav-link.active:hover {
@@ -69,18 +64,15 @@ sections:
             color: #ffffff !important;
             text-decoration: none !important;
           }
-
           .navbar-nav .nav-item .nav-link.active {
             background-color: transparent !important;
             color: #ffffff !important;
           }
-
           /* ===== 4. 页面宽度设置 ===== */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 85% !important; 
             width: 85% !important; 
           }
-
           /* ===== 5. 间距系统 ===== */
           :root {
             --space-xs: 0.5rem;
@@ -88,12 +80,10 @@ sections:
             --space-md: 1.5rem;
             --space-lg: 2.5rem;
           }
-
           .hbb-section {
             padding-top: 1rem !important;
             padding-bottom: 1rem !important;
           }
-
           /* ===== 6. 轮播图 SLIDER ===== */
           .slider-container {
             width: 100%;
@@ -102,20 +92,17 @@ sections:
             position: relative;
             margin: var(--space-sm) 0 var(--space-md) 0;
           }
-
           .slider-wrapper {
             display: flex;
             width: 300%;
             height: 100%;
             animation: slide-loop 12s infinite;
           }
-
           .slider-wrapper img {
             width: 33.333%;
             height: 100%;
             object-fit: cover;
           }
-
           @keyframes slide-loop {
             0% { transform: translateX(0); }
             28% { transform: translateX(0); }
@@ -125,7 +112,6 @@ sections:
             95% { transform: translateX(-66.66%); }
             100% { transform: translateX(0); }
           }
-
           /* ===== 7. 标题与文字 ===== */
           .main-title {
             text-align: center;
@@ -135,14 +121,12 @@ sections:
             color: #2d3748;
             letter-spacing: 1px;
           }
-
           .research-text {
             text-align: justify;
             line-height: 1.8;
             font-size: 1.08rem;
             color: #222;
           }
-
           /* ===== 8. 底部署名栏 ===== */
           .logo-bar {
             display: flex;
@@ -152,7 +136,6 @@ sections:
             border-top: 1px solid #f0f0f0;
             margin-top: var(--space-md);
           }
-
           /* ===== 9. CUSTOM FOOTER STYLE ===== */
           .custom-footer-container {
             background-color: #008a85; 
@@ -166,7 +149,6 @@ sections:
             margin-left: -50vw;
             margin-right: -50vw;
           }
-
           .footer-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr); 
@@ -174,7 +156,6 @@ sections:
             max-width: 1200px;
             margin: 0 auto;
           }
-
           .footer-column h3 {
             color: #ffffff !important;
             font-size: 1.4rem;
@@ -184,34 +165,28 @@ sections:
             display: inline-block;
             padding-bottom: 5px;
           }
-
           .footer-column p, .footer-column li {
             font-size: 0.95rem;
             line-height: 1.6;
             color: rgba(255,255,255,0.9);
           }
-
           .footer-column a {
             color: #ffffff !important;
             text-decoration: underline;
             text-underline-offset: 3px;
             transition: opacity 0.2s;
           }
-
           .footer-column a:hover {
             opacity: 0.7;
           }
-
           .footer-column ul {
             list-style: none;
             padding: 0;
             margin: 0;
           }
-
           .footer-column ul li {
             margin-bottom: 8px;
           }
-
           @media (max-width: 768px) {
             .footer-grid {
               grid-template-columns: 1fr;
@@ -232,7 +207,6 @@ sections:
         <div class="main-title">
           — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
         </div>
-
         <div class="slider-container">
           <div class="slider-wrapper">
             <img src="media/AA3A0511.JPG">
@@ -282,28 +256,14 @@ sections:
       text: |
         <div class="custom-footer-container">
           <div class="footer-grid">
-            <!-- 1. Address -->
             <div class="footer-column">
               <h3>Address</h3>
-              <p>
-                Chimie ParisTech - PSL University<br>
-                i-CLeHS (CNRS UMR 8060)<br>
-                11 Rue Pierre et Marie Curie<br>
-                75005 Paris, France
-              </p>
+              <p>Chimie ParisTech - PSL University<br>i-CLeHS (CNRS UMR 8060)<br>11 Rue Pierre et Marie Curie<br>75005 Paris, France</p>
             </div>
-
-            <!-- 2. Contact -->
             <div class="footer-column">
               <h3>Contact</h3>
-              <p>
-                <strong>Tel:</strong> +33 1 XX XX XX XX<br>
-                <strong>Email:</strong> <a href="mailto:contact@seisad.com">contact@seisad.com</a><br>
-                <strong>Twitter:</strong> <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a>
-              </p>
+              <p><strong>Tel:</strong> +33 1 XX XX XX XX<br><strong>Email:</strong> <a href="mailto:contact@seisad.com">contact@seisad.com</a><br><strong>Twitter:</strong> <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a></p>
             </div>
-
-            <!-- 3. Quick Links -->
             <div class="footer-column">
               <h3>Quick Links</h3>
               <ul>
