@@ -87,7 +87,7 @@ sections:
           /* ===== 6. 轮播图 SLIDER ===== */
           .slider-container {
             width: 100%;
-            height: 520px;
+            height: 888px;
             overflow: hidden;
             position: relative;
             margin: var(--space-sm) 0 var(--space-md) 0;
