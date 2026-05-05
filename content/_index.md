@@ -154,7 +154,7 @@ sections:
             border-top: 1px solid #f0f0f0;
             margin-top: var(--space-md);
           }
-    /* ===== 9. CUSTOM FOOTER STYLE ===== */
+          /* ===== 9. CUSTOM FOOTER STYLE ===== */
           .custom-footer-container {
             background-color: #008a85; /* 使用你的标志性绿色 */
             color: #ffffff;            /* 文字用白色 */
