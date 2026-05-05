@@ -59,7 +59,7 @@ sections:
           .nav-link {
             color: #ffffff !important;
             font-weight: bold !important;
-            font-size: 1.05rem !important;
+            font-size: 1.4rem !important;
             padding: 0 1.5rem !important; 
             display: flex !important;
             align-items: center !important; 
@@ -82,7 +82,8 @@ sections:
             border-radius: 0 0 8px 8px;
           }
           .full-name {
-            font-size: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
             color: #718096;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -135,7 +136,7 @@ sections:
           .custom-footer-container {
             background-color: #008a85; 
             color: #ffffff;            
-            padding: 4rem 0 !important; 
+            padding: 1.5rem 0 !important; 
             width: 100vw;
             position: relative;
             left: 50%;
@@ -147,7 +148,7 @@ sections:
           .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
           .footer-column h3 {
             color: #ffffff !important;
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             margin-bottom: 1.2rem;
             font-weight: bold;
             border-bottom: 2px solid rgba(255,255,255,0.3);
@@ -218,8 +219,8 @@ sections:
         <div class="home-outer-wrapper">
           <div class="logo-bar">
             <img src="media/seisad.png" style="height:80px;">
-            <img src="media/chimie.png" style="height:100px;">
             <img src="media/iclehs.png" style="height:75px;">
+            <img src="media/chimie.png" style="height:100px;">
             <img src="media/cnrs.png" style="height:80px;">
           </div>
         </div>
