@@ -233,7 +233,8 @@ sections:
     content:
       text: |
         <div class="main-title">
-          — Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team (SEISAD) —
+          Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team
+          <span class="brand-name">(SEISAD)</span>
         </div>
         <div class="slider-container">
           <div class="slider-wrapper">
