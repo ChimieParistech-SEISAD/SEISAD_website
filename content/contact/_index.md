@@ -7,105 +7,28 @@ design:
 
 sections:
   # ─────────────────────────────────────────────────────────
-  # 0. GLOBAL STYLE (全站感官一致性样式：导航栏、标题、页脚)
+  # 0. GLOBAL STYLE (同步全站视觉规范 & 彻底修正页脚)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
       text: |
         <style>
-          /* 1. 彻底解决框架间距 */
-          .blox-page-header, .main-content, main {
-            padding-top: 0 !important;
-            margin-top: 0 !important;
-          }
-          section.hbb-section {
-            padding-top: 10px !important;
-            padding-bottom: 10px !important;
-          }
-          .max-w-prose, .prose, .container, .mx-auto { 
-            max-width: 100% !important; 
-            width: 100% !important; 
-          }
-          .home-outer-wrapper {
-            width: 95%;
-            max-width: 1400px;
-            margin: 0 auto;
-            clear: both;
-          }
+          /* 1. 彻底解决框架间距与宽度 */
+          .blox-page-header, .main-content, main { padding-top: 0 !important; margin-top: 0 !important; }
+          section.hbb-section { padding-top: 10px !important; padding-bottom: 10px !important; }
+          .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
+          .home-outer-wrapper { width: 95%; max-width: 1400px; margin: 0 auto; clear: both; }
 
-          /* ===== 2. 导航栏标准化 (修正 SEISAD 显现和图标挤压问题) ===== */
-          header, .page-header {
-            background-color: #008a85 !important;
-            padding: 0 !important;
-          }
-          
-          /* 强制隐藏左侧所有的 Brand/Logo 文本 */
-          .navbar-brand, .navbar-brand-mobile, .brand-logo {
-            display: none !important;
-          }
-          
-          .navbar {
-            background-color: #008a85 !important;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
-            min-height: 60px;
-            padding: 0 2rem !important; /* 给导航栏左右留出安全边距 */
-          }
-          
-          /* 导航栏容器：使用 space-between 让中间菜单居中，两侧撑开 */
-          .navbar > .container, .navbar > .container-xl {
-            display: flex !important;
-            justify-content: space-between !important; 
-            max-width: 1400px !important; /* 与内容宽度一致 */
-          }
-          
-          /* 中间菜单部分 */
-          .navbar-collapse {
-            flex-grow: 1 !important;
-            display: flex !important;
-            justify-content: center !important; /* 确保菜单项整体在中间 */
-          }
-          
-          .navbar-nav {
-            flex-direction: row !important;
-            align-items: center !important;
-          }
-          
-          .nav-item {
-            display: flex !important;
-            align-items: center !important;
-          }
-          
-          .nav-link {
-            color: #ffffff !important;
-            font-weight: bold !important;
-            font-size: 1.5rem !important; /* 稍微调小一点，防止在小屏幕挤压 */
-            /* 关键：通过 padding 统一单词间的物理间距 */
-            padding: 0 1.5rem !important; 
-            transition: background-color 0.3s;
-          }
-          
-          .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.15) !important;
-            border-radius: 4px;
-          }
-          
-          /* 右侧图标部分 (搜索、月亮) */
-          .navbar-nav-btns {
-            display: flex !important;
-            align-items: center !important;
-            margin-left: 2rem !important; /* 强制与 "Contact" 保持距离 */
-          }
-          
-          .navbar-nav-btns .nav-link {
-            padding: 0 0.8rem !important; /* 图标之间的间距小一点 */
-          }
-          
-          /* 针对移动端的微调：如果屏幕太小，隐藏图标或调整 */
-          @media (max-width: 768px) {
-            .nav-link { padding: 0 0.8rem !important; font-size: 0.9rem !important; }
-          }
+          /* 2. 导航栏标准化 (同步主页：隐藏品牌名，菜单居中，图标靠右) */
+          header, .page-header { background-color: #008a85 !important; padding: 0 !important; }
+          .navbar-brand, .navbar-brand-mobile, .brand-logo { display: none !important; }
+          .navbar { background-color: #008a85 !important; box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important; min-height: 60px; padding: 0 2rem !important; }
+          .navbar > .container, .navbar > .container-xl { display: flex !important; justify-content: space-between !important; max-width: 1400px !important; }
+          .navbar-collapse { flex-grow: 1 !important; display: flex !important; justify-content: center !important; }
+          .nav-link { color: #ffffff !important; font-weight: bold !important; font-size: 1.5rem !important; padding: 0 1.5rem !important; }
+          .navbar-nav-btns { display: flex !important; align-items: center !important; margin-left: 2rem !important; }
 
-          /* 3. 统一标题横条 (解决贴顶) */
+          /* 3. 统一标题横条 (解决内容贴顶问题) */
           .main-title-container {
             background-color: #f0f9f8;
             border-top: 6px solid #008a85;
@@ -115,51 +38,27 @@ sections:
             box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             border-radius: 0 0 8px 8px;
           }
-          .brand-name-bold {
-            font-size: 2.6rem;
-            color: #008a85;
-            font-weight: 900;
-            letter-spacing: 4px;
-            line-height: 1;
-          }
+          .brand-name-bold { font-size: 2.6rem; color: #008a85; font-weight: 900; letter-spacing: 4px; line-height: 1; }
 
-          /* 4. Contact 页面对齐控制 */
-          .contact-grid-wrapper {
-            display: flex;
-            gap: 60px;
-            align-items: flex-start;
-          }
-          .contact-info-column {
-            flex: 0 0 40%;
-          }
+          /* 4. Contact 页面布局与对齐核心 */
+          .contact-grid-wrapper { display: flex; gap: 60px; align-items: flex-start; }
+          .contact-info-column { flex: 0 0 40%; text-align: left; }
           /* 关键对齐：确保绿色标题与下方文字垂直对齐 */
           .contact-info-column h2 {
             font-size: 2rem;
             color: #008a85;
             font-weight: bold;
-            margin: 0 0 25px 0 !important; /* 强制左边距为0，底部留白 */
+            margin: 0 0 25px 0 !important;
             padding: 0 !important;
-            text-align: left;
           }
-          .contact-details-box {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #333;
-            text-align: left;
-          }
-          .map-column-wrapper {
-            flex: 0 0 55%;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 1px solid #eee;
-          }
+          .contact-details-box { font-size: 1.1rem; line-height: 1.8; color: #333; }
+          .map-column-wrapper { flex: 0 0 55%; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; }
 
-          /* 5. 页脚全宽背景同步 */
+          /* 5. 彻底修正的自定义页脚样式 (100% 同步正确页面) */
           .custom-footer-container {
-            background-color: #008a85; 
-            color: #ffffff;            
-            padding: 1.5rem 0 !important; 
+            background-color: #008a85 !important; 
+            color: #ffffff !important;            
+            padding: 2rem 0 !important; 
             width: 100vw;
             position: relative;
             left: 50%;
@@ -170,7 +69,27 @@ sections:
             margin-bottom: -50px; 
           }
           .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-          footer, .site-footer { display: none !important; }
+          .footer-column h3 {
+            color: #ffffff !important;
+            font-size: 1.2rem !important;
+            margin-bottom: 1.2rem !important;
+            font-weight: bold !important;
+            border-bottom: 2px solid rgba(255,255,255,0.3) !important;
+            display: inline-block !important;
+            padding-bottom: 5px !important;
+            text-transform: none !important;
+          }
+          .footer-column p, .footer-column li, .footer-column {
+            font-size: 0.9rem !important;
+            line-height: 1.6 !important;
+            color: rgba(255,255,255,0.95) !important;
+            margin-bottom: 5px !important;
+          }
+          .footer-column ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+          .footer-column a { color: #ffffff !important; text-decoration: underline !important; }
+          
+          /* 强制移除系统干扰 */
+          footer, .site-footer, .powered-by, .copyright { display: none !important; }
 
           @media (max-width: 900px) {
             .contact-grid-wrapper { flex-direction: column; }
@@ -190,8 +109,6 @@ sections:
             <div class="brand-name-bold">CONTACT US</div>
           </div>
         </div>
-    design:
-      full_width: true
 
   # ─────────────────────────────────────────────────────────
   # 2. CONTACT CONTENT (解决 Office Location 对齐问题)
@@ -216,11 +133,9 @@ sections:
             </div>
           </div>
         </div>
-    design:
-      full_width: true
 
   # ─────────────────────────────────────────────────────────
-  # 3. CUSTOM FOOTER (完全同步主页)
+  # 3. CUSTOM FOOTER (修正后的完美版本)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
@@ -247,6 +162,4 @@ sections:
             </div>
           </div>
         </div>
-    design:
-      full_width: true
 ---
