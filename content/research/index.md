@@ -248,9 +248,9 @@ sections:
           <!-- 主题 1 -->
           <div class="theme-module">
             <div class="theme-left">
-              <div class="theme-label">Synthetic <br>Methodologies</div>
+              <div class="theme-label">Synthetic Methodologies</div>
               <div class="theme-img-container">
-                <img src="media/AA3A0511.JPG" alt="Synthetic Methodologies">
+                <img src="/SEISAD_website/media/Synthetic Methodologies.jpg" alt="Synthetic Methodologies">
               </div>
             </div>
             <div class="theme-right">
@@ -268,9 +268,9 @@ sections:
           <!-- 主题 2 -->
           <div class="theme-module">
             <div class="theme-left">
-              <div class="theme-label">Sensors & <br>Diagnostics</div>
+              <div class="theme-label">Sensors & Diagnostics</div>
               <div class="theme-img-container">
-                <img src="media/AA3A0511.JPG" alt="Sensors">
+                <img src="/SEISAD_website/media/biosensor.jpg" alt="Sensors">
               </div>
             </div>
             <div class="theme-right">
@@ -288,9 +288,9 @@ sections:
           <!-- 主题 3 -->
           <div class="theme-module">
             <div class="theme-left">
-              <div class="theme-label">Advanced <br>Bio-imaging</div>
+              <div class="theme-label">Advanced Bio-imaging</div>
               <div class="theme-img-container">
-                <img src="media/AA3A0511.JPG" alt="Imaging">
+                <img src="/SEISAD_website/media/Imaging.png" alt="Imaging">
               </div>
             </div>
             <div class="theme-right">
