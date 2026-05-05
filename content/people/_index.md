@@ -52,7 +52,7 @@ sections:
           .nav-link {
             color: #ffffff !important;
             font-weight: bold !important;
-            font-size: 1.1rem !important;
+            font-size: 1.4rem !important;
             padding: 0 1.5rem !important; 
             transition: background-color 0.3s;
           }
