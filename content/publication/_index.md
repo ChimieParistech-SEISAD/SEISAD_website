@@ -223,19 +223,32 @@ sections:
         </div>
 
   # ─────────────────────────────────────────────────────────
-  # 3. 自定义页脚 (全站同步)
+  # 3. CUSTOM FOOTER (完全同步主页)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
       text: |
         <div class="custom-footer-container">
-        <div class="home-outer-wrapper">
-        <div class="footer-grid">
-        <div class="footer-column"><h3>Address</h3><p>Chimie ParisTech - PSL University<br>i-CLeHS (CNRS UMR 8060)<br>11 Rue Pierre et Marie Curie<br>75005 Paris, France</p></div>
-        <div class="footer-column"><h3>Contact</h3><p>Tel: +33 1 XX XX XX XX<br>Email: contact@seisad.com</p></div>
-        <div class="footer-column"><h3>Quick Links</h3><ul style="list-style:none; padding:0;"><li><a href="https://psl.eu/" style="color:white;">PSL University</a></li><li><a href="https://www.cnrs.fr/" style="color:white;">CNRS</a></li></ul></div>
-        </div>
-        </div>
+          <div class="home-outer-wrapper">
+            <div class="footer-grid">
+              <div class="footer-column">
+                <h3>Address</h3>
+                <p>Chimie ParisTech - PSL University<br>i-CLeHS (CNRS UMR 8060)<br>11 Rue Pierre et Marie Curie<br>75005 Paris, France</p>
+              </div>
+              <div class="footer-column">
+                <h3>Contact</h3>
+                <p>Tel: +33 1 XX XX XX XX<br>Email: <a href="mailto:contact@seisad.com">contact@seisad.com</a><br>Twitter: <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a></p>
+              </div>
+              <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="https://www.chimieparistech.psl.eu/" target="_blank">Chimie ParisTech</a></li>
+                  <li><a href="https://www.cnrs.fr/" target="_blank">CNRS</a></li>
+                  <li><a href="https://psl.eu/" target="_blank">PSL University</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
     design:
       full_width: true
