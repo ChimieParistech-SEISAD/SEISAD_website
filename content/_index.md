@@ -7,7 +7,7 @@ design:
 
 sections:
   # ─────────────────────────────────────────────────────────
-  # 0. GLOBAL STYLE (核心：统一 spacing system)
+  # 0. GLOBAL STYLE (核心：样式与系统)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
@@ -38,7 +38,7 @@ sections:
           .navbar-nav {
             height: 100%;
             align-items: stretch !important; 
-            flex-direction: row !important; /* 确保横向排列 */
+            flex-direction: row !important; 
           }
           .nav-item {
             display: flex !important;
@@ -59,21 +59,19 @@ sections:
             height: 60px !important; 
             transition: background-color 0.3s ease;
             border-radius: 0 !important;
-            background-color: transparent !important; /* 默认透明 */
+            background-color: transparent !important;
           }
 
-          /* 鼠标悬停效果：应用于所有项，包括当前激活项 */
           .nav-link:hover, 
           .navbar-nav .nav-item .nav-link:hover,
           .navbar-nav .nav-item .nav-link.active:hover {
-            background-color: rgba(255, 255, 255, 0.2) !important; /* 悬停时的淡白色背景 */
+            background-color: rgba(255, 255, 255, 0.2) !important;
             color: #ffffff !important;
             text-decoration: none !important;
           }
 
-          /* 激活项样式：平时和普通项一样，不加白框 */
           .navbar-nav .nav-item .nav-link.active {
-            background-color: transparent !important; /* 确保平时没有背景 */
+            background-color: transparent !important;
             color: #ffffff !important;
           }
 
@@ -154,11 +152,12 @@ sections:
             border-top: 1px solid #f0f0f0;
             margin-top: var(--space-md);
           }
+
           /* ===== 9. CUSTOM FOOTER STYLE ===== */
           .custom-footer-container {
-            background-color: #008a85; /* 使用你的标志性绿色 */
-            color: #ffffff;            /* 文字用白色 */
-            padding: 4rem 10% !important; /* 上下内边距，左右缩进 */
+            background-color: #008a85; 
+            color: #ffffff;            
+            padding: 4rem 10% !important; 
             margin-top: 0;
             width: 100vw;
             position: relative;
@@ -170,7 +169,7 @@ sections:
 
           .footer-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 三列布局 */
+            grid-template-columns: repeat(3, 1fr); 
             gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
@@ -213,7 +212,6 @@ sections:
             margin-bottom: 8px;
           }
 
-          /* 手机适配：在窄屏下变成一列 */
           @media (max-width: 768px) {
             .footer-grid {
               grid-template-columns: 1fr;
@@ -275,7 +273,8 @@ sections:
         </div>
     design:
       full_width: true
-# ─────────────────────────────────────────────────────────
+
+  # ─────────────────────────────────────────────────────────
   # 4. CUSTOM FOOTER
   # ─────────────────────────────────────────────────────────
   - block: markdown
