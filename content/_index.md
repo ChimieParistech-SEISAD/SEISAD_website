@@ -7,13 +7,26 @@ design:
 
 sections:
   # ─────────────────────────────────────────────────────────
-  # 0. GLOBAL STYLE (重构宽度控制逻辑)
+  # 0. GLOBAL STYLE (彻底解决间距与缩放问题)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
       text: |
         <style>
-          /* ===== 1. 彻底解决缩放问题的容器逻辑 ===== */
+          /* ===== 1. 暴力消除框架自带的顶部和块间距 ===== */
+          /* 针对导航栏下方的第一个大空白 */
+          .blox-page-header, .main-content, main {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+          }
+
+          /* 针对每个 Section 块的间距 */
+          section.hbb-section {
+            padding-top: 10px !important;    /* 缩小到极小值 */
+            padding-bottom: 10px !important;
+          }
+
+          /* 解决 Hugo 默认容器的缩放限制 */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 100% !important; 
             width: 100% !important; 
@@ -26,8 +39,8 @@ sections:
             clear: both;
           }
 
-          /* ===== 2. 顶部导航栏 (保持之前的样式) ===== */
-          header, .page-header, .blox-page-header {
+          /* ===== 2. 顶部导航栏 ===== */
+          header, .page-header {
             background-color: #008a85 !important;
             padding: 0 !important;
             margin: 0 !important;
@@ -53,18 +66,17 @@ sections:
             justify-content: center !important;
             height: 60px !important; 
             transition: background-color 0.3s ease;
-            background-color: transparent !important;
           }
           .nav-link:hover, .nav-link.active:hover {
             background-color: rgba(255, 255, 255, 0.2) !important;
           }
 
-          /* ===== 3. 重新设计的居中标题 (顶部横条) ===== */
+          /* ===== 3. 居中标题 (顶部横条) ===== */
           .main-title-container {
             background-color: #f0f9f8;
             border-top: 6px solid #008a85;
             padding: 2.5rem 1.5rem;
-            margin: 2.5rem 0; /* 这里的左右margin由wrapper控制 */
+            margin: 0.5rem 0 2rem 0; /* 极小化顶部 margin */
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.03);
             border-radius: 0 0 8px 8px;
@@ -75,7 +87,7 @@ sections:
             text-transform: uppercase;
             letter-spacing: 2px;
             display: block;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             line-height: 1.4;
           }
           .brand-name-bold {
@@ -94,12 +106,7 @@ sections:
             position: relative;
             margin: 1.5rem 0;
           }
-          .slider-wrapper {
-            display: flex;
-            width: 300%;
-            height: 100%;
-            animation: slide-loop 12s infinite;
-          }
+          .slider-wrapper { display: flex; width: 300%; height: 100%; animation: slide-loop 12s infinite; }
           .slider-wrapper img { width: 33.333%; height: 100%; object-fit: cover; }
           @keyframes slide-loop {
             0% { transform: translateX(0); }
@@ -112,24 +119,19 @@ sections:
           }
 
           /* ===== 5. 研究内容文本 ===== */
-          .research-text {
-            text-align: justify;
-            line-height: 1.8;
-            font-size: 1.08rem;
-            color: #222;
-          }
+          .research-text { text-align: justify; line-height: 1.8; font-size: 1.08rem; color: #222; }
 
           /* ===== 6. Logo 栏 ===== */
           .logo-bar {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            padding: 3rem 0;
+            padding: 2rem 0;
             border-top: 1px solid #f0f0f0;
-            margin-top: 2rem;
+            margin-top: 1rem;
           }
 
-          /* ===== 7. 自定义底部 (全宽背景+容器居中) ===== */
+          /* ===== 7. 自定义底部 (全宽背景) ===== */
           .custom-footer-container {
             background-color: #008a85; 
             color: #ffffff;            
@@ -140,12 +142,9 @@ sections:
             right: 50%;
             margin-left: -50vw;
             margin-right: -50vw;
+            margin-bottom: -50px; /* 强行拉下底部，消除下面可能存在的白边 */
           }
-          .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 40px;
-          }
+          .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
           .footer-column h3 {
             color: #ffffff !important;
             font-size: 1.4rem;
@@ -158,9 +157,12 @@ sections:
           .footer-column a { color: #ffffff !important; text-decoration: underline; }
           .footer-column ul { list-style: none; padding: 0; }
 
-          /* ===== 8. 隐藏系统默认底部 ===== */
-          footer.site-footer, .site-footer, footer, .powered-by, .copyright {
+          /* ===== 8. 彻底隐藏系统默认底部 ===== */
+          footer, .site-footer, .powered-by, .copyright {
             display: none !important;
+            height: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
           }
 
           @media (max-width: 768px) {
@@ -198,7 +200,7 @@ sections:
     content:
       text: |
         <div class="home-outer-wrapper">
-          <h2 style="text-align:center; font-size:2rem; font-weight:bold; color:#333; margin: 2rem 0;">Our Research</h2>
+          <h2 style="text-align:center; font-size:2rem; font-weight:bold; color:#333; margin-bottom: 1.5rem;">Our Research</h2>
           <div class="research-text">
             <span style="float:left; font-size:60px; line-height:50px; padding-right:15px; color:#008a85; font-weight:bold;">A</span>
             ctually, the Team develops projects aimed at elaborating processes and tools for the early detection of pathological signals using chemical and analytical methodologies. The main research directions focus on: (i) new synthetic methodologies and supported catalysis in mini- and continuous microflow reactors, protein ligand library synthesis, and advanced radiolabeling for imaging; (ii) electrochemical sensors for biological markers, molecular materials for electrocatalysis, and label-free detection of microRNAs via scanning electrochemical microscopy (SECM); (iii) development of targeted optical and MR imaging agents, functional MRI methods for characterization, and therapeutic follow-up of cancer in preclinical models; and (iv) characterization of new nano-supports and selective objects such as peptide nanotubes, nanobodies, and biocompatible nano-objects for medical diagnosis and environmental control.
