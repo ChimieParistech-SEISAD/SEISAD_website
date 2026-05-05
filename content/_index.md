@@ -155,6 +155,11 @@ sections:
             display: inline-block;
             padding-bottom: 5px;
           }
+          .footer-column p, .footer-column li, .footer-column {
+            font-size: 0.85rem; /* 字号缩小 */
+            line-height: 1.5;
+            color: rgba(255,255,255,0.95) !important; /* 确保是白色的 */
+          }
           .footer-column a { color: #ffffff !important; text-decoration: underline; }
           .footer-column ul { list-style: none; padding: 0; }
 
@@ -242,7 +247,7 @@ sections:
               </div>
               <div class="footer-column">
                 <h3>Contact</h3>
-                <p><strong>Tel:</strong> +33 1 XX XX XX XX<br><strong>Email:</strong> <a href="mailto:contact@seisad.com">contact@seisad.com</a><br><strong>Twitter:</strong> <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a></p>
+                <p>Tel: +33 1 XX XX XX XX<br>Email:</strong <a href="mailto:contact@seisad.com">contact@seisad.com</a><br>Twitter: <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a></p>
               </div>
               <div class="footer-column">
                 <h3>Quick Links</h3>
