@@ -268,8 +268,8 @@ sections:
       text: |
         <div class="logo-bar">
           <img src="media/seisad.png" style="height:80px;">
-          <img src="media/chimie.png" style="height:100px;">
           <img src="media/iclehs.png" style="height:75px;">
+          <img src="media/chimie.png" style="height:100px;">
           <img src="media/cnrs.png" style="height:80px;">
         </div>
     design:
@@ -289,7 +289,7 @@ sections:
             </div>
             <div class="footer-column">
               <h3>Contact</h3>
-              <p><strong>Tel:</strong> +33 1 XX XX XX XX<br><strong>Email:</strong> <a href="mailto:contact@seisad.com">contact@seisad.com</a><br><strong>Twitter:</strong> <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a></p>
+              <p>Tel: +33 1 XX XX XX XX<br>Email: <a href="mailto:contact@seisad.com">contact@seisad.com</a><br>Twitter: <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a></p>
             </div>
             <div class="footer-column">
               <h3>Quick Links</h3>
