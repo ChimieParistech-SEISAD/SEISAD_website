@@ -107,6 +107,21 @@ sections:
           @media (max-width: 768px) {
             .nav-link { padding: 0 0.8rem !important; font-size: 0.9rem !important; }
           }
+          /* 右侧图标部分 (搜索、月亮) */
+          .navbar-nav-btns {
+            display: flex !important;
+            align-items: center !important;
+            margin-left: 2rem !important; /* 强制与 "Contact" 保持距离 */
+          }
+          
+          .navbar-nav-btns .nav-link {
+            padding: 0 0.8rem !important; /* 图标之间的间距小一点 */
+          }
+          
+          /* 针对移动端的微调：如果屏幕太小，隐藏图标或调整 */
+          @media (max-width: 768px) {
+            .nav-link { padding: 0 0.8rem !important; font-size: 0.9rem !important; }
+          }
           /* ===== 3. 统一标题横条样式 ===== */
           .main-title-container {
             background-color: #f0f9f8;
