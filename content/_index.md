@@ -112,37 +112,36 @@ sections:
             95% { transform: translateX(-66.66%); }
             100% { transform: translateX(0); }
           }
-          /* ===== 7. 重新设计的标题区块 (精美卡片式) ===== */
+          /* ===== 7. 重新设计的标题区块 (居中 + 顶部横条) ===== */
           .main-title-container {
             background-color: #f0f9f8; /* 极浅的薄荷绿底色 */
-            border-left: 8px solid #008a85; /* 左侧深绿色加粗装饰条 */
-            padding: 1.5rem 2rem;
-            margin: 2rem auto;
-            max-width: 90%;
-            text-align: left; /* 改为左对齐，通常比居中显高级 */
-            box-shadow: 2px 2px 15px rgba(0,0,0,0.05); /* 极淡的阴影 */
+            border-top: 6px solid #008a85; /* 顶部深绿色装饰横条 */
+            padding: 2.5rem 1.5rem; /* 增加上下内边距，让呼吸感更足 */
+            margin: 2.5rem auto;
+            max-width: 85%;
+            text-align: center; /* 彻底居中 */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* 淡淡的投影 */
+            border-radius: 0 0 8px 8px; /* 顶部是平的，底部加一点点微圆角更精致 */
           }
 
           .full-name {
             font-size: 1.4rem;
-            color: #4a5568;
             font-weight: bold;
-            text-transform: uppercase; /* 全称大写化，增加学术感 */
-            letter-spacing: 1px;
+            color: #718096; /* 灰蓝色，显得比较高级 */
+            text-transform: uppercase; /* 全称大写 */
+            letter-spacing: 2px; /* 增加字间距，显得大气 */
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
           }
 
           .brand-name-bold {
-            font-size: 2.2rem;
+            font-size: 2.6rem; /* 进一步放大简称 */
             color: #008a85;
             font-weight: 900;
-            letter-spacing: -1px;
-          }
-
-          .brand-name-bold span {
-            color: #2d3748; /* 让圆括号保持深色，对比更明显 */
-            font-weight: 300;
+            letter-spacing: 4px; /* 缩写字母拉开距离，非常有设计感 */
+            margin: 0;
+            line-height: 1;
           }
           /* ===== 8. 底部署名栏 ===== */
           .logo-bar {
