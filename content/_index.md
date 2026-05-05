@@ -47,7 +47,7 @@ sections:
             color: #ffffff !important;
             opacity: 1 !important;
             font-weight: bold !important;
-            font-size: 1.05rem !important;
+            font-size: 1.3rem !important;
             padding: 0 1.5rem !important; 
             display: flex !important;
             align-items: center !important; 
@@ -124,7 +124,7 @@ sections:
           }
 
           .full-name {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             color: #4a5568;
             font-weight: bold;
             text-transform: uppercase; /* 全称大写化，增加学术感 */
