@@ -220,7 +220,7 @@ sections:
       full_width: true
 
   # ─────────────────────────────────────────────────────────
-  # 3. CUSTOM FOOTER (全站同步)
+  # 3. CUSTOM FOOTER (完全同步主页)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
@@ -229,18 +229,19 @@ sections:
           <div class="home-outer-wrapper">
             <div class="footer-grid">
               <div class="footer-column">
-                <h3 style="color:white; border-bottom:2px solid rgba(255,255,255,0.3); padding-bottom:5px; margin-bottom:1.2rem;">Address</h3>
-                <p style="font-size:0.85rem; line-height:1.5;">Chimie ParisTech - PSL University<br>i-CLeHS (CNRS UMR 8060)<br>11 Rue Pierre et Marie Curie<br>75005 Paris, France</p>
+                <h3>Address</h3>
+                <p>Chimie ParisTech - PSL University<br>i-CLeHS (CNRS UMR 8060)<br>11 Rue Pierre et Marie Curie<br>75005 Paris, France</p>
               </div>
               <div class="footer-column">
-                <h3 style="color:white; border-bottom:2px solid rgba(255,255,255,0.3); padding-bottom:5px; margin-bottom:1.2rem;">Contact</h3>
-                <p style="font-size:0.85rem; line-height:1.5;">Tel: +33 1 XX XX XX XX<br>Email: <a href="mailto:contact@seisad.com" style="color:white; text-decoration:underline;">contact@seisad.com</a></p>
+                <h3>Contact</h3>
+                <p>Tel: +33 1 XX XX XX XX<br>Email: <a href="mailto:contact@seisad.com">contact@seisad.com</a><br>Twitter: <a href="https://twitter.com/MakeOwnable" target="_blank">@MakeOwnable</a></p>
               </div>
               <div class="footer-column">
-                <h3 style="color:white; border-bottom:2px solid rgba(255,255,255,0.3); padding-bottom:5px; margin-bottom:1.2rem;">Quick Links</h3>
-                <ul style="list-style:none; padding:0; font-size:0.85rem;">
-                  <li><a href="https://psl.eu/" style="color:white; text-decoration:underline;">PSL University</a></li>
-                  <li><a href="https://www.cnrs.fr/" style="color:white; text-decoration:underline;">CNRS</a></li>
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="https://www.chimieparistech.psl.eu/" target="_blank">Chimie ParisTech</a></li>
+                  <li><a href="https://www.cnrs.fr/" target="_blank">CNRS</a></li>
+                  <li><a href="https://psl.eu/" target="_blank">PSL University</a></li>
                 </ul>
               </div>
             </div>
