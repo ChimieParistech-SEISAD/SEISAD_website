@@ -118,7 +118,7 @@ sections:
             border-top: 6px solid #008a85; /* 顶部深绿色装饰横条 */
             padding: 2.5rem 1.5rem; /* 增加上下内边距，让呼吸感更足 */
             margin: 2.5rem auto;
-            max-width: 85%;
+            max-width: 90%;
             text-align: center; /* 彻底居中 */
             box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* 淡淡的投影 */
             border-radius: 0 0 8px 8px; /* 顶部是平的，底部加一点点微圆角更精致 */
