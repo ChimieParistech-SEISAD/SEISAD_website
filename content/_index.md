@@ -112,20 +112,38 @@ sections:
             95% { transform: translateX(-66.66%); }
             100% { transform: translateX(0); }
           }
-          /* ===== 7. 标题与文字 ===== */
+          /* ===== 7. 标题优化：更有品牌感 ===== */
           .main-title {
             text-align: center;
-            padding: var(--space-xs) 0;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2d3748;
-            letter-spacing: 1px;
+            padding: 2.5rem 0 1.5rem 0; /* 增加上下间距，让它不那么拥挤 */
+            font-size: 1.4rem; /* 稍微调小一点全称，突出层次 */
+            font-weight: 500;
+            color: #4a5568; /* 全称用深灰色，更有质感 */
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+            max-width: 90%;
+            margin: 0 auto;
           }
-          .research-text {
-            text-align: justify;
-            line-height: 1.8;
-            font-size: 1.08rem;
-            color: #222;
+
+          /* 专门针对 SEISAD 这个词的样式 */
+          .brand-name {
+            color: #008a85; /* 实验室绿色 */
+            font-weight: 800; /* 极粗体 */
+            font-size: 1.8rem; /* 缩写比全称大 */
+            display: block; /* 让它换行，或者不换行（取决于你喜欢哪种） */
+            margin-top: 5px;
+            letter-spacing: 2px;
+          }
+
+          /* 给标题加一个淡淡的底部装饰线，增加精致感 */
+          .main-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #008a85;
+            margin: 15px auto 0;
+            border-radius: 2px;
           }
           /* ===== 8. 底部署名栏 ===== */
           .logo-bar {
