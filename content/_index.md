@@ -24,9 +24,9 @@ sections:
             background-color: #008a85 !important;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
             margin: 0 !important;
-            padding: 0 !important; /* 关键：去掉内边距，让子元素可以顶天立地 */
+            padding: 0 !important; 
             border: none !important;
-            min-height: 60px; /* 统一导航栏高度 */
+            min-height: 60px; 
           }
 
           /* ===== 2. 删除左上角文字 (SEISAD) ===== */
@@ -34,17 +34,16 @@ sections:
             display: none !important;
           }
 
-          /* 让导航菜单占满高度并居中 */
-          .navbar-collapse {
-            height: 100%;
-          }
+          /* 导航布局修正 */
           .navbar-nav {
             height: 100%;
-            align-items: stretch; /* 让子元素拉伸填充高度 */
+            align-items: stretch !important; 
+            flex-direction: row !important; /* 确保横向排列 */
           }
           .nav-item {
-            display: flex;
-            align-items: stretch;
+            display: flex !important;
+            align-items: stretch !important;
+            height: 60px !important;
           }
 
           /* ===== 3. 导航文字样式 (顶天立地的悬停效果) ===== */
@@ -53,27 +52,30 @@ sections:
             opacity: 1 !important;
             font-weight: bold !important;
             font-size: 1.05rem !important;
-            padding: 0 1.5rem !important; /* 左右间距，控制色块宽度 */
+            padding: 0 1.5rem !important; 
             display: flex !important;
-            align-items: center; /* 文字垂直居中 */
-            transition: all 0.3s ease;
-            height: 60px !important; /* 与 navbar 高度一致，实现顶天立地 */
-            border-radius: 0 !important; /* 悬停是矩形，不要圆角 */
+            align-items: center !important; 
+            justify-content: center !important;
+            height: 60px !important; 
+            transition: background-color 0.3s ease;
+            border-radius: 0 !important;
+            background-color: transparent !important; /* 默认透明 */
           }
 
-          /* 鼠标悬停时的效果：淡化背景，覆盖整个区域 */
-          .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.15) !important; /* 白色淡化背景 */
+          /* 鼠标悬停效果：应用于所有项，包括当前激活项 */
+          .nav-link:hover, 
+          .navbar-nav .nav-item .nav-link:hover,
+          .navbar-nav .nav-item .nav-link.active:hover {
+            background-color: rgba(255, 255, 255, 0.2) !important; /* 悬停时的淡白色背景 */
             color: #ffffff !important;
+            text-decoration: none !important;
           }
 
-          /* 取消当前页面的特殊高亮（保持和其他一致） */
+          /* 激活项样式：平时和普通项一样，不加白框 */
           .navbar-nav .nav-item .nav-link.active {
-            background-color: transparent !important;
+            background-color: transparent !important; /* 确保平时没有背景 */
             color: #ffffff !important;
           }
-          /* 如果希望当前页也有个淡淡的底色，可以开启下面这段 */
-          /* .navbar-nav .nav-item .nav-link.active { background-color: rgba(255, 255, 255, 0.08) !important; } */
 
           /* ===== 4. 页面宽度设置 ===== */
           .max-w-prose, .prose, .container, .mx-auto { 
