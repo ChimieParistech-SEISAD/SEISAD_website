@@ -126,6 +126,7 @@ sections:
           .full-name {
             font-size: 1.1rem;
             color: #4a5568;
+            font-weight: bold;
             text-transform: uppercase; /* 全称大写化，增加学术感 */
             letter-spacing: 1px;
             display: block;
@@ -232,7 +233,7 @@ sections:
       text: |
         <div class="main-title-container">
           <span class="full-name">Synthesis, Electrochemistry, Imaging and Analytical Systems for Diagnosis Team</span>
-          <div class="brand-name-bold">SEISAD <span>—</span></div>
+          <div class="brand-name-bold">SEISAD </div>
         </div>
         <div class="slider-container">
           <div class="slider-wrapper">
