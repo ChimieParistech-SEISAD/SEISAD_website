@@ -222,9 +222,41 @@ sections:
   # ─────────────────────────────────────────────────────────
   # 2. PERMANENT MEMBERS
   # ─────────────────────────────────────────────────────────
-  - block: markdown
+- block: markdown
     content:
       text: |
+        <style>
+          .people-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* This forces 2 columns */
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+          }
+          .person-card {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+          }
+          .person-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+          }
+          .person-info { padding: 20px; }
+          .person-name { font-weight: bold; font-size: 1.2rem; color: #333; }
+          .person-title { color: #666; font-style: italic; margin-bottom: 10px; }
+          .person-bio { font-size: 0.95rem; margin-bottom: 15px; min-height: 40px; }
+          .person-links { font-size: 0.85rem; line-height: 1.6; }         
+          /* Responsive: Stack in 1 column on small mobile screens */
+          @media (max-width: 600px) {
+            .people-grid { grid-template-columns: 1fr; }
+          }
+        </style>
         <div class="home-outer-wrapper">
           <h2 style="text-align:center; color:#333; margin-bottom:40px; font-weight:900; text-transform:uppercase; letter-spacing:1px;">Permanent Members</h2>
           <div class="people-grid">
@@ -254,6 +286,81 @@ sections:
                   <div><span>Email:</span> <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
                   <div><a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
                   <div><a href="#" target="_blank">Full CV (PDF)</a></div>
+                </div>
+              </div>
+            </div>
+            <!-- Row 2: Person 3 -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
+              <div class="person-info">
+                <div class="person-name">Member Name</div>
+                <div class="person-title">Position Title</div>
+                <div class="person-bio">Research interests and expertise description.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:email@domain.com">email@...</a></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Person 4 -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
+              <div class="person-info">
+                <div class="person-name">Member Name</div>
+                <div class="person-title">Position Title</div>
+                <div class="person-bio">Research interests and expertise description.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:email@domain.com">email@...</a></div>
+                </div>
+              </div>
+            </div>
+  <!-- Row 3: Person 5 -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
+              <div class="person-info">
+                <div class="person-name">Member Name</div>
+                <div class="person-title">Position Title</div>
+                <div class="person-bio">Research interests and expertise description.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:email@domain.com">email@...</a></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3: Person 6 -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
+              <div class="person-info">
+                <div class="person-name">Member Name</div>
+                <div class="person-title">Position Title</div>
+                <div class="person-bio">Research interests and expertise description.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:email@domain.com">email@...</a></div>
+                </div>
+              </div>
+            </div>
+  <!-- Row 4: Person 7 -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
+              <div class="person-info">
+                <div class="person-name">Member Name</div>
+                <div class="person-title">Position Title</div>
+                <div class="person-bio">Research interests and expertise description.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:email@domain.com">email@...</a></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 4: Person 8 -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
+              <div class="person-info">
+                <div class="person-name">Member Name</div>
+                <div class="person-title">Position Title</div>
+                <div class="person-bio">Research interests and expertise description.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:email@domain.com">email@...</a></div>
                 </div>
               </div>
             </div>
