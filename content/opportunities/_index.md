@@ -290,7 +290,7 @@ sections:
               </ul>
               <div style="margin-top:10px; font-size:0.9rem; color:#666;">Expected start date: Oct 2026 | Deadline: 31 May 2026</div>
               <a href="mailto:bich-thuy.doan@chimieparistech.psl.eu;zijun.wang@chimieparistech.psl.eu?subject=Application for PhD: NIR-II Quantum Dots" class="apply-btn">Apply for PhD</a>
-              <a href="/media/PhD ENSCP NPs SWIR theranostics-20260424.pdf" target="_blank" class="download-btn">Download PDF Description</a>
+              <a href="/SEISAD_website/media/PhD ENSCP NPs SWIR theranostics-20260424.pdf" target="_blank" class="download-btn">Download PDF Description</a>
             </div>
           </div>
 
