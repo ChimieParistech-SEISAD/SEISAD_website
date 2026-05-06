@@ -291,7 +291,7 @@ sections:
           <!-- 主题 3 -->
           <div class="theme-module">
             <div class="theme-left">
-              <div class="theme-label">Advanced Bio-imaging & Phototherapy</div>
+              <div class="theme-label">Bio-imaging & Phototherapy</div>
               <div class="theme-img-container">
                 <img src="/SEISAD_website/media/Imaging.png" alt="Imaging">
               </div>
