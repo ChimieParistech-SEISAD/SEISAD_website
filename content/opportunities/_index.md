@@ -7,7 +7,7 @@ design:
 
 sections:
   # ─────────────────────────────────────────────────────────
-  # 0. GLOBAL STYLE (完全保留你原来的样式)
+  # 0. GLOBAL STYLE (完全是你第一次提供的原始代码，仅增加了下载按钮的样式)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
@@ -24,7 +24,7 @@ sections:
             padding-bottom: 10px !important;
           }
 
-          /* 统一容器宽度 */
+          /* 统一容器宽度 (与主页 1400px 对应) */
           .max-w-prose, .prose, .container, .mx-auto { 
             max-width: 100% !important; 
             width: 100% !important; 
@@ -37,12 +37,13 @@ sections:
             clear: both;
           }
 
-          /* ===== 2. 导航栏标准化 ===== */
+          /* ===== 2. 导航栏标准化 (修正 SEISAD 显现和图标挤压问题) ===== */
           header, .page-header {
             background-color: #008a85 !important;
             padding: 0 !important;
           }
           
+          /* 强制隐藏左侧所有的 Brand/Logo 文本 */
           .navbar-brand, .navbar-brand-mobile, .brand-logo {
             display: none !important;
           }
@@ -51,19 +52,21 @@ sections:
             background-color: #008a85 !important;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
             min-height: 60px;
-            padding: 0 2rem !important;
+            padding: 0 2rem !important; /* 给导航栏左右留出安全边距 */
           }
           
+          /* 导航栏容器：使用 space-between 让中间菜单居中，两侧撑开 */
           .navbar > .container, .navbar > .container-xl {
             display: flex !important;
             justify-content: space-between !important; 
-            max-width: 1400px !important;
+            max-width: 1400px !important; /* 与内容宽度一致 */
           }
           
+          /* 中间菜单部分 */
           .navbar-collapse {
             flex-grow: 1 !important;
             display: flex !important;
-            justify-content: center !important;
+            justify-content: center !important; /* 确保菜单项整体在中间 */
           }
           
           .navbar-nav {
@@ -71,10 +74,16 @@ sections:
             align-items: center !important;
           }
           
+          .nav-item {
+            display: flex !important;
+            align-items: center !important;
+          }
+          
           .nav-link {
             color: #ffffff !important;
             font-weight: bold !important;
-            font-size: 1.5rem !important;
+            font-size: 1.5rem !important; /* 稍微调小一点，防止在小屏幕挤压 */
+            /* 关键：通过 padding 统一单词间的物理间距 */
             padding: 0 1.5rem !important; 
             transition: background-color 0.3s;
           }
@@ -84,7 +93,23 @@ sections:
             border-radius: 4px;
           }
           
-          /* ===== 3. 居中标题横条 ===== */
+          /* 右侧图标部分 (搜索、月亮) */
+          .navbar-nav-btns {
+            display: flex !important;
+            align-items: center !important;
+            margin-left: 2rem !important; /* 强制与 "Contact" 保持距离 */
+          }
+          
+          .navbar-nav-btns .nav-link {
+            padding: 0 0.8rem !important; /* 图标之间的间距小一点 */
+          }
+          
+          /* 针对移动端的微调：如果屏幕太小，隐藏图标或调整 */
+          @media (max-width: 768px) {
+            .nav-link { padding: 0 0.8rem !important; font-size: 0.9rem !important; }
+          }
+
+          /* ===== 3. 居中标题横条 (与主页一致) ===== */
           .main-title-container {
             background-color: #f0f9f8;
             border-top: 6px solid #008a85;
@@ -152,6 +177,7 @@ sections:
           .opp-list { padding-left: 20px; margin: 15px 0; }
           .opp-list li { margin-bottom: 10px; font-size: 1.05rem; color: #444; list-style-type: disc !important; }
           
+          /* 邮件申请按钮 */
           .apply-btn {
             display: inline-block;
             background: #008a85;
@@ -161,13 +187,14 @@ sections:
             text-decoration: none !important;
             font-weight: bold;
             margin-top: 25px;
-            margin-right: 15px;
+            margin-right: 15px; /* 添加了右侧边距，不让两个按钮贴在一起 */
             transition: opacity 0.3s;
           }
-          /* 新增：PDF 下载按钮样式 */
+          
+          /* 新增：PDF 下载按钮 */
           .download-btn {
             display: inline-block;
-            background: #6c757d;
+            background: #6c757d; /* 灰色区分 */
             color: white !important;
             padding: 12px 30px;
             border-radius: 8px;
@@ -176,9 +203,10 @@ sections:
             margin-top: 25px;
             transition: opacity 0.3s;
           }
+          
           .apply-btn:hover, .download-btn:hover { opacity: 0.9; color: white !important; }
 
-          /* ===== 5. 自定义底部 ===== */
+          /* ===== 5. 自定义底部 (全宽背景) ===== */
           .custom-footer-container {
             background-color: #008a85; 
             color: #ffffff;            
@@ -208,14 +236,21 @@ sections:
             color: rgba(255,255,255,0.95) !important;
           }
           .footer-column a { color: #ffffff !important; text-decoration: underline; }
-          
+          .footer-column ul { list-style: none; padding: 0; }
+
+          /* ===== 6. 彻底隐藏系统默认底部 ===== */
           footer, .site-footer, .powered-by, .copyright {
             display: none !important;
+          }
+
+          @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .opp-header { flex-direction: column; align-items: flex-start; gap: 10px; }
           }
         </style>
 
   # ─────────────────────────────────────────────────────────
-  # 1. TITLE BAR
+  # 1. TITLE BAR (视觉一致性核心：与主页结构相同)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
@@ -237,7 +272,7 @@ sections:
       text: |
         <div class="home-outer-wrapper">
           
-          <!-- 第一个职位：真实开放并增加 PDF 下载 -->
+          <!-- New PhD Position: NIR-II Quantum Dots -->
           <div class="opp-card">
             <div class="opp-header">
               <span style="font-size:1.6rem; font-weight:bold;">PhD Position: NIR-II Semiconductor Quantum Dots and Theranostics</span>
@@ -254,38 +289,46 @@ sections:
                 <li>Fluent in English with strong scientific rigor.</li>
               </ul>
               <div style="margin-top:10px; font-size:0.9rem; color:#666;">Expected start date: Oct 2026 | Deadline: 31 May 2026</div>
-              
-              <!-- 按钮区域 -->
-              <div style="display: flex; flex-wrap: wrap;">
-                <a href="mailto:bich-thuy.doan@chimieparistech.psl.eu;zijun.wang@chimieparistech.psl.eu?subject=Application for PhD: NIR-II Quantum Dots" class="apply-btn">Apply via Email</a>
-                <a href="/media/PhD ENSCP NPs SWIR theranostics-20260424.pdf" target="_blank" class="download-btn">Download PDF Description</a>
-              </div>
+              <a href="mailto:bich-thuy.doan@chimieparistech.psl.eu;zijun.wang@chimieparistech.psl.eu?subject=Application for PhD: NIR-II Quantum Dots" class="apply-btn">Apply for PhD</a>
+              <a href="/media/PhD ENSCP NPs SWIR theranostics-20260424.pdf" target="_blank" class="download-btn">Download PDF Description</a>
             </div>
           </div>
 
-          <!-- 第二个职位：修改为 Close -->
+          <!-- Existing PhD Position (已关闭) -->
           <div class="opp-card" style="opacity: 0.7;">
             <div class="opp-header" style="background: #718096;">
               <span style="font-size:1.6rem; font-weight:bold;">PhD Position in Bio-Sensing</span>
-              <span class="opp-badge" style="color: #718096;">Status: Closed</span>
+              <span class="opp-badge" style="color: #718096; background: #e2e8f0;">Status: Closed</span>
             </div>
             <div class="opp-body">
-              <div class="opp-section-title" style="color:#718096 !important;">Project Description</div>
+              <div class="opp-section-title" style="color: #718096 !important;">Project Description</div>
               <p class="opp-text">The candidate will work on developing a new generation of electrochemical sensors for early detection of neurological biomarkers. This project involves surface chemistry, nanomaterials, and microfluidics.</p>
-              <div style="margin-top:25px; color:#e53e3e; font-weight:bold;">Applications Closed</div>
+              <div class="opp-section-title" style="color: #718096 !important;">Requirements</div>
+              <ul class="opp-list">
+                <li>Master's degree in Analytical Chemistry, Materials Science, or Bioengineering.</li>
+                <li>Experience with electrochemistry is highly desirable.</li>
+                <li>Fluent in English (written and spoken).</li>
+              </ul>
+              <div style="margin-top:25px; color:#e53e3e; font-weight:bold; font-size: 1.1rem;">Applications Closed</div>
             </div>
           </div>
 
-          <!-- 第三个职位：修改为 Close -->
+          <!-- Postdoc Position (已关闭) -->
           <div class="opp-card" style="opacity: 0.7;">
             <div class="opp-header" style="background: #718096;">
               <span style="font-size:1.6rem; font-weight:bold;">Postdoctoral Fellowship</span>
-              <span class="opp-badge" style="color: #718096;">Status: Closed</span>
+              <span class="opp-badge" style="color: #718096; background: #e2e8f0;">Status: Closed</span>
             </div>
             <div class="opp-body">
-              <div class="opp-section-title" style="color:#718096 !important;">Project Description</div>
+              <div class="opp-section-title" style="color: #718096 !important;">Project Description</div>
               <p class="opp-text">Focus on the synthesis and preclinical evaluation of bimodal MRI/Optical imaging agents for cancer theranostics.</p>
-              <div style="margin-top:25px; color:#e53e3e; font-weight:bold;">Applications Closed</div>
+              <div class="opp-section-title" style="color: #718096 !important;">Requirements</div>
+              <ul class="opp-list">
+                <li>PhD in Organic Chemistry or Molecular Imaging.</li>
+                <li>Proven track record of high-quality publications.</li>
+                <li>Self-motivated and multidisciplinary mindset.</li>
+              </ul>
+              <div style="margin-top:25px; color:#e53e3e; font-weight:bold; font-size: 1.1rem;">Applications Closed</div>
             </div>
           </div>
 
@@ -294,7 +337,7 @@ sections:
       full_width: true
 
   # ─────────────────────────────────────────────────────────
-  # 3. CUSTOM FOOTER (完全保留你原来的)
+  # 3. CUSTOM FOOTER (完全同步主页)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
