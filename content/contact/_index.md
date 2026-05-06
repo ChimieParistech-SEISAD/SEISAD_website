@@ -110,27 +110,48 @@ sections:
           </div>
         </div>
 
-  # ─────────────────────────────────────────────────────────
-  # 2. CONTACT CONTENT (解决 Office Location 对齐问题)
+# ─────────────────────────────────────────────────────────
+  # 2. CONTACT CONTENT (Office Location & Interactive Map)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
       text: |
         <div class="home-outer-wrapper">
-          <div class="contact-grid-wrapper">
-            <div class="contact-info-column">
-              <h2>Office Location</h2>
-              <div class="contact-details-box">
-                <strong style="font-size:1.2rem; display:block; margin-bottom:8px;">Institute of Chemistry for Life and Health Sciences (i-CLeHS)</strong>
-                UMR 8060 / ENSCP – Chimie ParisTech<br><br>
-                11 Rue Pierre et Marie Curie<br>
-                75005 Paris, France<br><br>
-                Email: <a href="mailto:anne.varenne@chimieparistech.psl.eu" style="color:#008a85; font-weight:bold; text-decoration:underline;">anne.varenne@chimieparistech.psl.eu</a>
+          <!-- 使用 flex 布局实现左右对齐，gap 设置间距 -->
+          <div class="contact-grid-wrapper" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: start;">
+            
+            <!-- 左侧：文字信息 -->
+            <div class="contact-info-column" style="flex: 1; min-width: 320px;">
+              <h2 style="color: #008a85; margin-bottom: 20px; font-size: 2rem;">Office Location</h2>
+              <div class="contact-details-box" style="line-height: 1.6; color: #333;">
+                <strong style="font-size:1.25rem; display:block; margin-bottom:10px; color: #002e5b;">Institute of Chemistry for Life and Health Sciences (i-CLeHS)</strong>
+                <p style="margin: 0; font-size: 1.05rem;">
+                  UMR 8060 / ENSCP – Chimie ParisTech<br><br>
+                  11 Rue Pierre et Marie Curie<br>
+                  75005 Paris, France<br><br>
+                  <strong>Email:</strong> <a href="mailto:anne.varenne@chimieparistech.psl.eu" style="color:#008a85; font-weight:bold; text-decoration:underline;">anne.varenne@chimieparistech.psl.eu</a>
+                </p>
               </div>
             </div>
-            <div class="map-column-wrapper">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.591035540058!2d2.3421715768858223!3d48.846938901509915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e600555555%3A0x63346e45f1b268f7!2sChimie%20ParisTech%20-%20PSL!5e0!3m2!1sen!2sfr!4v1700000000000!5m2!1sen!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <!-- 右侧：Google Map 嵌入 -->
+            <div class="map-column-wrapper" style="flex: 1.5; min-width: 320px;">
+              <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 1px solid #eee;">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.591035540058!2d2.3421715768858223!3d48.846938901509915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e600555555%3A0x63346e45f1b268f7!2sChimie%20ParisTech%20-%20PSL!5e0!3m2!1sen!2sfr!4v1715670000000!5m2!1sen!2sfr" 
+                  width="100%" 
+                  height="400" 
+                  style="border:0; display: block;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <p style="text-align: right; margin-top: 8px;">
+                <a href="https://maps.app.goo.gl/3A68NfXmBvX6Uj6V9" target="_blank" style="font-size: 0.9rem; color: #666; text-decoration: none;">🕒 Open in Google Maps →</a>
+              </p>
             </div>
+
           </div>
         </div>
 
