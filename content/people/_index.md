@@ -244,18 +244,18 @@ sections:
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
           }
           .person-img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
             flex-shrink: 0;
             margin-right: 20px;
           }
           .person-info { padding: 0; }
-          .person-name { font-weight: bold; font-size: 1.2rem; color: #333; }
+          .person-name { font-weight: bold; font-size: 1.5rem; color: #333; }
           .person-title { color: #666; font-style: italic; margin-bottom: 10px; }
-          .person-bio { font-size: 0.95rem; margin-bottom: 15px; min-height: 40px; }
-          .person-links { font-size: 0.85rem; line-height: 1.6; }         
+          .person-bio { font-size: 1.2rem; margin-bottom: 15px; min-height: 40px; }
+          .person-links { font-size: 1.2rem; line-height: 1.6; }         
           /* Responsive: Stack in 1 column on small mobile screens */
           @media (max-width: 600px) {
             .people-grid { grid-template-columns: 1fr; }
