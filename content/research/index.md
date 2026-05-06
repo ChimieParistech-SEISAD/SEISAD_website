@@ -259,8 +259,9 @@ sections:
               </div>
               <div class="theme-contact">
                 <span class="contact-title">Contact Person:</span>
-                <div>Prof. Anne Varenne</div>
-                <div>Email: <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
+                <div>Dr. Christian Girard</div>
+                <div>Dr. Laura Trapiella</div>
+                <div>Dr. Zijun Wang</div>
               </div>
             </div>
           </div>
@@ -268,7 +269,7 @@ sections:
           <!-- 主题 2 -->
           <div class="theme-module">
             <div class="theme-left">
-              <div class="theme-label">Sensors & Diagnostics</div>
+              <div class="theme-label"> Electrochemical BioSensors</div>
               <div class="theme-img-container">
                 <img src="/SEISAD_website/media/biosensor.jpg" alt="Sensors">
               </div>
@@ -279,8 +280,10 @@ sections:
               </div>
               <div class="theme-contact">
                 <span class="contact-title">Contact Person:</span>
-                <div>Dr. Zijun Wang</div>
-                <div>Email: <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
+                <div>Prof. Anne Varenne</div>
+                <div>Prof. Sophie Griveau</div>
+                <div>Dr. Cyrine Slim</div>
+                <div>Dr. Fanny d'Orlyé</div>
               </div>
             </div>
           </div>
@@ -288,7 +291,7 @@ sections:
           <!-- 主题 3 -->
           <div class="theme-module">
             <div class="theme-left">
-              <div class="theme-label">Advanced Bio-imaging</div>
+              <div class="theme-label">Advanced Bio-imaging & Phototherapy</div>
               <div class="theme-img-container">
                 <img src="/SEISAD_website/media/Imaging.png" alt="Imaging">
               </div>
@@ -299,8 +302,8 @@ sections:
               </div>
               <div class="theme-contact">
                 <span class="contact-title">Contact Person:</span>
-                <div>Dr. B. Doan</div>
-                <div>Email: <a href="mailto:b.doan@chimieparistech.psl.eu">b.doan@chimieparistech.psl.eu</a></div>
+                <div>Dr. Bich-Thuy Doan</div>
+                <div>Dr. Zijun Wang</div>
               </div>
             </div>
           </div>
