@@ -314,7 +314,7 @@ sections:
                 </div>
               </div>
             </div>
-  <!-- Row 3: Person 5 -->
+            <!-- Row 3: Person 5 -->
             <div class="person-card">
               <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
               <div class="person-info">
@@ -339,7 +339,7 @@ sections:
                 </div>
               </div>
             </div>
-  <!-- Row 4: Person 7 -->
+            <!-- Row 4: Person 7 -->
             <div class="person-card">
               <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
               <div class="person-info">
