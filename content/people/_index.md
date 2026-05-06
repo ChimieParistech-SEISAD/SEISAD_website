@@ -230,7 +230,7 @@ sections:
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* This forces 2 columns */
             gap: 30px;
-            max-width: 1000px;
+            width: 100%;
             margin: 0 auto;
           }
           .person-card {
