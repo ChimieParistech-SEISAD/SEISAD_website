@@ -247,7 +247,7 @@ sections:
     design:
       full_width: true
 
-  # ─────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────
   # 2. OPPORTUNITIES CONTENT
   # ─────────────────────────────────────────────────────────
   - block: markdown
@@ -255,7 +255,28 @@ sections:
       text: |
         <div class="home-outer-wrapper">
           
-          <!-- PhD Position -->
+          <!-- New PhD Position: NIR-II Quantum Dots -->
+          <div class="opp-card">
+            <div class="opp-header">
+              <span style="font-size:1.6rem; font-weight:bold;">PhD Position: NIR-II Semiconductor Quantum Dots and Theranostics</span>
+              <span class="opp-badge">Status: Open</span>
+            </div>
+            <div class="opp-body">
+              <div class="opp-section-title">Project Description</div>
+              <p class="opp-text">This project focuses on developing high-performance silver chalcogenide quantum dots for the second near-infrared window (NIR-II). The candidate will work on microwave-assisted synthesis, surface engineering for biocompatibility, and preclinical validation (in vitro/in vivo) for multimodal imaging (Fluorescence/MRI) and cancer therapy.</p>
+              <div class="opp-section-title">Requirements</div>
+              <ul class="opp-list">
+                <li>Master's degree in Chemistry, Materials Science, or Biomedical Engineering.</li>
+                <li>Background in colloidal synthesis, optical spectroscopy (UV-Vis/PL), and characterization (TEM, XRD).</li>
+                <li>Motivation for multidisciplinary research at the interface of chemistry and biology.</li>
+                <li>Fluent in English with strong scientific rigor.</li>
+              </ul>
+              <div style="margin-top:10px; font-size:0.9rem; color:#666;">Expected start date: Oct 2026 | Deadline: 31 May 2026</div>
+              <a href="mailto:bich-thuy.doan@chimieparistech.psl.eu;zijun.wang@chimieparistech.psl.eu?subject=Application for PhD: NIR-II Quantum Dots" class="apply-btn">Apply for PhD</a>
+            </div>
+          </div>
+
+          <!-- Existing PhD Position -->
           <div class="opp-card">
             <div class="opp-header">
               <span style="font-size:1.6rem; font-weight:bold;">PhD Position in Bio-Sensing</span>
