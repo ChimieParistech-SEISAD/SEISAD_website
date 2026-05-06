@@ -117,12 +117,10 @@ sections:
     content:
       text: |
         <div class="home-outer-wrapper">
-          <!-- 使用 flex 布局实现左右对齐，gap 设置间距 -->
           <div class="contact-grid-wrapper" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: start;">
             
-            <!-- 左侧：文字信息 -->
             <div class="contact-info-column" style="flex: 1; min-width: 320px;">
-              <h2 style="color: #008a85; margin-bottom: 20px; font-size: 2rem;">Office Location</h2>
+              <h2 style="color: #008a85; margin-bottom: 20px; font-size: 2rem; border: none; padding: 0;">Office Location</h2>
               <div class="contact-details-box" style="line-height: 1.6; color: #333;">
                 <strong style="font-size:1.25rem; display:block; margin-bottom:10px; color: #002e5b;">Institute of Chemistry for Life and Health Sciences (i-CLeHS)</strong>
                 <p style="margin: 0; font-size: 1.05rem;">
@@ -134,7 +132,6 @@ sections:
               </div>
             </div>
 
-            <!-- 右侧：Google Map 嵌入 -->
             <div class="map-column-wrapper" style="flex: 1.5; min-width: 320px;">
               <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 1px solid #eee;">
                 <iframe 
@@ -143,8 +140,7 @@ sections:
                   height="400" 
                   style="border:0; display: block;" 
                   allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade">
+                  loading="lazy">
                 </iframe>
               </div>
               <p style="text-align: right; margin-top: 8px;">
@@ -154,6 +150,8 @@ sections:
 
           </div>
         </div>
+    design:
+      full_width: true
 
   # ─────────────────────────────────────────────────────────
   # 3. CUSTOM FOOTER (修正后的完美版本)
