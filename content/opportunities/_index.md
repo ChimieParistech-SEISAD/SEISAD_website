@@ -262,6 +262,7 @@ sections:
         <div class="home-outer-wrapper">
           
           <!-- 1. ACTIVE POSITION: NIR-II Quantum Dots -->
+          <!-- 1. ACTIVE POSITION: NIR-II Quantum Dots -->
           <div class="opp-card">
             <div class="opp-header">
               <span style="font-size:1.6rem; font-weight:bold;">PhD Position: NIR-II Semiconductor Quantum Dots and Theranostics</span>
@@ -279,10 +280,10 @@ sections:
               </ul>
               <div style="margin-top:10px; font-size:0.9rem; color:#666;">Expected start date: Oct 2026 | Deadline: 31 May 2026</div>
               
-              <div class="btn-group">
-                <a href="mailto:bich-thuy.doan@chimieparistech.psl.eu;zijun.wang@chimieparistech.psl.eu?subject=Application for PhD: NIR-II Quantum Dots" class="apply-btn">Apply via Email</a>
-                <a href="/SEISAD_website/media/PhD ENSCP NPs SWIR theranostics-20260424.pdf" target="_blank" class="download-btn">Download PDF Description</a>
-              </div>
+<div class="btn-group" style="margin-top: 25px;">
+<a href="mailto:bich-thuy.doan@chimieparistech.psl.eu;zijun.wang@chimieparistech.psl.eu?subject=Application for PhD: NIR-II Quantum Dots" class="apply-btn">Apply via Email</a>
+<a href="/media/PhD ENSCP NPs SWIR theranostics-20260424.pdf" target="_blank" class="download-btn">Download PDF Description</a>
+</div>
             </div>
           </div>
 
