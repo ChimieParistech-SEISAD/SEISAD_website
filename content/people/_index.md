@@ -235,7 +235,8 @@ sections:
           }
           .person-card {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            align-items: flex-start;
             background: #fff;
             border: 1px solid #eee;
             border-radius: 8px;
@@ -243,11 +244,14 @@ sections:
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
           }
           .person-img {
-            width: 100%;
-            height: 300px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
             object-fit: cover;
+            flex-shrink: 0;
+            margin-right: 20px;
           }
-          .person-info { padding: 20px; }
+          .person-info { padding: 0; }
           .person-name { font-weight: bold; font-size: 1.2rem; color: #333; }
           .person-title { color: #666; font-style: italic; margin-bottom: 10px; }
           .person-bio { font-size: 0.95rem; margin-bottom: 15px; min-height: 40px; }
@@ -301,7 +305,6 @@ sections:
                 </div>
               </div>
             </div>
-
             <!-- Row 2: Person 4 -->
             <div class="person-card">
               <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
@@ -326,7 +329,6 @@ sections:
                 </div>
               </div>
             </div>
-
             <!-- Row 3: Person 6 -->
             <div class="person-card">
               <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
@@ -351,7 +353,6 @@ sections:
                 </div>
               </div>
             </div>
-
             <!-- Row 4: Person 8 -->
             <div class="person-card">
               <img src="/SEISAD_website/media/people/placeholder.jpg" class="person-img" alt="Name">
