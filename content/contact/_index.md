@@ -7,25 +7,22 @@ design:
 
 sections:
   # ─────────────────────────────────────────────────────────
-  # 0. GLOBAL STYLE (同步全站视觉规范 & 彻底修正对齐)
+  # 0. GLOBAL STYLE (同步规范 & 修正对齐)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
       text: |
         <style>
-          /* 基础框架修正 */
           .blox-page-header, .main-content, main { padding-top: 0 !important; margin-top: 0 !important; }
           section.hbb-section { padding-top: 10px !important; padding-bottom: 10px !important; }
           .max-w-prose, .prose, .container, .mx-auto { max-width: 100% !important; width: 100% !important; }
           .home-outer-wrapper { width: 95%; max-width: 1400px; margin: 0 auto; clear: both; }
 
-          /* 导航栏标准化 */
           header, .page-header { background-color: #008a85 !important; padding: 0 !important; }
           .navbar-brand, .navbar-brand-mobile, .brand-logo { display: none !important; }
           .navbar { background-color: #008a85 !important; box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important; min-height: 60px; padding: 0 2rem !important; }
           .nav-link { color: #ffffff !important; font-weight: bold !important; font-size: 1.5rem !important; padding: 0 1.5rem !important; }
 
-          /* 统一标题横条 */
           .main-title-container {
             background-color: #f0f9f8;
             border-top: 6px solid #008a85;
@@ -37,7 +34,6 @@ sections:
           }
           .brand-name-bold { font-size: 2.6rem; color: #008a85; font-weight: 900; letter-spacing: 4px; line-height: 1; }
 
-          /* Contact 布局核心 (移动端自动堆叠) */
           .contact-grid-wrapper { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
           .contact-info-column { flex: 1; min-width: 320px; text-align: left; }
           .contact-info-column h2 {
@@ -58,7 +54,6 @@ sections:
             border: 1px solid #eee;
           }
 
-          /* 彻底修正页脚 */
           .custom-footer-container {
             background-color: #008a85 !important; 
             color: #ffffff !important;            
@@ -105,7 +100,7 @@ sections:
         </div>
 
   # ─────────────────────────────────────────────────────────
-  # 2. CONTACT CONTENT (位置与地图)
+  # 2. CONTACT CONTENT (增加带 Marker 定位的地图)
   # ─────────────────────────────────────────────────────────
   - block: markdown
     content:
@@ -123,7 +118,15 @@ sections:
               </div>
             </div>
             <div class="map-column-wrapper">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.591035540058!2d2.3421715768858223!3d48.846938901509915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e600555555%3A0x63346e45f1b268f7!2sChimie%20ParisTech%20-%20PSL!5e0!3m2!1sen!2sfr!4v1715670000000!5m2!1sen!2sfr" width="100%" height="450" style="border:0; display:block;" allowfullscreen="" loading="lazy"></iframe>
+              <!-- 精准 Marker 定位地址：11 Rue Pierre et Marie Curie -->
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.591!2d2.342!3d48.847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e600555555%3A0x63346e45f1b268f7!2s11%20Rue%20Pierre%20et%20Marie%20Curie%2C%2075005%20Paris%2C%20France!5e0!3m2!1sen!2sfr!4v1715670000000!5m2!1sen!2sfr" 
+                width="100%" 
+                height="450" 
+                style="border:0; display:block;" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
             </div>
           </div>
         </div>
