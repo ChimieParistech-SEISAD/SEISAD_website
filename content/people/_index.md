@@ -222,7 +222,7 @@ sections:
   # ─────────────────────────────────────────────────────────
   # 2. PERMANENT MEMBERS
   # ─────────────────────────────────────────────────────────
-- block: markdown
+  - block: markdown
     content:
       text: |
         <style>
