@@ -298,7 +298,7 @@ sections:
           <div class="opp-card" style="opacity: 0.7;">
             <div class="opp-header" style="background: #718096;">
               <span style="font-size:1.6rem; font-weight:bold;">PhD Position in Bio-Sensing</span>
-              <span class="opp-badge" style="color: #718096; background: #e2e8f0;">Status:open</span>
+              <span class="opp-badge" style="color: #718096; background: #e2e8f0;">Status: Closed</span>
             </div>
             <div class="opp-body">
               <div class="opp-section-title" style="color: #718096 !important;">Project Description</div>
