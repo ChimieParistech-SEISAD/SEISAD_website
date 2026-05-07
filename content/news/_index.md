@@ -260,7 +260,7 @@ sections:
             <div class="news-date">May 2024</div>
             <div class="news-content">
               <span class="news-tag">Publication</span>
-              <div class="news-title">New paper published in Nature Communications</div>
+              <div class="news-title">New paper published in XXX XXX</div>
               <div class="news-text">Our latest work on microfluidic platforms for cancer cell analysis is now online. Congratulations to all the team members involved!</div>
             </div>
           </div>
