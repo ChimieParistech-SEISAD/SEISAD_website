@@ -275,7 +275,7 @@ sections:
                   <div><span>Email:</span> <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
                   <div><span>Tel:</span> +33 x xx xx xx xx</div>
                   <div><a href="https://scholar.google.com/citations?user=ndfeauUAAAAJ&hl=fr" target="_blank">Google Scholar</a></div>
-                  <div><a href="#" target="_blank">Full CV (PDF)</a></div>
+                  <div><a href="SEISAD_website/static/media/people/Anne-CV.pdf" target="_blank">CV (PDF)</a></div>
                 </div>
               </div>
             </div>
@@ -289,7 +289,7 @@ sections:
                 <div class="person-links">
                   <div><span>Email:</span> <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
                   <div><a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
-                  <div><a href="#" target="_blank">Full CV (PDF)</a></div>
+                  <div><a href="SEISAD_website/static/media/people/Zijun-CV.pdf" target="_blank">CV (PDF)</a></div>
                 </div>
               </div>
             </div>
@@ -379,7 +379,34 @@ sections:
         <div class="home-outer-wrapper">
           <h2 style="text-align:center; color:#333; margin-bottom:40px; font-weight:900; text-transform:uppercase; letter-spacing:1px;">Students & Researchers</h2>
           <div class="people-grid">
-            <!-- Xingyuan XU -->
+            <!-- Matthieu Sagot -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/Matthieu Sagot.JPG" class="person-img" alt="Matthieu Sagot">
+              <div class="person-info">
+                <div class="person-name">Matthieu SAGOT</div>
+                <div class="person-title">Postdoc</div>
+                <div class="person-bio">Developing an all-in-one microfluidic analytical platform coupling an electrophoretic separation with a multi-parametric detection scheme (Fluorescence, UV, Raman, DLS) for the characterization of nanoplastics.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:matthieu.sagot@chimieparistech.psl.eu">matthieu.sagot@chimieparistech.psl.eu</a></div>
+                  <div><a href="https://scholar.google.com/citations?user=idvRp8MAAAAJ&hl=fr" target="_blank">Google Scholar</a></div>
+                  <div><a href="https://www.linkedin.com/in/matthieu-sagot-3497aa391/" target="_blank">LinkedIn Profile</a></div>
+                </div>
+              </div>
+            </div>
+             <!-- Xingyuan XU -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Xingyuan XU">
+              <div class="person-info">
+                <div class="person-name">Xingyuan Xu</div>
+                <div class="person-title">PhD Student</div>
+                <div class="person-bio">Theranostics related AI and advanced sensing.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:xingyuan.xu@chimieparistech.psl.eu">xingyuan.xu@chimieparistech.psl.eu</a></div>
+                  <div><a href="https://www.linkedin.com/in/xingyuan-xu-a125293a9/" target="_blank">LinkedIn Profile</a></div>
+                </div>
+              </div>
+            </div>
+             <!-- Xingyuan XU -->
             <div class="person-card">
               <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Xingyuan XU">
               <div class="person-info">
@@ -392,6 +419,7 @@ sections:
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
     design:
