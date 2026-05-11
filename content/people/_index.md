@@ -275,7 +275,7 @@ sections:
                   <div><span>Email:</span> <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
                   <div><span>Tel:</span> +33 x xx xx xx xx</div>
                   <div><a href="https://scholar.google.com/citations?user=ndfeauUAAAAJ&hl=fr" target="_blank">Google Scholar</a></div>
-                  <div><a href="/SEISAD_website/static/media/people/Anne-CV.pdf" target="_blank">CV (PDF)</a></div>
+                  <div><a href="/SEISAD_website/media/people/Anne-CV.pdf" target="_blank">CV (PDF)</a></div>
                 </div>
               </div>
             </div>
@@ -289,7 +289,7 @@ sections:
                 <div class="person-links">
                   <div><span>Email:</span> <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
                   <div><a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
-                  <div><a href="/SEISAD_website/static/media/people/Zijun-CV.pdf" target="_blank">CV (PDF)</a></div>
+                  <div><a href="/SEISAD_website/media/people/Zijun-CV.pdf" target="_blank">CV (PDF)</a></div>
                 </div>
               </div>
             </div>
