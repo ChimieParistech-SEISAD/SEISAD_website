@@ -275,7 +275,7 @@ sections:
                   <div><span>Email:</span> <a href="mailto:anne.varenne@chimieparistech.psl.eu">anne.varenne@chimieparistech.psl.eu</a></div>
                   <div><span>Tel:</span> +33 x xx xx xx xx</div>
                   <div><a href="https://scholar.google.com/citations?user=ndfeauUAAAAJ&hl=fr" target="_blank">Google Scholar</a></div>
-                  <div><a href="SEISAD_website/static/media/people/Anne-CV.pdf" target="_blank">CV (PDF)</a></div>
+                  <div><a href="/SEISAD_website/static/media/people/Anne-CV.pdf" target="_blank">CV (PDF)</a></div>
                 </div>
               </div>
             </div>
@@ -289,7 +289,7 @@ sections:
                 <div class="person-links">
                   <div><span>Email:</span> <a href="mailto:zijun.wang@chimieparistech.psl.eu">zijun.wang@chimieparistech.psl.eu</a></div>
                   <div><a href="https://scholar.google.com/citations?user=h7Bt-MkAAAAJ&hl=en" target="_blank">Google Scholar</a></div>
-                  <div><a href="SEISAD_website/static/media/people/Zijun-CV.pdf" target="_blank">CV (PDF)</a></div>
+                  <div><a href="/SEISAD_website/static/media/people/Zijun-CV.pdf" target="_blank">CV (PDF)</a></div>
                 </div>
               </div>
             </div>
@@ -406,20 +406,30 @@ sections:
                 </div>
               </div>
             </div>
-             <!-- Xingyuan XU -->
+             <!-- Lucas Castro -->
             <div class="person-card">
-              <img src="/SEISAD_website/media/people/XingyuanXu.png" class="person-img" alt="Xingyuan XU">
+              <img src="/SEISAD_website/media/people/XXX.png" class="person-img" alt="Lucas Castro">
               <div class="person-info">
-                <div class="person-name">Xingyuan XU</div>
+                <div class="person-name">Lucas Castro</div>
                 <div class="person-title">PhD Student</div>
-                <div class="person-bio">Theranostics related AI and advanced sensing.</div>
+                <div class="person-bio">XXX.</div>
                 <div class="person-links">
-                  <div><span>Email:</span> <a href="mailto:xingyuan.xu@chimieparistech.psl.eu">xingyuan.xu@chimieparistech.psl.eu</a></div>
-                  <div><a href="https://www.linkedin.com/in/xingyuan-xu-a125293a9/" target="_blank">LinkedIn Profile</a></div>
+                  <div><span>Email:</span> <a href="mailto:lucas.castro@chimieparistech.psl.eu">lucas.castro@chimieparistech.psl.eu</a></div>
                 </div>
               </div>
             </div>
-            
+             <!-- Lucas Castro -->
+            <div class="person-card">
+              <img src="/SEISAD_website/media/people/XXX.png" class="person-img" alt="XXX">
+              <div class="person-info">
+                <div class="person-name">XXX</div>
+                <div class="person-title">PhD Student</div>
+                <div class="person-bio">XXX.</div>
+                <div class="person-links">
+                  <div><span>Email:</span> <a href="mailto:XXX@chimieparistech.psl.eu">XXX@chimieparistech.psl.eu</a></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
     design:
